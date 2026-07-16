@@ -1,6 +1,6 @@
 {
-  "name": "astro",
-  "version": "0.0.1",
+  "name": "tuo",
+  "version": "0.1.0",
   "type": "module",
   "scripts": {
     "dev": "astro dev",
@@ -9,7 +9,7 @@
     "astro": "astro",
     "format": "vp fmt . && prettier --write **/*.astro",
     "lint": "vp lint",
-    "check": "astro check && vp check ; prettier --check **/*.astro",
+    "check": "astro check && vp check && prettier --check **/*.astro",
     "prepare": "vp config"
   },
   "dependencies": {
