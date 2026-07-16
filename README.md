@@ -1,3 +1,5 @@
+<!-- DO NOT TOUCH MY CODE -->
+
 # Astro Starter Kit: Blog
 
 ```sh
