@@ -7,9 +7,9 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "format": "vp fmt . && prettier . --write",
+    "format": "vp fmt . && prettier --write **/*.astro",
     "lint": "vp lint",
-    "check": "astro check && vp check",
+    "check": "astro check && vp check ; prettier --check **/*.astro",
     "prepare": "vp config"
   },
   "dependencies": {
