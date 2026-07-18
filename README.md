@@ -64,3 +64,28 @@ Check out [our documentation](https://docs.astro.build) or jump into our [Discor
 ## Credit
 
 This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).
+
+# Reference
+
+### loaders
+
+```TypeScript
+export function loader() {
+  return {
+    name: "loader", //required
+    // Optional Zod schema used to validate data and generate types
+    // Overridden by collection schema defined in content.config.ts
+    schema: z.object({
+      id: z.string(),
+      databaseId: z.number(),
+      label: z.string(),
+      // ...
+    }),
+    // An async function that is called at build time to load data and update the store. It is passed a LoaderContext object that contains helper functions and properties for writing your loader’s implementation logic, as well as the store database and methods for interacting with it.
+    load: async (context) => {
+      const data = await getData();
+    },
+    // Use TS satisfies operator instead of a return type annotation to provide type safety inside your loader object and to preserve type inference when your loader is used in a collection.
+  } satisfies Loader;
+}
+```

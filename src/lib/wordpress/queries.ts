@@ -2,6 +2,7 @@ export const ALL_POSTS_QUERY = `
 query AllPostsQuery($first: Int) {
   posts(first: $first, where: {status: PUBLISH}) {
     nodes {
+      id
       slug
       title
       date
@@ -24,10 +25,10 @@ query AllPagesQuery {
   pages(where: {status: PUBLISH}) {
     edges {
       node {
+        id
         title
         status
         slug
-        id
         isFrontPage
         content(format: RENDERED)
       }

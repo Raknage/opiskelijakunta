@@ -1,8 +1,19 @@
 import { ALL_PAGES_QUERY, ALL_POSTS_QUERY, MENU_QUERY } from "./queries";
+import type {
+  WPMenu,
+  WPPage,
+  WPPost,
+  WPFetchedPosts,
+  WPFetchedPages,
+  WPFetchedMenus,
+} from "./schemas";
 
 const apiUrl = import.meta.env.WPGRAPHQL_URL;
 
-export async function fetchAPI(query: string, variables = {}) {
+export async function fetchQuery<T>(
+  query: string,
+  variables: Record<string, any> = {},
+): Promise<T> {
   const res = await fetch(apiUrl, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -13,7 +24,7 @@ export async function fetchAPI(query: string, variables = {}) {
     throw new Error(`WordPress API error: ${res.status}`);
   }
 
-  const { data, errors } = await res.json();
+  const { data, errors } = (await res.json()) as { data: T; errors?: any[] };
 
   if (errors) {
     throw new Error(`GraphQL Error: ${errors[0].message}`);
@@ -22,17 +33,17 @@ export async function fetchAPI(query: string, variables = {}) {
   return data;
 }
 
-export async function getPrimaryMenu(limit: number = 100) {
-  const data = await fetchAPI(MENU_QUERY, { limit: limit });
-  return data?.menuItems?.edges[0];
+export async function getPosts(first: number = 5): Promise<WPPost[]> {
+  const data = await fetchQuery<WPFetchedPosts>(ALL_POSTS_QUERY, { first: first });
+  return data.posts.nodes;
 }
 
-export async function getPages() {
-  const data = await fetchAPI(ALL_PAGES_QUERY);
-  return data?.pages?.edges[0];
+export async function getPages(): Promise<WPPage[]> {
+  const data = await fetchQuery<WPFetchedPages>(ALL_PAGES_QUERY);
+  return data.pages.edges;
 }
 
-export async function getPosts(first: number = 100) {
-  const data = await fetchAPI(ALL_POSTS_QUERY, { first: first });
-  return data?.posts?.nodes[0];
+export async function getPrimaryMenu(limit: number = 100): Promise<WPMenu[]> {
+  const data = await fetchQuery<WPFetchedMenus>(MENU_QUERY, { limit: limit });
+  return data.menuItems.edges;
 }
