@@ -1,49 +1,1378 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
-import Footer from "../components/Footer.astro";
-import Header from "../components/Header.astro";
-import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
+import Layout from "../layouts/Layout.astro";
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-  </head>
-  <body>
-    <Header />
-    <main>
-      <h1>🧑‍🚀 Hello, Astronaut!</h1>
-      <p>
-        Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This template
-        serves as a lightweight, minimally-styled starting point for anyone looking to build a personal
-        website, blog, or portfolio with Astro.
-      </p>
-      <p>
-        This template comes with a few integrations already configured in your
-        <code>astro.config.mjs</code> file. You can customize your setup with
-        <a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-        React, or Vue to your project.
-      </p>
-      <p>Here are a few ideas on how to get started with the template:</p>
-      <ul>
-        <li>Edit this page in <code>src/pages/index.astro</code></li>
-        <li>Edit the site header items in <code>src/components/Header.astro</code></li>
-        <li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-        <li>Check out the included blog posts in <code>src/content/blog/</code></li>
-        <li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-      </ul>
-      <p>
-        Have fun! If you get stuck, remember to
-        <a href="https://docs.astro.build/">read the docs</a>
-        or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-      </p>
-      <p>
-        Looking for a blog template with a bit more personality? Check out
-        <a href="https://github.com/Charca/astro-blog-template">astro-blog-template</a>
-        by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-      </p>
-    </main>
-    <Footer />
-  </body>
-</html>
+<Layout>
+  <main>
+    <div id="page-container">
+      <div id="et-boc" class="et-boc">
+        <header class="et-l et-l--header">
+          <div class="et_builder_inner_content et_pb_gutters3 has_et_pb_sticky">
+            <div
+              class="et_pb_section et_pb_section_0_tb_header et_pb_sticky_module et_pb_with_background et_section_regular et_pb_section--with-menu et_pb_sticky et_pb_sticky--top"
+              style="position: fixed !important; padding: 10px 0px !important; z-index: 10010; width: 801px; left: 0px; top: 0px; bottom: auto; margin-top: 0px;">
+              <div class="et_pb_row et_pb_row_0_tb_header et_pb_row--with-menu" style="z-index: 3;">
+                <div
+                  class="et_pb_column et_pb_column_4_4 et_pb_column_0_tb_header et_pb_css_mix_blend_mode_passthrough et-last-child et_pb_column--with-menu">
+                  <div
+                    class="et_pb_module et_pb_menu et_pb_menu_0_tb_header dtb-menu et_pb_bg_layout_light et_pb_text_align_center et_dropdown_animation_fade et_pb_menu--with-logo et_pb_menu--style-left_aligned">
+                    <div class="et_pb_menu_inner_container clearfix">
+                      <div class="et_pb_menu__logo-wrap">
+                        <div class="et_pb_menu__logo">
+                          <a href="https://opiskelijakunta.net/"
+                            ><img
+                              fetchpriority="high"
+                              decoding="async"
+                              width="1277"
+                              height="250"
+                              src="https://opiskelijakunta.net/wp-content/uploads/2022/08/tuo-logo-min-2.png"
+                              alt=""
+                              srcset="https://opiskelijakunta.net/wp-content/uploads/2022/08/tuo-logo-min-2.png 1277w, https://opiskelijakunta.net/wp-content/uploads/2022/08/tuo-logo-min-2-980x192.png 980w, https://opiskelijakunta.net/wp-content/uploads/2022/08/tuo-logo-min-2-480x94.png 480w"
+                              sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) and (max-width: 980px) 980px, (min-width: 981px) 1277px, 100vw"
+                              class="wp-image-92"
+                            /></a
+                          >
+                        </div>
+                      </div><div class="et_pb_menu__wrap">
+                        <div class="et_pb_menu__menu">
+                          <nav class="et-menu-nav">
+                            <ul id="menu-valikko" class="et-menu nav">
+                              <li
+                                class="et_pb_menu_page_id-12 menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-45">
+                                <a href="https://opiskelijakunta.net/opiskelijakunta/"
+                                  ><span>Opiskelijakunta</span></a
+                                ><ul class="sub-menu">
+                                  <li
+                                    class="et_pb_menu_page_id-886 menu-item menu-item-type-custom menu-item-object-custom menu-item-886">
+                                    <a href="https://opiskelijakunta.net/opiskelijakunta/#meista"
+                                      ><span>Tietoa meistä</span></a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-1040 menu-item menu-item-type-custom menu-item-object-custom menu-item-1040">
+                                    <a
+                                      target="_blank"
+                                      href="https://drive.google.com/drive/folders/1SEF2-BdoH69qyV8FtQBjdjrWZJWuvBKM?usp=share_link"
+                                      ><span>Materiaalipankki</span></a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-48 menu-item menu-item-type-custom menu-item-object-custom menu-item-48">
+                                    <a href="https://opiskelijakunta.net/opiskelijakunta/#hallitus"
+                                      ><span>Hallitus</span></a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-49 menu-item menu-item-type-custom menu-item-object-custom menu-item-49">
+                                    <a
+                                      href="https://opiskelijakunta.net/opiskelijakunta/#henkilokunta"
+                                      ><span>Henkilökunta</span></a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-47 menu-item menu-item-type-custom menu-item-object-custom menu-item-47">
+                                    <a
+                                      href="https://opiskelijakunta.net/opiskelijakunta/#edustajisto"
+                                      ><span>Edustajisto</span></a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-50 menu-item menu-item-type-custom menu-item-object-custom menu-item-50">
+                                    <a
+                                      href="https://opiskelijakunta.net/opiskelijakunta/#yhdistykset"
+                                      ><span>Kumppaniyhdistykset</span></a
+                                    >
+                                  </li>
+                                </ul>
+                              </li><li
+                                class="et_pb_menu_page_id-22 menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-44">
+                                <a href="https://opiskelijakunta.net/jasenyys/"
+                                  ><span>Jäsenyys</span></a
+                                ><ul class="sub-menu">
+                                  <li
+                                    class="et_pb_menu_page_id-51 menu-item menu-item-type-custom menu-item-object-custom menu-item-51">
+                                    <a href="https://opiskelijakunta.net/jasenyys/#liity"
+                                      ><span>Liity jäseneksi</span></a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-52 menu-item menu-item-type-custom menu-item-object-custom menu-item-52">
+                                    <a href="https://opiskelijakunta.net/jasenyys/#edut"
+                                      ><span>Jäsenedut</span></a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-55 menu-item menu-item-type-custom menu-item-object-custom menu-item-55">
+                                    <a href="https://opiskelijakunta.net/jasenyys/#ehdot"
+                                      ><span>Jäsenyyden ehdot</span></a
+                                    >
+                                  </li>
+                                </ul>
+                              </li><li
+                                class="et_pb_menu_page_id-214 menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-795">
+                                <a href="https://opiskelijakunta.net/ajankohtaista/"
+                                  ><span>Ajankohtaista</span></a
+                                ><ul class="sub-menu">
+                                  <li
+                                    class="et_pb_menu_page_id-268 menu-item menu-item-type-custom menu-item-object-custom menu-item-268">
+                                    <a href="https://opiskelijakunta.net/ajankohtaista/#uutiset"
+                                      ><span>Uutiset ja blogit</span></a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-59 menu-item menu-item-type-custom menu-item-object-custom menu-item-59">
+                                    <a href="https://opiskelijakunta.net/ajankohtaista/#kalenteri"
+                                      ><span>Tapahtumakalenteri</span></a
+                                    >
+                                  </li>
+                                </ul>
+                              </li><li
+                                class="et_pb_menu_page_id-34 menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-42">
+                                <a href="https://opiskelijakunta.net/edunvalvonta/"
+                                  ><span>Edunvalvonta</span></a
+                                ><ul class="sub-menu">
+                                  <li
+                                    class="et_pb_menu_page_id-786 menu-item menu-item-type-custom menu-item-object-custom menu-item-786">
+                                    <a href="https://opiskelijakunta.net/edunvalvonta/#edunvalvonta"
+                                      ><span>Edunvalvonta</span></a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-62 menu-item menu-item-type-custom menu-item-object-custom menu-item-62">
+                                    <a href="https://opiskelijakunta.net/edunvalvonta/#hairinta"
+                                      ><span>Häirintäyhdyshenkilö</span></a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-60 menu-item menu-item-type-custom menu-item-object-custom menu-item-60">
+                                    <a href="https://opiskelijakunta.net/edunvalvonta/#edustajat"
+                                      ><span>Opiskelijaedustajat</span></a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-785 menu-item menu-item-type-custom menu-item-object-custom menu-item-785">
+                                    <a href="https://opiskelijakunta.net/edunvalvonta/#aktiivit"
+                                      ><span>Aktiivit</span></a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-61 menu-item menu-item-type-custom menu-item-object-custom menu-item-61">
+                                    <a href="https://opiskelijakunta.net/edunvalvonta/#johtoryhma"
+                                      ><span>Johtoryhmävastaavat</span></a
+                                    >
+                                  </li>
+                                </ul>
+                              </li><li
+                                class="et_pb_menu_page_id-36 menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-41">
+                                <a href="https://opiskelijakunta.net/palvelut/"
+                                  ><span>Palvelut</span></a
+                                ><ul class="sub-menu">
+                                  <li
+                                    class="et_pb_menu_page_id-67 menu-item menu-item-type-custom menu-item-object-custom menu-item-67">
+                                    <a href="https://opiskelijakunta.net/palvelut/#olohuone"
+                                      ><span>Tuo Lounge</span></a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-64 menu-item menu-item-type-custom menu-item-object-custom menu-item-64">
+                                    <a href="https://opiskelijakunta.net/palvelut/#tapahtumat"
+                                      ><span>Tapahtumat</span></a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-66 menu-item menu-item-type-custom menu-item-object-custom menu-item-66">
+                                    <a href="https://opiskelijakunta.net/palvelut/#lainaus"
+                                      ><span>Lainaus</span></a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-65 menu-item menu-item-type-custom menu-item-object-custom menu-item-65">
+                                    <a href="https://opiskelijakunta.net/palvelut/#oikeusapu"
+                                      ><span>Oikeusapu</span></a
+                                    >
+                                  </li>
+                                </ul>
+                              </li><li
+                                class="et_pb_menu_page_id-38 menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-40">
+                                <a href="https://opiskelijakunta.net/yhteystiedot/"
+                                  ><span>Yhteystiedot</span></a
+                                ><ul class="sub-menu">
+                                  <li
+                                    class="et_pb_menu_page_id-70 menu-item menu-item-type-custom menu-item-object-custom menu-item-70">
+                                    <a href="https://opiskelijakunta.net/yhteystiedot/#lounge"
+                                      ><span>Tuo Lounge</span></a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-69 menu-item menu-item-type-custom menu-item-object-custom menu-item-69">
+                                    <a href="https://opiskelijakunta.net/yhteystiedot/#henkilosto"
+                                      ><span>Toimisto</span></a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-997 menu-item menu-item-type-custom menu-item-object-custom menu-item-997">
+                                    <a href="https://opiskelijakunta.net/yhteystiedot/#henkilosto"
+                                      ><span>Meidän yhteystiedot</span></a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-71 menu-item menu-item-type-custom menu-item-object-custom menu-item-71">
+                                    <a href="https://opiskelijakunta.net/yhteystiedot/#laskutus"
+                                      ><span>Laskutustiedot</span></a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-74 menu-item menu-item-type-custom menu-item-object-custom menu-item-74">
+                                    <a href="https://opiskelijakunta.net/yhteystiedot/#palaute"
+                                      ><span>Anna palautetta</span></a
+                                    >
+                                  </li>
+                                </ul>
+                              </li><li
+                                class="et_pb_menu_page_id-570 menu-item menu-item-type-post_type menu-item-object-page menu-item-576">
+                                <a href="https://opiskelijakunta.net/ukk/"><span>UKK</span></a>
+                              </li><li
+                                class="trp-language-switcher-container et_pb_menu_page_id-608 menu-item menu-item-type-post_type menu-item-object-language_switcher menu-item-1475">
+                                <a href="https://opiskelijakunta.net/en/"
+                                  ><span data-no-translation=""
+                                    ><img
+                                      decoding="async"
+                                      class="trp-flag-image"
+                                      src="https://opiskelijakunta.net/wp-content/plugins/translatepress-multilingual/assets/images/flags/en_GB.png"
+                                      width="18"
+                                      height="12"
+                                      alt="en_GB"
+                                      title="English"
+                                    /></span
+                                  ></a
+                                >
+                              </li>
+                            </ul>
+                          </nav>
+                        </div><div class="et_mobile_nav_menu">
+                          <div class="mobile_nav closed">
+                            <span class="mobile_menu_bar hamburger_menu_icon"
+                              ><div class="dtb-hamburger">
+                                <div class="dtb-hamburger-box">
+                                  <div class="dtb-hamburger-inner"></div>
+                                </div>
+                              </div></span
+                            ><ul id="mobile_menu1" class="et_mobile_menu">
+                              <li
+                                class="et_pb_menu_page_id-12 menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-45 et_first_mobile_item">
+                                <a class="sub-menu-toggle" href="#"></a><a
+                                  href="https://opiskelijakunta.net/opiskelijakunta/"
+                                  >Opiskelijakunta</a
+                                ><ul class="sub-menu">
+                                  <li
+                                    class="et_pb_menu_page_id-886 menu-item menu-item-type-custom menu-item-object-custom menu-item-886">
+                                    <a href="https://opiskelijakunta.net/opiskelijakunta/#meista"
+                                      >Tietoa meistä</a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-1040 menu-item menu-item-type-custom menu-item-object-custom menu-item-1040">
+                                    <a
+                                      target="_blank"
+                                      href="https://drive.google.com/drive/folders/1SEF2-BdoH69qyV8FtQBjdjrWZJWuvBKM?usp=share_link"
+                                      >Materiaalipankki</a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-48 menu-item menu-item-type-custom menu-item-object-custom menu-item-48">
+                                    <a href="https://opiskelijakunta.net/opiskelijakunta/#hallitus"
+                                      >Hallitus</a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-49 menu-item menu-item-type-custom menu-item-object-custom menu-item-49">
+                                    <a
+                                      href="https://opiskelijakunta.net/opiskelijakunta/#henkilokunta"
+                                      >Henkilökunta</a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-47 menu-item menu-item-type-custom menu-item-object-custom menu-item-47">
+                                    <a
+                                      href="https://opiskelijakunta.net/opiskelijakunta/#edustajisto"
+                                      >Edustajisto</a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-50 menu-item menu-item-type-custom menu-item-object-custom menu-item-50">
+                                    <a
+                                      href="https://opiskelijakunta.net/opiskelijakunta/#yhdistykset"
+                                      >Kumppaniyhdistykset</a
+                                    >
+                                  </li>
+                                </ul>
+                              </li><li
+                                class="et_pb_menu_page_id-22 menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-44">
+                                <a class="sub-menu-toggle" href="#"></a><a
+                                  href="https://opiskelijakunta.net/jasenyys/">Jäsenyys</a
+                                ><ul class="sub-menu">
+                                  <li
+                                    class="et_pb_menu_page_id-51 menu-item menu-item-type-custom menu-item-object-custom menu-item-51">
+                                    <a href="https://opiskelijakunta.net/jasenyys/#liity"
+                                      >Liity jäseneksi</a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-52 menu-item menu-item-type-custom menu-item-object-custom menu-item-52">
+                                    <a href="https://opiskelijakunta.net/jasenyys/#edut"
+                                      >Jäsenedut</a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-55 menu-item menu-item-type-custom menu-item-object-custom menu-item-55">
+                                    <a href="https://opiskelijakunta.net/jasenyys/#ehdot"
+                                      >Jäsenyyden ehdot</a
+                                    >
+                                  </li>
+                                </ul>
+                              </li><li
+                                class="et_pb_menu_page_id-214 menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-795">
+                                <a class="sub-menu-toggle" href="#"></a><a
+                                  href="https://opiskelijakunta.net/ajankohtaista/">Ajankohtaista</a
+                                ><ul class="sub-menu">
+                                  <li
+                                    class="et_pb_menu_page_id-268 menu-item menu-item-type-custom menu-item-object-custom menu-item-268">
+                                    <a href="https://opiskelijakunta.net/ajankohtaista/#uutiset"
+                                      >Uutiset ja blogit</a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-59 menu-item menu-item-type-custom menu-item-object-custom menu-item-59">
+                                    <a href="https://opiskelijakunta.net/ajankohtaista/#kalenteri"
+                                      >Tapahtumakalenteri</a
+                                    >
+                                  </li>
+                                </ul>
+                              </li><li
+                                class="et_pb_menu_page_id-34 menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-42">
+                                <a class="sub-menu-toggle" href="#"></a><a
+                                  href="https://opiskelijakunta.net/edunvalvonta/">Edunvalvonta</a
+                                ><ul class="sub-menu">
+                                  <li
+                                    class="et_pb_menu_page_id-786 menu-item menu-item-type-custom menu-item-object-custom menu-item-786">
+                                    <a href="https://opiskelijakunta.net/edunvalvonta/#edunvalvonta"
+                                      >Edunvalvonta</a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-62 menu-item menu-item-type-custom menu-item-object-custom menu-item-62">
+                                    <a href="https://opiskelijakunta.net/edunvalvonta/#hairinta"
+                                      >Häirintäyhdyshenkilö</a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-60 menu-item menu-item-type-custom menu-item-object-custom menu-item-60">
+                                    <a href="https://opiskelijakunta.net/edunvalvonta/#edustajat"
+                                      >Opiskelijaedustajat</a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-785 menu-item menu-item-type-custom menu-item-object-custom menu-item-785">
+                                    <a href="https://opiskelijakunta.net/edunvalvonta/#aktiivit"
+                                      >Aktiivit</a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-61 menu-item menu-item-type-custom menu-item-object-custom menu-item-61">
+                                    <a href="https://opiskelijakunta.net/edunvalvonta/#johtoryhma"
+                                      >Johtoryhmävastaavat</a
+                                    >
+                                  </li>
+                                </ul>
+                              </li><li
+                                class="et_pb_menu_page_id-36 menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-41">
+                                <a class="sub-menu-toggle" href="#"></a><a
+                                  href="https://opiskelijakunta.net/palvelut/">Palvelut</a
+                                ><ul class="sub-menu">
+                                  <li
+                                    class="et_pb_menu_page_id-67 menu-item menu-item-type-custom menu-item-object-custom menu-item-67">
+                                    <a href="https://opiskelijakunta.net/palvelut/#olohuone"
+                                      >Tuo Lounge</a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-64 menu-item menu-item-type-custom menu-item-object-custom menu-item-64">
+                                    <a href="https://opiskelijakunta.net/palvelut/#tapahtumat"
+                                      >Tapahtumat</a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-66 menu-item menu-item-type-custom menu-item-object-custom menu-item-66">
+                                    <a href="https://opiskelijakunta.net/palvelut/#lainaus"
+                                      >Lainaus</a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-65 menu-item menu-item-type-custom menu-item-object-custom menu-item-65">
+                                    <a href="https://opiskelijakunta.net/palvelut/#oikeusapu"
+                                      >Oikeusapu</a
+                                    >
+                                  </li>
+                                </ul>
+                              </li><li
+                                class="et_pb_menu_page_id-38 menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-40">
+                                <a class="sub-menu-toggle" href="#"></a><a
+                                  href="https://opiskelijakunta.net/yhteystiedot/">Yhteystiedot</a
+                                ><ul class="sub-menu">
+                                  <li
+                                    class="et_pb_menu_page_id-70 menu-item menu-item-type-custom menu-item-object-custom menu-item-70">
+                                    <a href="https://opiskelijakunta.net/yhteystiedot/#lounge"
+                                      >Tuo Lounge</a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-69 menu-item menu-item-type-custom menu-item-object-custom menu-item-69">
+                                    <a href="https://opiskelijakunta.net/yhteystiedot/#henkilosto"
+                                      >Toimisto</a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-997 menu-item menu-item-type-custom menu-item-object-custom menu-item-997">
+                                    <a href="https://opiskelijakunta.net/yhteystiedot/#henkilosto"
+                                      >Meidän yhteystiedot</a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-71 menu-item menu-item-type-custom menu-item-object-custom menu-item-71">
+                                    <a href="https://opiskelijakunta.net/yhteystiedot/#laskutus"
+                                      >Laskutustiedot</a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-74 menu-item menu-item-type-custom menu-item-object-custom menu-item-74">
+                                    <a href="https://opiskelijakunta.net/yhteystiedot/#palaute"
+                                      >Anna palautetta</a
+                                    >
+                                  </li>
+                                </ul>
+                              </li><li
+                                class="et_pb_menu_page_id-570 menu-item menu-item-type-post_type menu-item-object-page menu-item-576">
+                                <a href="https://opiskelijakunta.net/ukk/">UKK</a>
+                              </li><li
+                                class="trp-language-switcher-container et_pb_menu_page_id-608 menu-item menu-item-type-post_type menu-item-object-language_switcher menu-item-1475">
+                                <a href="https://opiskelijakunta.net/en/"
+                                  ><span data-no-translation=""
+                                    ><img
+                                      decoding="async"
+                                      class="trp-flag-image"
+                                      src="https://opiskelijakunta.net/wp-content/plugins/translatepress-multilingual/assets/images/flags/en_GB.png"
+                                      width="18"
+                                      height="12"
+                                      alt="en_GB"
+                                      title="English"
+                                    /></span
+                                  ></a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><div
+              class="et_pb_section et_pb_section_0_tb_header et_pb_sticky_module et_pb_with_background et_section_regular et_pb_section--with-menu et_pb_sticky_placeholder"
+              style=""
+              data-sticky-placeholder-id="et_pb_section_0_tb_header">
+              <div class="et_pb_row et_pb_row_0_tb_header et_pb_row--with-menu" style="z-index: 3;">
+                <div
+                  class="et_pb_column et_pb_column_4_4 et_pb_column_0_tb_header et_pb_css_mix_blend_mode_passthrough et-last-child et_pb_column--with-menu">
+                  <div
+                    class="et_pb_module et_pb_menu et_pb_menu_0_tb_header dtb-menu et_pb_bg_layout_light et_pb_text_align_center et_dropdown_animation_fade et_pb_menu--with-logo et_pb_menu--style-left_aligned">
+                    <div class="et_pb_menu_inner_container clearfix">
+                      <div class="et_pb_menu__logo-wrap">
+                        <div class="et_pb_menu__logo">
+                          <a href="https://opiskelijakunta.net/"
+                            ><img
+                              fetchpriority="high"
+                              decoding="async"
+                              width="1277"
+                              height="250"
+                              src="https://opiskelijakunta.net/wp-content/uploads/2022/08/tuo-logo-min-2.png"
+                              alt=""
+                              srcset="https://opiskelijakunta.net/wp-content/uploads/2022/08/tuo-logo-min-2.png 1277w, https://opiskelijakunta.net/wp-content/uploads/2022/08/tuo-logo-min-2-980x192.png 980w, https://opiskelijakunta.net/wp-content/uploads/2022/08/tuo-logo-min-2-480x94.png 480w"
+                              sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) and (max-width: 980px) 980px, (min-width: 981px) 1277px, 100vw"
+                              class="wp-image-92"
+                            /></a
+                          >
+                        </div>
+                      </div><div class="et_pb_menu__wrap">
+                        <div class="et_pb_menu__menu">
+                          <nav class="et-menu-nav">
+                            <ul id="menu-valikko" class="et-menu nav">
+                              <li
+                                class="et_pb_menu_page_id-12 menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-45">
+                                <a href="https://opiskelijakunta.net/opiskelijakunta/"
+                                  ><span>Opiskelijakunta</span></a
+                                ><ul class="sub-menu">
+                                  <li
+                                    class="et_pb_menu_page_id-886 menu-item menu-item-type-custom menu-item-object-custom menu-item-886">
+                                    <a href="https://opiskelijakunta.net/opiskelijakunta/#meista"
+                                      ><span>Tietoa meistä</span></a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-1040 menu-item menu-item-type-custom menu-item-object-custom menu-item-1040">
+                                    <a
+                                      target="_blank"
+                                      href="https://drive.google.com/drive/folders/1SEF2-BdoH69qyV8FtQBjdjrWZJWuvBKM?usp=share_link"
+                                      ><span>Materiaalipankki</span></a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-48 menu-item menu-item-type-custom menu-item-object-custom menu-item-48">
+                                    <a href="https://opiskelijakunta.net/opiskelijakunta/#hallitus"
+                                      ><span>Hallitus</span></a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-49 menu-item menu-item-type-custom menu-item-object-custom menu-item-49">
+                                    <a
+                                      href="https://opiskelijakunta.net/opiskelijakunta/#henkilokunta"
+                                      ><span>Henkilökunta</span></a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-47 menu-item menu-item-type-custom menu-item-object-custom menu-item-47">
+                                    <a
+                                      href="https://opiskelijakunta.net/opiskelijakunta/#edustajisto"
+                                      ><span>Edustajisto</span></a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-50 menu-item menu-item-type-custom menu-item-object-custom menu-item-50">
+                                    <a
+                                      href="https://opiskelijakunta.net/opiskelijakunta/#yhdistykset"
+                                      ><span>Kumppaniyhdistykset</span></a
+                                    >
+                                  </li>
+                                </ul>
+                              </li><li
+                                class="et_pb_menu_page_id-22 menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-44">
+                                <a href="https://opiskelijakunta.net/jasenyys/"
+                                  ><span>Jäsenyys</span></a
+                                ><ul class="sub-menu">
+                                  <li
+                                    class="et_pb_menu_page_id-51 menu-item menu-item-type-custom menu-item-object-custom menu-item-51">
+                                    <a href="https://opiskelijakunta.net/jasenyys/#liity"
+                                      ><span>Liity jäseneksi</span></a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-52 menu-item menu-item-type-custom menu-item-object-custom menu-item-52">
+                                    <a href="https://opiskelijakunta.net/jasenyys/#edut"
+                                      ><span>Jäsenedut</span></a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-55 menu-item menu-item-type-custom menu-item-object-custom menu-item-55">
+                                    <a href="https://opiskelijakunta.net/jasenyys/#ehdot"
+                                      ><span>Jäsenyyden ehdot</span></a
+                                    >
+                                  </li>
+                                </ul>
+                              </li><li
+                                class="et_pb_menu_page_id-214 menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-795">
+                                <a href="https://opiskelijakunta.net/ajankohtaista/"
+                                  ><span>Ajankohtaista</span></a
+                                ><ul class="sub-menu">
+                                  <li
+                                    class="et_pb_menu_page_id-268 menu-item menu-item-type-custom menu-item-object-custom menu-item-268">
+                                    <a href="https://opiskelijakunta.net/ajankohtaista/#uutiset"
+                                      ><span>Uutiset ja blogit</span></a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-59 menu-item menu-item-type-custom menu-item-object-custom menu-item-59">
+                                    <a href="https://opiskelijakunta.net/ajankohtaista/#kalenteri"
+                                      ><span>Tapahtumakalenteri</span></a
+                                    >
+                                  </li>
+                                </ul>
+                              </li><li
+                                class="et_pb_menu_page_id-34 menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-42">
+                                <a href="https://opiskelijakunta.net/edunvalvonta/"
+                                  ><span>Edunvalvonta</span></a
+                                ><ul class="sub-menu">
+                                  <li
+                                    class="et_pb_menu_page_id-786 menu-item menu-item-type-custom menu-item-object-custom menu-item-786">
+                                    <a href="https://opiskelijakunta.net/edunvalvonta/#edunvalvonta"
+                                      ><span>Edunvalvonta</span></a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-62 menu-item menu-item-type-custom menu-item-object-custom menu-item-62">
+                                    <a href="https://opiskelijakunta.net/edunvalvonta/#hairinta"
+                                      ><span>Häirintäyhdyshenkilö</span></a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-60 menu-item menu-item-type-custom menu-item-object-custom menu-item-60">
+                                    <a href="https://opiskelijakunta.net/edunvalvonta/#edustajat"
+                                      ><span>Opiskelijaedustajat</span></a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-785 menu-item menu-item-type-custom menu-item-object-custom menu-item-785">
+                                    <a href="https://opiskelijakunta.net/edunvalvonta/#aktiivit"
+                                      ><span>Aktiivit</span></a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-61 menu-item menu-item-type-custom menu-item-object-custom menu-item-61">
+                                    <a href="https://opiskelijakunta.net/edunvalvonta/#johtoryhma"
+                                      ><span>Johtoryhmävastaavat</span></a
+                                    >
+                                  </li>
+                                </ul>
+                              </li><li
+                                class="et_pb_menu_page_id-36 menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-41">
+                                <a href="https://opiskelijakunta.net/palvelut/"
+                                  ><span>Palvelut</span></a
+                                ><ul class="sub-menu">
+                                  <li
+                                    class="et_pb_menu_page_id-67 menu-item menu-item-type-custom menu-item-object-custom menu-item-67">
+                                    <a href="https://opiskelijakunta.net/palvelut/#olohuone"
+                                      ><span>Tuo Lounge</span></a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-64 menu-item menu-item-type-custom menu-item-object-custom menu-item-64">
+                                    <a href="https://opiskelijakunta.net/palvelut/#tapahtumat"
+                                      ><span>Tapahtumat</span></a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-66 menu-item menu-item-type-custom menu-item-object-custom menu-item-66">
+                                    <a href="https://opiskelijakunta.net/palvelut/#lainaus"
+                                      ><span>Lainaus</span></a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-65 menu-item menu-item-type-custom menu-item-object-custom menu-item-65">
+                                    <a href="https://opiskelijakunta.net/palvelut/#oikeusapu"
+                                      ><span>Oikeusapu</span></a
+                                    >
+                                  </li>
+                                </ul>
+                              </li><li
+                                class="et_pb_menu_page_id-38 menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-40">
+                                <a href="https://opiskelijakunta.net/yhteystiedot/"
+                                  ><span>Yhteystiedot</span></a
+                                ><ul class="sub-menu">
+                                  <li
+                                    class="et_pb_menu_page_id-70 menu-item menu-item-type-custom menu-item-object-custom menu-item-70">
+                                    <a href="https://opiskelijakunta.net/yhteystiedot/#lounge"
+                                      ><span>Tuo Lounge</span></a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-69 menu-item menu-item-type-custom menu-item-object-custom menu-item-69">
+                                    <a href="https://opiskelijakunta.net/yhteystiedot/#henkilosto"
+                                      ><span>Toimisto</span></a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-997 menu-item menu-item-type-custom menu-item-object-custom menu-item-997">
+                                    <a href="https://opiskelijakunta.net/yhteystiedot/#henkilosto"
+                                      ><span>Meidän yhteystiedot</span></a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-71 menu-item menu-item-type-custom menu-item-object-custom menu-item-71">
+                                    <a href="https://opiskelijakunta.net/yhteystiedot/#laskutus"
+                                      ><span>Laskutustiedot</span></a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-74 menu-item menu-item-type-custom menu-item-object-custom menu-item-74">
+                                    <a href="https://opiskelijakunta.net/yhteystiedot/#palaute"
+                                      ><span>Anna palautetta</span></a
+                                    >
+                                  </li>
+                                </ul>
+                              </li><li
+                                class="et_pb_menu_page_id-570 menu-item menu-item-type-post_type menu-item-object-page menu-item-576">
+                                <a href="https://opiskelijakunta.net/ukk/"><span>UKK</span></a>
+                              </li><li
+                                class="trp-language-switcher-container et_pb_menu_page_id-608 menu-item menu-item-type-post_type menu-item-object-language_switcher menu-item-1475">
+                                <a href="https://opiskelijakunta.net/en/"
+                                  ><span data-no-translation=""
+                                    ><img
+                                      decoding="async"
+                                      class="trp-flag-image"
+                                      src="https://opiskelijakunta.net/wp-content/plugins/translatepress-multilingual/assets/images/flags/en_GB.png"
+                                      width="18"
+                                      height="12"
+                                      alt="en_GB"
+                                      title="English"
+                                    /></span
+                                  ></a
+                                >
+                              </li>
+                            </ul>
+                          </nav>
+                        </div><div class="et_mobile_nav_menu">
+                          <div class="mobile_nav closed">
+                            <span class="mobile_menu_bar hamburger_menu_icon"
+                              ><div class="dtb-hamburger">
+                                <div class="dtb-hamburger-box">
+                                  <div class="dtb-hamburger-inner"></div>
+                                </div>
+                              </div></span
+                            ><ul id="mobile_menu1" class="et_mobile_menu">
+                              <li
+                                class="et_pb_menu_page_id-12 menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-45 et_first_mobile_item">
+                                <a class="sub-menu-toggle" href="#"></a><a
+                                  href="https://opiskelijakunta.net/opiskelijakunta/"
+                                  >Opiskelijakunta</a
+                                ><ul class="sub-menu">
+                                  <li
+                                    class="et_pb_menu_page_id-886 menu-item menu-item-type-custom menu-item-object-custom menu-item-886">
+                                    <a href="https://opiskelijakunta.net/opiskelijakunta/#meista"
+                                      >Tietoa meistä</a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-1040 menu-item menu-item-type-custom menu-item-object-custom menu-item-1040">
+                                    <a
+                                      target="_blank"
+                                      href="https://drive.google.com/drive/folders/1SEF2-BdoH69qyV8FtQBjdjrWZJWuvBKM?usp=share_link"
+                                      >Materiaalipankki</a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-48 menu-item menu-item-type-custom menu-item-object-custom menu-item-48">
+                                    <a href="https://opiskelijakunta.net/opiskelijakunta/#hallitus"
+                                      >Hallitus</a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-49 menu-item menu-item-type-custom menu-item-object-custom menu-item-49">
+                                    <a
+                                      href="https://opiskelijakunta.net/opiskelijakunta/#henkilokunta"
+                                      >Henkilökunta</a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-47 menu-item menu-item-type-custom menu-item-object-custom menu-item-47">
+                                    <a
+                                      href="https://opiskelijakunta.net/opiskelijakunta/#edustajisto"
+                                      >Edustajisto</a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-50 menu-item menu-item-type-custom menu-item-object-custom menu-item-50">
+                                    <a
+                                      href="https://opiskelijakunta.net/opiskelijakunta/#yhdistykset"
+                                      >Kumppaniyhdistykset</a
+                                    >
+                                  </li>
+                                </ul>
+                              </li><li
+                                class="et_pb_menu_page_id-22 menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-44">
+                                <a class="sub-menu-toggle" href="#"></a><a
+                                  href="https://opiskelijakunta.net/jasenyys/">Jäsenyys</a
+                                ><ul class="sub-menu">
+                                  <li
+                                    class="et_pb_menu_page_id-51 menu-item menu-item-type-custom menu-item-object-custom menu-item-51">
+                                    <a href="https://opiskelijakunta.net/jasenyys/#liity"
+                                      >Liity jäseneksi</a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-52 menu-item menu-item-type-custom menu-item-object-custom menu-item-52">
+                                    <a href="https://opiskelijakunta.net/jasenyys/#edut"
+                                      >Jäsenedut</a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-55 menu-item menu-item-type-custom menu-item-object-custom menu-item-55">
+                                    <a href="https://opiskelijakunta.net/jasenyys/#ehdot"
+                                      >Jäsenyyden ehdot</a
+                                    >
+                                  </li>
+                                </ul>
+                              </li><li
+                                class="et_pb_menu_page_id-214 menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-795">
+                                <a class="sub-menu-toggle" href="#"></a><a
+                                  href="https://opiskelijakunta.net/ajankohtaista/">Ajankohtaista</a
+                                ><ul class="sub-menu">
+                                  <li
+                                    class="et_pb_menu_page_id-268 menu-item menu-item-type-custom menu-item-object-custom menu-item-268">
+                                    <a href="https://opiskelijakunta.net/ajankohtaista/#uutiset"
+                                      >Uutiset ja blogit</a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-59 menu-item menu-item-type-custom menu-item-object-custom menu-item-59">
+                                    <a href="https://opiskelijakunta.net/ajankohtaista/#kalenteri"
+                                      >Tapahtumakalenteri</a
+                                    >
+                                  </li>
+                                </ul>
+                              </li><li
+                                class="et_pb_menu_page_id-34 menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-42">
+                                <a class="sub-menu-toggle" href="#"></a><a
+                                  href="https://opiskelijakunta.net/edunvalvonta/">Edunvalvonta</a
+                                ><ul class="sub-menu">
+                                  <li
+                                    class="et_pb_menu_page_id-786 menu-item menu-item-type-custom menu-item-object-custom menu-item-786">
+                                    <a href="https://opiskelijakunta.net/edunvalvonta/#edunvalvonta"
+                                      >Edunvalvonta</a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-62 menu-item menu-item-type-custom menu-item-object-custom menu-item-62">
+                                    <a href="https://opiskelijakunta.net/edunvalvonta/#hairinta"
+                                      >Häirintäyhdyshenkilö</a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-60 menu-item menu-item-type-custom menu-item-object-custom menu-item-60">
+                                    <a href="https://opiskelijakunta.net/edunvalvonta/#edustajat"
+                                      >Opiskelijaedustajat</a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-785 menu-item menu-item-type-custom menu-item-object-custom menu-item-785">
+                                    <a href="https://opiskelijakunta.net/edunvalvonta/#aktiivit"
+                                      >Aktiivit</a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-61 menu-item menu-item-type-custom menu-item-object-custom menu-item-61">
+                                    <a href="https://opiskelijakunta.net/edunvalvonta/#johtoryhma"
+                                      >Johtoryhmävastaavat</a
+                                    >
+                                  </li>
+                                </ul>
+                              </li><li
+                                class="et_pb_menu_page_id-36 menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-41">
+                                <a class="sub-menu-toggle" href="#"></a><a
+                                  href="https://opiskelijakunta.net/palvelut/">Palvelut</a
+                                ><ul class="sub-menu">
+                                  <li
+                                    class="et_pb_menu_page_id-67 menu-item menu-item-type-custom menu-item-object-custom menu-item-67">
+                                    <a href="https://opiskelijakunta.net/palvelut/#olohuone"
+                                      >Tuo Lounge</a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-64 menu-item menu-item-type-custom menu-item-object-custom menu-item-64">
+                                    <a href="https://opiskelijakunta.net/palvelut/#tapahtumat"
+                                      >Tapahtumat</a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-66 menu-item menu-item-type-custom menu-item-object-custom menu-item-66">
+                                    <a href="https://opiskelijakunta.net/palvelut/#lainaus"
+                                      >Lainaus</a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-65 menu-item menu-item-type-custom menu-item-object-custom menu-item-65">
+                                    <a href="https://opiskelijakunta.net/palvelut/#oikeusapu"
+                                      >Oikeusapu</a
+                                    >
+                                  </li>
+                                </ul>
+                              </li><li
+                                class="et_pb_menu_page_id-38 menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-40">
+                                <a class="sub-menu-toggle" href="#"></a><a
+                                  href="https://opiskelijakunta.net/yhteystiedot/">Yhteystiedot</a
+                                ><ul class="sub-menu">
+                                  <li
+                                    class="et_pb_menu_page_id-70 menu-item menu-item-type-custom menu-item-object-custom menu-item-70">
+                                    <a href="https://opiskelijakunta.net/yhteystiedot/#lounge"
+                                      >Tuo Lounge</a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-69 menu-item menu-item-type-custom menu-item-object-custom menu-item-69">
+                                    <a href="https://opiskelijakunta.net/yhteystiedot/#henkilosto"
+                                      >Toimisto</a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-997 menu-item menu-item-type-custom menu-item-object-custom menu-item-997">
+                                    <a href="https://opiskelijakunta.net/yhteystiedot/#henkilosto"
+                                      >Meidän yhteystiedot</a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-71 menu-item menu-item-type-custom menu-item-object-custom menu-item-71">
+                                    <a href="https://opiskelijakunta.net/yhteystiedot/#laskutus"
+                                      >Laskutustiedot</a
+                                    >
+                                  </li><li
+                                    class="et_pb_menu_page_id-74 menu-item menu-item-type-custom menu-item-object-custom menu-item-74">
+                                    <a href="https://opiskelijakunta.net/yhteystiedot/#palaute"
+                                      >Anna palautetta</a
+                                    >
+                                  </li>
+                                </ul>
+                              </li><li
+                                class="et_pb_menu_page_id-570 menu-item menu-item-type-post_type menu-item-object-page menu-item-576">
+                                <a href="https://opiskelijakunta.net/ukk/">UKK</a>
+                              </li><li
+                                class="trp-language-switcher-container et_pb_menu_page_id-608 menu-item menu-item-type-post_type menu-item-object-language_switcher menu-item-1475">
+                                <a href="https://opiskelijakunta.net/en/"
+                                  ><span data-no-translation=""
+                                    ><img
+                                      decoding="async"
+                                      class="trp-flag-image"
+                                      src="https://opiskelijakunta.net/wp-content/plugins/translatepress-multilingual/assets/images/flags/en_GB.png"
+                                      width="18"
+                                      height="12"
+                                      alt="en_GB"
+                                      title="English"
+                                    /></span
+                                  ></a
+                                >
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header><div id="et-main-area">
+          <div id="main-content">
+            <article id="post-8" class="post-8 page type-page status-publish hentry">
+              <div class="entry-content">
+                <div class="et-l et-l--post">
+                  <div class="et_builder_inner_content et_pb_gutters3">
+                    <div
+                      class="et_pb_section et_pb_section_0 et_pb_with_background et_section_regular">
+                      <div class="et_pb_row et_pb_row_0">
+                        <div
+                          class="et_pb_column et_pb_column_4_4 et_pb_column_0 et_pb_css_mix_blend_mode_passthrough et-last-child">
+                          <div
+                            class="et_pb_module et_pb_text et_pb_text_0 et_pb_text_align_left et_pb_bg_layout_light">
+                            <div class="et_pb_text_inner">
+                              <h1 style="text-align: center;">
+                                Luomassa parempaa opiskelijaelämää
+                              </h1>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div><div class="et_pb_section et_pb_section_1 et_section_regular">
+                      <div
+                        class="et_pb_with_border et_pb_row et_pb_row_1 et_pb_gutters1 et_pb_row_4col">
+                        <div
+                          class="et_pb_column et_pb_column_1_4 et_pb_column_1 et_pb_css_mix_blend_mode_passthrough">
+                          <div
+                            class="et_pb_module et_pb_blurb et_pb_blurb_0 et_pb_text_align_center et_pb_blurb_position_top et_pb_bg_layout_light">
+                            <div class="et_pb_blurb_content">
+                              <div class="et_pb_main_blurb_image">
+                                <span class="et_pb_image_wrap"
+                                  ><span
+                                    class="et-waypoint et_pb_animation_off et_pb_animation_off_tablet et_pb_animation_off_phone et-pb-icon et-pb-icon-circle et-animated"
+                                    ></span
+                                  ></span
+                                >
+                              </div><div class="et_pb_blurb_container">
+                                <h4 class="et_pb_module_header">
+                                  <span>Opiskelijakunta</span>
+                                </h4><div class="et_pb_blurb_description">
+                                  <p>Yhdessä parempaa opiskelijaelämää</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div><div
+                            class="et_pb_button_module_wrapper et_pb_button_0_wrapper et_pb_button_alignment_center et_pb_module">
+                            <a
+                              class="et_pb_button et_pb_button_0 et_hover_enabled et_pb_bg_layout_light"
+                              href="https://opiskelijakunta.net/opiskelijakunta/">Lue lisää</a
+                            >
+                          </div>
+                        </div><div
+                          class="et_pb_column et_pb_column_1_4 et_pb_column_2 et_pb_css_mix_blend_mode_passthrough">
+                          <div
+                            class="et_pb_module et_pb_blurb et_pb_blurb_1 et_pb_text_align_center et_pb_blurb_position_top et_pb_bg_layout_light">
+                            <div class="et_pb_blurb_content">
+                              <div class="et_pb_main_blurb_image">
+                                <span class="et_pb_image_wrap"
+                                  ><span
+                                    class="et-waypoint et_pb_animation_off et_pb_animation_off_tablet et_pb_animation_off_phone et-pb-icon et-pb-icon-circle et-animated"
+                                    ></span
+                                  ></span
+                                >
+                              </div><div class="et_pb_blurb_container">
+                                <h4 class="et_pb_module_header">
+                                  <span>Liity jäseneksi</span>
+                                </h4><div class="et_pb_blurb_description">
+                                  <p>Tule osaksi yhteisöämme!</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div><div
+                            class="et_pb_button_module_wrapper et_pb_button_1_wrapper et_pb_button_alignment_center et_pb_module">
+                            <a
+                              class="et_pb_button et_pb_button_1 et_hover_enabled et_pb_bg_layout_light"
+                              href="https://opiskelijakunta.net/jasenyys/">Lue lisää</a
+                            >
+                          </div>
+                        </div><div
+                          class="et_pb_column et_pb_column_1_4 et_pb_column_3 et_pb_css_mix_blend_mode_passthrough">
+                          <div
+                            class="et_pb_module et_pb_blurb et_pb_blurb_2 et_pb_text_align_center et_pb_blurb_position_top et_pb_bg_layout_light">
+                            <div class="et_pb_blurb_content">
+                              <div class="et_pb_main_blurb_image">
+                                <span class="et_pb_image_wrap"
+                                  ><span
+                                    class="et-waypoint et_pb_animation_off et_pb_animation_off_tablet et_pb_animation_off_phone et-pb-icon et-pb-icon-circle et-animated"
+                                    ></span
+                                  ></span
+                                >
+                              </div><div class="et_pb_blurb_container">
+                                <h4 class="et_pb_module_header"><span>TUO lounge</span></h4><div
+                                  class="et_pb_blurb_description">
+                                  <p>Yhteisömme kohtaamispaikka</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div><div
+                            class="et_pb_button_module_wrapper et_pb_button_2_wrapper et_pb_button_alignment_center et_pb_module">
+                            <a
+                              class="et_pb_button et_pb_button_2 et_hover_enabled et_pb_bg_layout_light"
+                              href="https://opiskelijakunta.net/palvelut/">Lue lisää</a
+                            >
+                          </div>
+                        </div><div
+                          class="et_pb_column et_pb_column_1_4 et_pb_column_4 et_pb_css_mix_blend_mode_passthrough et-last-child">
+                          <div
+                            class="et_pb_module et_pb_blurb et_pb_blurb_3 et_pb_text_align_center et_pb_blurb_position_top et_pb_bg_layout_light">
+                            <div class="et_pb_blurb_content">
+                              <div class="et_pb_main_blurb_image">
+                                <span class="et_pb_image_wrap"
+                                  ><span
+                                    class="et-waypoint et_pb_animation_off et_pb_animation_off_tablet et_pb_animation_off_phone et-pb-icon et-pb-icon-circle et-animated"
+                                    ></span
+                                  ></span
+                                >
+                              </div><div class="et_pb_blurb_container">
+                                <h4 class="et_pb_module_header"><span>Verkkokauppa</span></h4><div
+                                  class="et_pb_blurb_description">
+                                  <p>Osaksi yhteisöä kotisohvalta</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div><div
+                            class="et_pb_button_module_wrapper et_pb_button_3_wrapper et_pb_button_alignment_center et_pb_module">
+                            <a
+                              class="et_pb_button et_pb_button_3 et_hover_enabled et_pb_bg_layout_light"
+                              href="https://kide.app/community/b7ba5770-37be-47e6-bafa-d0dd10fc520e/products"
+                              target="_blank">Lue lisää</a
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div><div
+                      class="et_pb_section et_pb_section_2 et_pb_with_background et_section_regular">
+                      <div class="et_pb_row et_pb_row_2 et_pb_gutters2 et_pb_row_1-4_3-4">
+                        <div
+                          class="et_pb_column et_pb_column_1_4 et_pb_column_5 et_pb_css_mix_blend_mode_passthrough">
+                          <div class="et_pb_module et_pb_image et_pb_image_0">
+                            <span class="et_pb_image_wrap has-box-shadow-overlay"
+                              ><div class="box-shadow-overlay"></div><img
+                                loading="lazy"
+                                decoding="async"
+                                width="750"
+                                height="423"
+                                src="https://opiskelijakunta.net/wp-content/uploads/2025/05/Edustajistovaalit-2024-kotisivut-1.jpg"
+                                alt=""
+                                title="Edustajistovaalit 2024 kotisivut (1)"
+                                srcset="https://opiskelijakunta.net/wp-content/uploads/2025/05/Edustajistovaalit-2024-kotisivut-1.jpg 750w, https://opiskelijakunta.net/wp-content/uploads/2025/05/Edustajistovaalit-2024-kotisivut-1-480x271.jpg 480w"
+                                sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) 750px, 100vw"
+                                class="wp-image-2340"
+                              /></span
+                            >
+                          </div>
+                        </div><div
+                          class="et_pb_column et_pb_column_3_4 et_pb_column_6 et_pb_css_mix_blend_mode_passthrough et-last-child">
+                          <div
+                            class="et_pb_module et_pb_blog_0 et_pb_posts et_pb_bg_layout_light et_pb_text_align_center">
+                            <div class="et_pb_ajax_pagination_container">
+                              <article
+                                id="post-2560"
+                                class="et_pb_post clearfix et_pb_no_thumb et_pb_blog_item_0_0 post-2560 post type-post status-publish format-standard has-post-thumbnail hentry category-blogi category-etusivulle category-uutiset">
+                                <h2 class="entry-title">
+                                  <a
+                                    href="https://opiskelijakunta.net/kannanotto-ei-kukaan-valmistu-nopeammin-koyhyydessa/"
+                                    >Kannanotto: Ei kukaan valmistu nopeammin köyhyydessä</a
+                                  >
+                                </h2><div class="post-content">
+                                  <div class="post-content-inner">
+                                    <p>
+                                      Opiskelijaliike on huutanut tätä. Opetus- ja
+                                      kulttuuriministeriö on sanonut sen. Nyt myös Kela on todennut
+                                      saman: opiskelijat eivät pärjää. Opintotuen taso ei vastaa
+                                      todellisia elinkustannuksia, ja järjestelmä tarvitsee sekä...
+                                    </p>
+                                  </div><a
+                                    href="https://opiskelijakunta.net/kannanotto-ei-kukaan-valmistu-nopeammin-koyhyydessa/"
+                                    class="more-link">lue lisää</a
+                                  >
+                                </div>
+                              </article><article
+                                id="post-2551"
+                                class="et_pb_post clearfix et_pb_no_thumb et_pb_blog_item_0_1 post-2551 post type-post status-publish format-standard has-post-thumbnail hentry category-blogi category-etusivulle category-uutiset">
+                                <h2 class="entry-title">
+                                  <a
+                                    href="https://opiskelijakunta.net/haku-turun-ammattikorkeakoulu-oyn-opiskelijaedustajaksi-on-auki-3/"
+                                    >Haku Turun ammattikorkeakoulu Oy:n opiskelijaedustajaksi on
+                                    auki</a
+                                  >
+                                </h2><div class="post-content">
+                                  <div class="post-content-inner">
+                                    <p>
+                                      Turun ammattikorkeakoulun opiskelijakunta – TUOn
+                                      keskusvaalilautakunta on avannut haun Turun
+                                      ammattikorkeakoulun osakeyhtiön hallituksen
+                                      opiskelijaedustajaksi. Opiskelijaedustajan luottamustoimi
+                                      kestää yhden vuoden 1.6.2026&nbsp;–...
+                                    </p>
+                                  </div><a
+                                    href="https://opiskelijakunta.net/haku-turun-ammattikorkeakoulu-oyn-opiskelijaedustajaksi-on-auki-3/"
+                                    class="more-link">lue lisää</a
+                                  >
+                                </div>
+                              </article>
+                            </div>
+                          </div><div
+                            class="et_pb_button_module_wrapper et_pb_button_4_wrapper et_pb_button_alignment_center et_pb_module">
+                            <a
+                              class="et_pb_button et_pb_button_4 et_hover_enabled et_pb_bg_layout_light"
+                              href="https://opiskelijakunta.net/ajankohtaista/">Katso kaikki</a
+                            >
+                          </div>
+                        </div>
+                      </div><div class="et_pb_row et_pb_row_3 et_pb_gutters2">
+                        <div
+                          class="et_pb_column et_pb_column_4_4 et_pb_column_7 et_pb_css_mix_blend_mode_passthrough et-last-child">
+                          <div class="et_pb_module difl_imagecarousel difl_imagecarousel_0">
+                            <div class="et_pb_module_inner">
+                              <div
+                                class="df_ic_container"
+                                data-settings='{"effect":"slide","desktop":"7","tablet":"1","mobile":"1","variable_width":"off","loop":true,"item_spacing":"30px","item_spacing_tablet":"","item_spacing_phone":"","arrow":"off","dots":"off","autoplay":"on","auto_delay":"4000","speed":"500","pause_hover":"off","centeredSlides":"off","order":"0","use_lightbox":"off","use_lightbox_caption":"off"}'
+                                data-item="7"
+                                data-itemtablet="1"
+                                data-itemphone="1">
+                                <div class="df_ic_inner_wrapper">
+                                  <div
+                                    class="swiper-container swiper-container-initialized swiper-container-horizontal">
+                                    <div
+                                      class="swiper-wrapper"
+                                      style="transition-duration: 0ms; transform: translate3d(-2253px, 0px, 0px);">
+                                      <div
+                                        class="et_pb_module difl_imagecarouselitem difl_imagecarouselitem_5 et_clickable swiper-slide swiper-slide-duplicate"
+                                        style="width: 721px; margin-right: 30px;"
+                                        data-swiper-slide-index="5">
+                                        <div class="et_pb_module_inner">
+                                          <div
+                                            class="df_ici_container"
+                                            data-src="https://opiskelijakunta.net/wp-content/uploads/2023/02/Nimeton-suunn.malli-16-min.jpg">
+                                            <div class="ic_image_wrapper">
+                                              <img
+                                                decoding="async"
+                                                class="df-ic-image"
+                                                src="https://opiskelijakunta.net/wp-content/uploads/2023/02/Nimeton-suunn.malli-16-min.jpg"
+                                                alt=""
+                                              />
+                                            </div><div class="overlay_wrapper"></div>
+                                          </div>
+                                        </div>
+                                      </div><div
+                                        class="et_pb_module difl_imagecarouselitem difl_imagecarouselitem_0 swiper-slide"
+                                        style="width: 721px; margin-right: 30px;"
+                                        data-swiper-slide-index="0">
+                                        <div class="et_pb_module_inner">
+                                          <div
+                                            class="df_ici_container"
+                                            data-src="https://opiskelijakunta.net/wp-content/uploads/2024/06/2_85.png">
+                                            <div class="ic_image_wrapper">
+                                              <img
+                                                decoding="async"
+                                                class="df-ic-image"
+                                                src="https://opiskelijakunta.net/wp-content/uploads/2024/06/2_85.png"
+                                                alt=""
+                                              />
+                                            </div><div class="overlay_wrapper"></div>
+                                          </div>
+                                        </div>
+                                      </div><div
+                                        class="et_pb_module difl_imagecarouselitem difl_imagecarouselitem_1 et_clickable swiper-slide swiper-slide-prev"
+                                        style="width: 721px; margin-right: 30px;"
+                                        data-swiper-slide-index="1">
+                                        <div class="et_pb_module_inner">
+                                          <div
+                                            class="df_ici_container"
+                                            data-src="https://opiskelijakunta.net/wp-content/uploads/2023/08/tok-logo-min.jpg">
+                                            <div class="ic_image_wrapper">
+                                              <img
+                                                decoding="async"
+                                                class="df-ic-image"
+                                                src="https://opiskelijakunta.net/wp-content/uploads/2023/08/tok-logo-min.jpg"
+                                                alt=""
+                                              />
+                                            </div><div class="overlay_wrapper"></div>
+                                          </div>
+                                        </div>
+                                      </div><div
+                                        class="et_pb_module difl_imagecarouselitem difl_imagecarouselitem_2 et_clickable swiper-slide swiper-slide-visible swiper-slide-active"
+                                        style="width: 721px; margin-right: 30px;"
+                                        data-swiper-slide-index="2">
+                                        <div class="et_pb_module_inner">
+                                          <div
+                                            class="df_ici_container"
+                                            data-src="https://opiskelijakunta.net/wp-content/uploads/2026/03/TS-logo.jpg">
+                                            <div class="ic_image_wrapper">
+                                              <img
+                                                decoding="async"
+                                                class="df-ic-image"
+                                                src="https://opiskelijakunta.net/wp-content/uploads/2026/03/TS-logo.jpg"
+                                                alt=""
+                                              />
+                                            </div><div class="overlay_wrapper"></div>
+                                          </div>
+                                        </div>
+                                      </div><div
+                                        class="et_pb_module difl_imagecarouselitem difl_imagecarouselitem_3 et_clickable swiper-slide swiper-slide-next"
+                                        style="width: 721px; margin-right: 30px;"
+                                        data-swiper-slide-index="3">
+                                        <div class="et_pb_module_inner">
+                                          <div
+                                            class="df_ici_container"
+                                            data-src="https://opiskelijakunta.net/wp-content/uploads/2023/05/Unica_TUOnettisivut600x600-min.jpg">
+                                            <div class="ic_image_wrapper">
+                                              <img
+                                                decoding="async"
+                                                class="df-ic-image"
+                                                src="https://opiskelijakunta.net/wp-content/uploads/2023/05/Unica_TUOnettisivut600x600-min.jpg"
+                                                alt=""
+                                              />
+                                            </div><div class="overlay_wrapper"></div>
+                                          </div>
+                                        </div>
+                                      </div><div
+                                        class="et_pb_module difl_imagecarouselitem difl_imagecarouselitem_4 et_clickable swiper-slide"
+                                        style="width: 721px; margin-right: 30px;"
+                                        data-swiper-slide-index="4">
+                                        <div class="et_pb_module_inner">
+                                          <div
+                                            class="df_ici_container"
+                                            data-src="https://opiskelijakunta.net/wp-content/uploads/2024/01/2_33.png">
+                                            <div class="ic_image_wrapper">
+                                              <img
+                                                decoding="async"
+                                                class="df-ic-image"
+                                                src="https://opiskelijakunta.net/wp-content/uploads/2024/01/2_33.png"
+                                                alt=""
+                                              />
+                                            </div><div class="overlay_wrapper"></div>
+                                          </div>
+                                        </div>
+                                      </div><div
+                                        class="et_pb_module difl_imagecarouselitem difl_imagecarouselitem_5 et_clickable swiper-slide"
+                                        style="width: 721px; margin-right: 30px;"
+                                        data-swiper-slide-index="5">
+                                        <div class="et_pb_module_inner">
+                                          <div
+                                            class="df_ici_container"
+                                            data-src="https://opiskelijakunta.net/wp-content/uploads/2023/02/Nimeton-suunn.malli-16-min.jpg">
+                                            <div class="ic_image_wrapper">
+                                              <img
+                                                decoding="async"
+                                                class="df-ic-image"
+                                                src="https://opiskelijakunta.net/wp-content/uploads/2023/02/Nimeton-suunn.malli-16-min.jpg"
+                                                alt=""
+                                              />
+                                            </div><div class="overlay_wrapper"></div>
+                                          </div>
+                                        </div>
+                                      </div><div
+                                        class="et_pb_module difl_imagecarouselitem difl_imagecarouselitem_0 swiper-slide swiper-slide-duplicate"
+                                        style="width: 721px; margin-right: 30px;"
+                                        data-swiper-slide-index="0">
+                                        <div class="et_pb_module_inner">
+                                          <div
+                                            class="df_ici_container"
+                                            data-src="https://opiskelijakunta.net/wp-content/uploads/2024/06/2_85.png">
+                                            <div class="ic_image_wrapper">
+                                              <img
+                                                decoding="async"
+                                                class="df-ic-image"
+                                                src="https://opiskelijakunta.net/wp-content/uploads/2024/06/2_85.png"
+                                                alt=""
+                                              />
+                                            </div><div class="overlay_wrapper"></div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div><span
+                                      class="swiper-notification"
+                                      aria-live="assertive"
+                                      aria-atomic="true"></span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div><footer class="et-l et-l--footer">
+            <div class="et_builder_inner_content et_pb_gutters3">
+              <div
+                class="et_pb_section et_pb_section_0_tb_footer et_pb_with_background et_section_regular">
+                <div class="et_pb_row et_pb_row_0_tb_footer et_pb_gutters1">
+                  <div
+                    class="et_pb_column et_pb_column_1_3 et_pb_column_0_tb_footer et_pb_css_mix_blend_mode_passthrough">
+                    <div
+                      class="et_pb_module et_pb_text et_pb_text_0_tb_footer et_pb_text_align_left et_pb_bg_layout_light">
+                      <div class="et_pb_text_inner">
+                        <h4 style="text-align: center;">Yhteystiedot</h4><p
+                          style="text-align: center;">
+                          <span>S-posti: tuo@opiskelijakunta.net</span><br /><span
+                            >Osoite: Joukahaisenkatu 7,
+                          </span><span>20520 Turku</span>
+                        </p>
+                      </div>
+                    </div><ul
+                      class="et_pb_module et_pb_social_media_follow et_pb_social_media_follow_0_tb_footer clearfix et_pb_text_align_center et_pb_bg_layout_light">
+                      <li
+                        class="et_pb_social_media_follow_network_0_tb_footer et_pb_social_icon et_pb_social_network_link et-social-facebook">
+                        <a
+                          href="https://www.facebook.com/opiskelijakunta"
+                          class="icon et_pb_with_border"
+                          title="Seuraa Facebook"
+                          target="_blank"
+                          ><span class="et_pb_social_media_follow_network_name" aria-hidden="true"
+                            >Seuraa</span
+                          ></a
+                        >
+                      </li><li
+                        class="et_pb_social_media_follow_network_1_tb_footer et_pb_social_icon et_pb_social_network_link et-social-instagram">
+                        <a
+                          href="https://www.instagram.com/opiskelijakunta_tuo/"
+                          class="icon et_pb_with_border"
+                          title="Seuraa Instagram"
+                          target="_blank"
+                          ><span class="et_pb_social_media_follow_network_name" aria-hidden="true"
+                            >Seuraa</span
+                          ></a
+                        >
+                      </li><li
+                        class="et_pb_social_media_follow_network_2_tb_footer et_pb_social_icon et_pb_social_network_link et-social-youtube">
+                        <a
+                          href="https://www.youtube.com/channel/UCfN4E_jr2WYM1IulBUJBkDw/featured"
+                          class="icon et_pb_with_border"
+                          title="Seuraa Youtube"
+                          target="_blank"
+                          ><span class="et_pb_social_media_follow_network_name" aria-hidden="true"
+                            >Seuraa</span
+                          ></a
+                        >
+                      </li>
+                    </ul>
+                  </div><div
+                    class="et_pb_column et_pb_column_1_3 et_pb_column_1_tb_footer et_pb_css_mix_blend_mode_passthrough">
+                    <div class="et_pb_module et_pb_image et_pb_image_0_tb_footer">
+                      <a href="https://opiskelijakunta.net/"
+                        ><span class="et_pb_image_wrap"
+                          ><img
+                            loading="lazy"
+                            decoding="async"
+                            width="600"
+                            height="117"
+                            src="https://opiskelijakunta.net/wp-content/uploads/2022/08/tuo-logo-min-3.png"
+                            alt=""
+                            title="tuo-logo-min-3"
+                            srcset="https://opiskelijakunta.net/wp-content/uploads/2022/08/tuo-logo-min-3.png 600w, https://opiskelijakunta.net/wp-content/uploads/2022/08/tuo-logo-min-3-480x94.png 480w"
+                            sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) 600px, 100vw"
+                            class="wp-image-102"
+                          /></span
+                        ></a
+                      >
+                    </div>
+                  </div><div
+                    class="et_pb_column et_pb_column_1_3 et_pb_column_2_tb_footer et_pb_css_mix_blend_mode_passthrough et-last-child">
+                    <div class="et_pb_module et_pb_code et_pb_code_0_tb_footer">
+                      <div class="et_pb_code_inner">
+                        <iframe
+                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6437.790699472227!2d22.28708833085335!3d60.44891557297526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x468c76e7f172df75%3A0xc6da0c1f4bf1fee1!2sJoukahaisenkatu%207%2C%2020520%20Turku!5e0!3m2!1sen!2sfi!4v1756825049168!5m2!1sen!2sfi"
+                          width="600"
+                          height="200"
+                          style="border:0;"
+                          allowfullscreen=""
+                          loading="lazy"
+                          referrerpolicy="no-referrer-when-downgrade"></iframe>
+                      </div>
+                    </div><div
+                      class="et_pb_module et_pb_text et_pb_text_1_tb_footer et_pb_text_align_left et_pb_bg_layout_light">
+                      <div class="et_pb_text_inner">
+                        <p style="text-align: left;">
+                          <span
+                            >Copyright 2025 TUO | <a
+                              href="https://opiskelijakunta.net/tietosuojaseloste/"
+                              >Tietosuojaseloste</a
+                            >| <a href="https://foorly.com/kotisivut-yritykselle/"
+                              >Kotisivujen toteutus: Foorly</a
+                            ></span
+                          >
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>
