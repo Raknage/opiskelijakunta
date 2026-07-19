@@ -52,7 +52,7 @@
       "prettier-plugin-astro",
       "prettier-plugin-tailwindcss"
     ],
-    "printWidth": 200,
+    "printWidth": 100,
     "singleAttributePerLine": false
   },
   "devEngines": {
