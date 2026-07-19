@@ -39,6 +39,7 @@
   },
   "prettier": {
     "bracketSameLine": true,
+    "htmlWhitespaceSensitivity": "ignore",
     "overrides": [
       {
         "files": "*.astro",
@@ -51,7 +52,7 @@
       "prettier-plugin-astro",
       "prettier-plugin-tailwindcss"
     ],
-    "printWidth": 100,
+    "printWidth": 200,
     "singleAttributePerLine": false
   },
   "devEngines": {
