@@ -1,5 +1,5 @@
 ---
-
+import { Image } from "astro:assets";
 ---
 
 <article>
@@ -59,11 +59,12 @@
 
   <p>25+</p><h3>Muita alennettuja tapahtumia</h3><canvas height="0" width="0"></canvas>
 
-  <img
+  <Image
     decoding="async"
     src="https://opiskelijakunta.net/wp-content/uploads/2022/10/Nimeton-suunn.malli-2-min.jpg"
     alt=""
     title="Nimetön suunn.malli (2)-min"
+    inferSize={true}
   />
 
   <h3>Jäsenedut</h3>
@@ -176,48 +177,53 @@
     <div style="transition-duration: 800ms; transform: translate3d(-2736px, 0px, 0px);">
       <div data-swiper-slide-index="2" style="width: 654px; margin-right: 30px;">
         <div data-src="https://opiskelijakunta.net/wp-content/uploads/2026/03/TS-logo.jpg">
-          <img
+          <Image
             decoding="async"
             src="https://opiskelijakunta.net/wp-content/uploads/2026/03/TS-logo.jpg"
             alt=""
+            inferSize={true}
           />
 
           <div data-swiper-slide-index="0" style="width: 654px; margin-right: 30px;">
             <div data-src="https://opiskelijakunta.net/wp-content/uploads/2024/01/2_33.png">
-              <img
+              <Image
                 decoding="async"
                 src="https://opiskelijakunta.net/wp-content/uploads/2024/01/2_33.png"
                 alt=""
+                inferSize={true}
               />
 
               <div data-swiper-slide-index="1" style="width: 654px; margin-right: 30px;">
                 <div
                   data-src="https://opiskelijakunta.net/wp-content/uploads/2023/02/Nimeton-suunn.malli-16-min.jpg">
-                  <img
+                  <Image
                     decoding="async"
                     src="https://opiskelijakunta.net/wp-content/uploads/2023/02/Nimeton-suunn.malli-16-min.jpg"
                     alt=""
+                    inferSize={true}
                   />
 
                   <div data-swiper-slide-index="2" style="width: 654px; margin-right: 30px;">
                     <div
                       data-src="https://opiskelijakunta.net/wp-content/uploads/2026/03/TS-logo.jpg">
-                      <img
+                      <Image
                         decoding="async"
                         src="https://opiskelijakunta.net/wp-content/uploads/2026/03/TS-logo.jpg"
                         alt=""
+                        inferSize={true}
                       />
 
                       <div data-swiper-slide-index="0" style="width: 654px; margin-right: 30px;">
                         <div
                           data-src="https://opiskelijakunta.net/wp-content/uploads/2024/01/2_33.png">
-                          <img
+                          <Image
                             decoding="async"
                             src="https://opiskelijakunta.net/wp-content/uploads/2024/01/2_33.png"
                             alt=""
+                            inferSize={true}
                           />
 
-                          <img
+                          <Image
                             decoding="async"
                             width="800"
                             height="400"

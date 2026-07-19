@@ -36,6 +36,10 @@ export default defineConfig({
     },
   ],
 
+  image: {
+    domains: ["opiskelijakunta.net", "cms.raknage.com"],
+  },
+
   vite: {
     plugins: [tailwindcss()],
   },
