@@ -1,5 +1,19 @@
 ---
+import type { PageProps } from "@/schemas";
 import { Image } from "astro:assets";
+
+export const props: PageProps = {
+  title: "Yhteystiedot",
+  navOrder: 6,
+  visible: true,
+  submenu: [
+    { label: "Tuo Lounge", id: "#lounge" },
+    { label: "Toimisto", id: "#henkilosto" },
+    { label: "Meidän yhteystiedot", id: "#henkilosto" },
+    { label: "Laskutustiedot", id: "#laskutus" },
+    { label: "Anna palautetta", id: "#palaute" },
+  ],
+};
 ---
 
 <article>

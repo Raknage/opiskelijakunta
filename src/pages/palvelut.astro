@@ -1,5 +1,18 @@
 ---
+import type { PageProps } from "@/schemas";
 import { Image } from "astro:assets";
+
+export const props: PageProps = {
+  title: "Palvelut",
+  navOrder: 5,
+  visible: true,
+  submenu: [
+    { label: "Tuo Lounge", id: "#olohuone" },
+    { label: "Tapahtumat", id: "#tapahtumat" },
+    { label: "Lainaus", id: "#lainaus" },
+    { label: "Oikeusapu", id: "#oikeusapu" },
+  ],
+};
 ---
 
 <article>
@@ -45,14 +58,14 @@ import { Image } from "astro:assets";
     sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) 800px, 100vw"
   />
 
-  <h3>Tuo Lounge<o:p></o:p></h3>
+  <h3>Tuo Lounge</h3>
 
   <p>
     Löydät TUO Loungen EduCityn toisesta kerroksesta 2069 Kahvio -tilasta. Loungeen voit tulla
     esimerkiksi luentojen välissä tai ruokatauolla pelaamaan biljardia, juomaan rauhassa kupin
     kuumaa tai&nbsp; vaikka haastamaan kaverin änärissä. TUO Loungesta löydät myös opiskelijakunnan
     henkilöstöä, jotka auttavat esimerkiksi opiskelun ongelmatilanteisiin ja jäsenyyteen liittyvissä
-    asioissa.<o:p></o:p>
+    asioissa.
   </p><p>
     TUO Loungesta voit ostaa erilaisia TUOlaiselle sopivia TUOtteita, kuten haalarimerkkejä,
     shottilaseja ja juomapulloja. Voit myös ostaa Turku AMK hupparin, collegen tai t-paidan

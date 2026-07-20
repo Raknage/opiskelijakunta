@@ -1,0 +1,30 @@
+---
+import { pageProps } from "@/schemas";
+
+const matches = import.meta.glob(["@/pages/*.astro", "!**/index.astro"], { eager: true });
+const allPages = Object.values(matches) as any[];
+const navItems = allPages
+  .map((page) => {
+    return { ...pageProps.parse(page.props), url: page.url };
+  })
+  .filter((page) => page.visible === true)
+  .sort((a, b) => a.navOrder - b.navOrder);
+
+console.log(navItems);
+---
+
+<nav>
+  <ul class="flex flex-wrap">
+    {
+      navItems.map((page) => {
+        return (
+          <li class="py-6.5 pr-5">
+            <a class="" href={page.url}>
+              {page.title} ^
+            </a>
+          </li>
+        );
+      })
+    }
+  </ul>
+</nav>

@@ -1,5 +1,17 @@
 ---
+import type { PageProps } from "@/schemas";
 import { Image } from "astro:assets";
+
+export const props: PageProps = {
+  title: "Jäsenyys",
+  navOrder: 2,
+  visible: true,
+  submenu: [
+    { label: "Liity jäseneksi", id: "#liity" },
+    { label: "Jäsenedut", id: "#edut" },
+    { label: "Jäsenyyden ehdot", id: "#ehdot" },
+  ],
+};
 ---
 
 <article>
@@ -61,9 +73,9 @@ import { Image } from "astro:assets";
 
   <Image
     decoding="async"
-    src="https://opiskelijakunta.net/wp-content/uploads/2022/10/Nimeton-suunn.malli-2-min.jpg"
+    src="https://opiskelijakunta.net/wp-content/uploads/2022/10/Nimeton-suunn.malli-6-min.jpg"
     alt=""
-    title="Nimetön suunn.malli (2)-min"
+    title="Nimetön suunn.malli (6)-min"
     inferSize={true}
   />
 

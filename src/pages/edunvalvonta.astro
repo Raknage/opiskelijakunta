@@ -1,5 +1,19 @@
 ---
+import type { PageProps } from "@/schemas";
 import { Image } from "astro:assets";
+
+export const props: PageProps = {
+  title: "Edunvalvonta",
+  navOrder: 4,
+  visible: true,
+  submenu: [
+    { label: "Edunvalvonta", id: "#edunvalvonta" },
+    { label: "Häirintäyhdyshenkilö", id: "#hairinta" },
+    { label: "Opiskelijaedustajat", id: "#edustajat" },
+    { label: "Aktiivit", id: "#aktiivit" },
+    { label: "Johtoryhmävastaavat", id: "#johtoryhma" },
+  ],
+};
 ---
 
 <article>

@@ -1,5 +1,16 @@
 ---
+import type { PageProps } from "@/schemas";
 import { Image } from "astro:assets";
+
+export const props: PageProps = {
+  title: "Ajankohtaista",
+  navOrder: 3,
+  visible: true,
+  submenu: [
+    { label: "Uutiset ja blogit", id: "#uutiset" },
+    { label: "Tapahtumakalenteri", id: "#kalenteri" },
+  ],
+};
 ---
 
 <article>

@@ -1,5 +1,22 @@
 ---
+import type { PageProps } from "@/schemas";
 import { Image } from "astro:assets";
+
+export const props: PageProps = {
+  title: "Opiskelijakunta",
+  navOrder: 1,
+  submenu: [
+    { label: "Tietoa meistä", id: "#meista" },
+    {
+      label: "Materiaalipankki",
+      url: "https://drive.google.com/drive/folders/1SEF2-BdoH69qyV8FtQBjdjrWZJWuvBKM?usp=share_link",
+    },
+    { label: "Hallitus", id: "#hallitus" },
+    { label: "Henkilökunta", id: "#henkilokunta" },
+    { label: "Edustajisto", id: "#edustajisto" },
+    { label: "Kumppaniyhdistykset", id: "#yhdistykset" },
+  ],
+};
 ---
 
 <article>

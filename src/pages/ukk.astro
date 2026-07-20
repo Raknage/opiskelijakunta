@@ -1,5 +1,13 @@
 ---
+import type { PageProps } from "@/schemas";
 import { Image } from "astro:assets";
+
+export const props: PageProps = {
+  title: "UKK",
+  navOrder: 7,
+  visible: true,
+  submenu: [],
+};
 ---
 
 <article>

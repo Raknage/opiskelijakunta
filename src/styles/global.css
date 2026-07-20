@@ -19,11 +19,6 @@
 
 :root {
   background-color: #333;
-  color: #eee;
-}
-
-body {
-  font-family: var(--font-atkinson);
-  margin: 0;
-  padding: 0;
+  color: #fff;
+  font-family: var(--font-open-sans);
 }
