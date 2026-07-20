@@ -1,5 +1,6 @@
 ---
 import { pageProps } from "@/schemas";
+import { ChevronDown } from "@lucide/astro";
 
 const matches = import.meta.glob(["@/pages/*.astro", "!**/index.astro"], { eager: true });
 const allPages = Object.values(matches) as any[];
@@ -9,8 +10,6 @@ const navItems = allPages
   })
   .filter((page) => page.visible === true)
   .sort((a, b) => a.navOrder - b.navOrder);
-
-console.log(navItems);
 ---
 
 <nav>
@@ -18,10 +17,11 @@ console.log(navItems);
     {
       navItems.map((page) => {
         return (
-          <li class="py-6.5 pr-5">
+          <li class="flex items-center py-6.5 pr-5">
             <a class="" href={page.url}>
-              {page.title} ^
+              {page.title}
             </a>
+            {page.submenu[0] && <ChevronDown size={20} />}
           </li>
         );
       })
