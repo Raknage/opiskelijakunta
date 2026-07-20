@@ -34,6 +34,46 @@ export default defineConfig({
         ],
       },
     },
+    {
+      provider: fontProviders.local(),
+      name: "BobbyJonesSoftRegular",
+      cssVariable: "--font-bobby-jones",
+      fallbacks: ["Lato", "Helvetica", "Arial", "Lucida", "sans-serif"],
+      options: {
+        variants: [
+          {
+            src: ["./src/assets/fonts/BobbyJonesSoftRegular.woff2"],
+            weight: "normal",
+            style: "normal",
+            display: "swap",
+          },
+        ],
+      },
+    },
+    {
+      provider: fontProviders.fontsource(),
+      name: "Lato",
+      fallbacks: ["Helvetica", "Arial", "Lucida", "sans-serif"],
+      cssVariable: "--font-lato",
+      weights: [400, 700, 900],
+      styles: ["normal"],
+    },
+    {
+      provider: fontProviders.fontsource(),
+      name: "Open Sans",
+      cssVariable: "--font-open-sans",
+      fallbacks: ["Arial", "sans-serif"],
+      weights: [400, 600, 700],
+      styles: ["normal"],
+    },
+    {
+      provider: fontProviders.fontsource(),
+      name: "Montserrat",
+      cssVariable: "--font-montserrat",
+      fallbacks: ["Open Sans", "Arial", "sans-serif"],
+      weights: ["100 900"],
+      styles: ["normal"],
+    },
   ],
 
   image: {

@@ -1,6 +1,22 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
+@theme inline {
+  --font-open-sans: var(--font-open-sans);
+  --font-lato: var(--font-lato);
+  --font-bobby-jones: var(--font-bobby-jones);
+  --font-montserrat: var(--font-montserrat);
+
+  --font-sans: var(--font-montserrat), var(--font-open-sans);
+  --font-heading: var(--font-bobby-jones), var(--font-lato);
+
+  --color-tuo-blue: #00aec7;
+  --color-tuo-yellow: #ffd900;
+  --color-tuo-red: #aa0061;
+  --color-tuo-dark-blue: #007a8b;
+  --color-tuo-bg: #f7f7f7;
+}
+
 :root {
   background-color: #333;
   color: #eee;
