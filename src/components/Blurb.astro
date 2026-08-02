@@ -1,0 +1,64 @@
+---
+import SymbolRound from "./ui/BlurbSymbol.astro";
+
+type Blurb = {
+  symbol: "heart" | "star" | "users" | "handshake" | "shopping" | "coffee";
+  heading: string;
+  text: string;
+  link: string;
+  external?: "_blank";
+};
+
+const blurbs = [
+  {
+    symbol: "heart",
+    heading: "Opiskelijakunta",
+    text: "Yhdessä parempaa opiskelijaelämää",
+    link: "/opiskelijakunta",
+  },
+  {
+    symbol: "star",
+    heading: "Liity jäseneksi",
+    text: "Tule osaksi yhteisöämme!",
+    link: "/jasenyys",
+  },
+  {
+    symbol: "coffee",
+    heading: "TUO lounge",
+    text: "Yhteisömme kohtaamispaikka",
+    link: "/palvelut",
+  },
+  {
+    symbol: "shopping",
+    heading: "Verkkokauppa",
+    text: "Osaksi yhteisöä kotisohvalta",
+    link: "https://kide.app/community/b7ba5770-37be-47e6-bafa-d0dd10fc520e/products",
+    external: "_blank",
+  },
+] as Blurb[];
+---
+
+<section
+  class="border-tuo-yellow shadow-tuo-dark-blue/30 m-auto my-[-10%] w-fit max-w-9/10 rounded-[15px] border-t-18 bg-white tracking-wider text-[#333] shadow-md">
+  <div class="grid sm:grid-cols-2 lg:grid-cols-4">
+    {
+      blurbs.map((b) => {
+        return (
+          <div class="grid min-w-60 grid-rows-[auto_1fr_1fr_auto] place-items-center px-10 py-5 text-center lg:py-7.5">
+            <SymbolRound icon={b.symbol} />
+            <h4 class="pb-2.5 text-lg font-black text-neutral-800 uppercase">{b.heading}</h4>
+            <p class="font-normal text-neutral-700">{b.text}</p>
+            <a
+              href={b.link}
+              target={b.external}
+              class="bg-tuo-blue text-tuo-yellow hover:bg-tuo-dark-blue mt-5 min-w-fit rounded-md px-8 py-2.5 font-bold">
+              Lue lisää
+            </a>
+          </div>
+        );
+      })
+    }
+  </div>
+</section>
+
+<div class="pt-13.5 pb-50"></div>

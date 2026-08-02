@@ -1,5 +1,6 @@
 ---
 import Hero from "@/components/Hero.astro";
+import Blurb from "@/components/Blurb.astro";
 import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
 ---
@@ -7,26 +8,8 @@ import { Image } from "astro:assets";
 <Layout>
   <main>
     <Hero title="Luomassa parempaa opiskelijaelämää" />
+    <Blurb />
     <article>
-      
-      <h4>Opiskelijakunta</h4>
-      <p>Yhdessä parempaa opiskelijaelämää</p>
-      <a href="https://opiskelijakunta.net/opiskelijakunta/">Lue lisää</a>
-      
-      <h4>Liity jäseneksi</h4>
-      <p>Tule osaksi yhteisöämme!</p>
-      <a href="https://opiskelijakunta.net/jasenyys/">Lue lisää</a>
-      
-      <h4>TUO lounge</h4><p>Yhteisömme kohtaamispaikka</p>
-      <a href="https://opiskelijakunta.net/palvelut/">Lue lisää</a>
-      
-      <h4>Verkkokauppa</h4>
-      <p>Osaksi yhteisöä kotisohvalta</p>
-      <a
-        href="https://kide.app/community/b7ba5770-37be-47e6-bafa-d0dd10fc520e/products"
-        target="_blank">
-        Lue lisää
-      </a>
       <Image
         loading="lazy"
         decoding="async"

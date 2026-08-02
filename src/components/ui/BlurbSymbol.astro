@@ -1,0 +1,22 @@
+---
+import { Heart, Star, Users, Handshake, ShoppingCart, Coffee } from "@lucide/astro";
+
+interface Props {
+  icon: "heart" | "star" | "users" | "handshake" | "shopping" | "coffee";
+  size?: number;
+}
+
+const { icon = "heart", size = 48 } = Astro.props;
+---
+
+<icon>
+  <div
+    class="text-tuo-yellow bg-tuo-blue mb-7.5 flex h-22.5 w-22.5 items-center justify-center rounded-full">
+    {icon == "heart" && <Heart size={size} />}
+    {icon == "star" && <Star size={size} />}
+    {icon == "users" && <Users size={size} />}
+    {icon == "handshake" && <Handshake size={size} />}
+    {icon == "shopping" && <ShoppingCart size={size} />}
+    {icon == "coffee" && <Coffee size={size} />}
+  </div>
+</icon>
