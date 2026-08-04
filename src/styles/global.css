@@ -20,5 +20,5 @@
 :root {
   background-color: #fff;
   color: #000;
-  font-family: var(--font-open-sans);
+  font-family: var(--font-lato), Arial, Helvetica, sans-serif;
 }

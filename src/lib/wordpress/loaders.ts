@@ -11,8 +11,9 @@ export function wpPostsLoader() {
 
       const postData = await getPosts();
 
-      ctx.store.clear();
-      ctx.logger.info("DataStore cleared");
+      // If env == dev ???
+      // ctx.store.clear();
+      // ctx.logger.info("DataStore cleared");
 
       for (const post of postData) {
         const id = post.id;
