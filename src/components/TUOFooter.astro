@@ -1,62 +1,89 @@
 ---
 import { Image } from "astro:assets";
+import { Facebook, Instagram, Youtube } from "simple-icons-astro";
+
+const size = 48;
 ---
 
-<footer>
-  <h4 style="text-align: center;">Yhteystiedot</h4><p style="text-align: center;">
-    S-posti: tuo@opiskelijakunta.net<br />
-    Osoite: Joukahaisenkatu 7, 20520 Turku
-  </p>
+<footer class="bg-tuo-blue w-full">
+  <div class="m-auto grid w-9/10 place-content-center gap-4 py-6.75 text-white lg:grid-cols-3">
+    <div class="grid place-content-center place-items-center">
+      <h4 class="text-tuo-yellow pb-2 text-xl font-bold">Yhteystiedot</h4>
+      <p>S-posti: tuo@opiskelijakunta.net</p>
+      <p>Osoite: Joukahaisenkatu 7, 20520 Turku</p>
+      <ul class="grid grid-cols-4 place-content-center place-items-center gap-6 pt-4">
+        <li>
+          <a
+            href="https://www.facebook.com/opiskelijakunta"
+            title="Seuraa Facebook"
+            target="_blank">
+            <Facebook size={size} class="text-[#0866FF]" />
+          </a>
+        </li><li>
+          <a
+            href="https://www.instagram.com/opiskelijakunta_tuo/"
+            title="Seuraa Instagram"
+            target="_blank">
+            <Instagram size={size} class="text-[#FF0069]" />
+          </a>
+        </li><li>
+          <a
+            href="https://www.youtube.com/channel/UCfN4E_jr2WYM1IulBUJBkDw/featured"
+            title="Seuraa Youtube"
+            target="_blank">
+            <Youtube size={size} class="text-[#FF0000]" />
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://kide.app/community/b7ba5770-37be-47e6-bafa-d0dd10fc520e"
+            title="Seuraa Kide.app"
+            target="_blank">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width={size}
+              height={size}
+              viewBox="0 0 24 24"
+              fill="none">
+              <path
+                d="M17.4489 8.91603V6.6054H15.0617L9.32105 12.382L9.33241 2.2758L7.70422 0.000488281L6 2.2758V14.094L8.09445 16.3493C8.09445 16.3493 10.4445 15.9351 10.4943 15.9133C10.5442 15.8915 17.4489 8.91603 17.4489 8.91603Z"
+                fill="#5E35B1">
+              </path>
+              <path
+                d="M17.4482 21.6893L12.5457 16.207L11.4616 17.2425L9.3916 17.7438L15.0448 24H17.4482V21.6893Z"
+                fill="#5E35B1">
+              </path>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
 
-  <ul>
-    <li>
-      <a href="https://www.facebook.com/opiskelijakunta" title="Seuraa Facebook" target="_blank">
-        Seuraa
-      </a>
-    </li><li>
-      <a
-        href="https://www.instagram.com/opiskelijakunta_tuo/"
-        title="Seuraa Instagram"
-        target="_blank">
-        Seuraa
-      </a>
-    </li><li>
-      <a
-        href="https://www.youtube.com/channel/UCfN4E_jr2WYM1IulBUJBkDw/featured"
-        title="Seuraa Youtube"
-        target="_blank">
-        Seuraa
-      </a>
-    </li>
-  </ul>
-
-  <a href="https://opiskelijakunta.net/">
-    <Image
-      loading="lazy"
-      decoding="async"
-      width="600"
-      height="117"
-      src="https://opiskelijakunta.net/wp-content/uploads/2022/08/tuo-logo-min-3.png"
-      alt=""
-      title="tuo-logo-min-3"
-      srcset="https://opiskelijakunta.net/wp-content/uploads/2022/08/tuo-logo-min-3.png 600w, https://opiskelijakunta.net/wp-content/uploads/2022/08/tuo-logo-min-3-480x94.png 480w"
-      sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) 600px, 100vw"
-    />
-  </a>
-
-  <iframe
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6437.790699472227!2d22.28708833085335!3d60.44891557297526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x468c76e7f172df75%3A0xc6da0c1f4bf1fee1!2sJoukahaisenkatu%207%2C%2020520%20Turku!5e0!3m2!1sen!2sfi!4v1756825049168!5m2!1sen!2sfi"
-    width="600"
-    height="200"
-    style="border:0;"
-    allowfullscreen=""
-    loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade">
-  </iframe>
-
-  <p style="text-align: left;">
-    Copyright 2025 TUO | <a href="https://opiskelijakunta.net/tietosuojaseloste/">
-      Tietosuojaseloste
+    <a href="/" class="mr-2 grid place-items-center">
+      <Image
+        loading="lazy"
+        decoding="async"
+        width="600"
+        height="117"
+        src="https://opiskelijakunta.net/wp-content/uploads/2022/08/tuo-logo-min-3.png"
+        alt=""
+        title="tuo-logo-min-3"
+        srcset="https://opiskelijakunta.net/wp-content/uploads/2022/08/tuo-logo-min-3.png 600w, https://opiskelijakunta.net/wp-content/uploads/2022/08/tuo-logo-min-3-480x94.png 480w"
+        sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) 600px, 100vw"
+      />
     </a>
-  </p>
+
+    <div class="mx-10">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1654.7017825542307!2d22.296170053041916!3d60.44879560864229!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x468c76e7f172df75%3A0xc6da0c1f4bf1fee1!2sJoukahaisenkatu%207%2C%2020520%20Turku!5e0!3m2!1sen!2sfi!4v1785874165567!5m2!1sen!2sfi"
+        class="h-50 w-full border-0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="strict-origin-when-cross-origin">
+      </iframe>
+      <p>
+        Copyright 2026 TUO | <a href="/tietosuojaseloste/">Tietosuojaseloste</a>
+      </p>
+    </div>
+  </div>
 </footer>
