@@ -1,0 +1,113 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import type { PageProps } from "@/schemas";
+
+export const props: PageProps = {
+  title: "Tietosuojaseloste",
+  navOrder: 99,
+  visible: false,
+};
+---
+
+<Layout>
+  <main
+    class="prose m-10 grid max-w-fit grid-cols-1 place-content-center py-6 xl:grid-cols-[1fr_3fr_1fr]">
+    <div></div>
+    <article class="text-neutral-500">
+      <h1>Tietosuojaseloste</h1>
+      <p>
+        Opiskelijakunnan toiminta edellyttää henkilötietojen käsittelyä, joka perustuu lakisääteisen
+        velvoitteen täyttämiseen, oikeutettuun etuun, muuhun asialliseen yhteyteen tai rekisteröidyn
+        nimenomaiseen suostumukseen. Henkilötietoja käytetään esimerkiksi jäsenyys- ja
+        asiakassuhteen hoitamiseen sekä kehittämiseen, työ- ja luottamustoimisuhteen vaatimiin
+        toimenpiteisiin, jäsendemokratian toteuttamiseen, tuutoroinnin tai luottamustoiminnan
+        opinnollistamiseen, yhteydenpitoon ja tiedottamiseen sekä tapahtumien järjestämiseen.
+      </p><p>
+        Tietoja voidaan käyttää myös yleisen edun mukaisia arkistointitarkoituksia taikka
+        tieteellisiä tai historiallisia tutkimustarkoituksia tai tilastollisia tarkoituksia varten.
+      </p><p>
+        Yksityisyys ja tietoturva ovat opiskelijakunnalle tärkeitä arvoja, joihin kiinnitetään
+        erityistä huomiota. Opiskelijakunta noudattaa hyvää tietojenkäsittelytapaa.
+      </p><p>
+        Henkilötietoja kerätään pääasiassa rekisteröidyltä itseltään. Lisäksi kerätään
+        verkkosivustoilla käyttäjien päätelaitetta koskevia tietoja evästeiden (”cookies”) ja muiden
+        vastaavien tekniikoiden, kuten analytiikan, avulla. Asiakkuuteen liittyvät CRM-tiedot
+        tulevat opiskelijakuntien yhteisestä verkkokaupasta.
+      </p><p>
+        Kerättyjä tietoja luovutetaan oleelliselle tahoille tarvittavissa määrin. Tahon oleellisuus
+        riippuu tilanteesta. Jotta jäsen voi saada käyttöönsä jäsentunnisteen, hänen tietojaan
+        luovutetaan jäsentunnisteen tarjoajalle. Jotta opiskelija voi ostaa jäsenhintaisia
+        tuotteita, hänen tietojaan luovutetaan verkkokaupalle. Jotta tuutori tai luottamustoimija
+        voi saada toiminnasta ansaitsemansa opintopisteet kirjatuksi opintorekisteriin, hänen
+        tietojaan luovutetaan korkeakoululle. Jotta hallinnon opiskelijaedustaja saa kokouskutsut ja
+        voi hoitaa tehtäväänsä, hänen tietonsa luovutetaan taholle, johon hänet on valittu
+        opiskelijaedustajaksi. Jotta opiskelijakunnan työntekijä tai luottamustoimija voi saada
+        palkkansa/palkkionsa, hänen tietojaan luovutetaan palkanlaskijalle. Ja niin edelleen.
+      </p><p>
+        Tietoja voidaan luovuttaa viranomaisille kulloinkin voimassa olevan lainsäädännön nojalla.
+      </p><p>
+        Yleisen tietosuoja-asetuksen mukaan rekisteröidyllä on oikeus tarkistaa tallennetut
+        tietonsa. Tarkastuspyyntö tulee tehdä kirjallisesti sähköpostitse osoitteeseen
+        tuo@opiskelijakunta.net, jotta pyytäjä on mahdollista identifioida. Pyynnön yhteydessä on
+        kerrottava, mitä tietoja halutaan tarkastaa ja miltä ajanjaksolta. Mikäli pyynnöt ovat
+        ilmeisen perusteettomia tai kohtuuttomia, erityisesti jos niitä esitetään toistuvasti,
+        voidaan periä kohtuullinen maksu tai kieltäytyä suorittamasta pyydettyä toimea.
+      </p><p>
+        Opiskelijakunta oikaisee, poistaa tai täydentää rekisterissä olevan, käsittelyn tarkoituksen
+        kannalta virheellisen, tarpeettoman, puutteellisen tai vanhentuneen henkilötiedon
+        oma-aloitteisesti tai rekisteröidyn vaatimuksesta. Tiedon korjaamiseksi rekisteröidyn tulee
+        ottaa yhteyttä osoitteeseen tuo@opiskelijakunta.net. Jäsenrekisterin osalta opiskelija voi
+        myös tarvittaessa muuttaa tietojaan itse jäsensivun kautta.
+      </p><p>
+        Lisätietoja henkilötietojen käsittelystä on saatavilla kustakin tietosuojaselosteesta.
+        Tietosuojaan liittyviä kysymyksiä voi myös lähettää osoitteeseen tuo@opiskelijakunta.net
+      </p><p>
+        Opiskelijakunta on sitoutunut seuraaviin periaatteisiin henkilötietojen käsittelyssä:
+      </p>
+
+      <ul>
+        <li>
+          <strong>Lainmukaisuus, kohtuullisuus, läpinäkyvyys</strong><ul>
+            <li>Kaikelle käsittelylle on löydettävissä oikeusperuste.</li><li>
+              Käsittelystä kerrotaan rekisteröidyille.
+            </li>
+          </ul>
+        </li><li>
+          <strong>Käyttötarkoitussidonnaisuus</strong><ul>
+            <li>
+              Tietoja käsitellään vain niihin tarkoituksiin, joihin ne on kerätty tai niiden kanssa
+              yhteensopiviin tarkoituksiin.
+            </li>
+          </ul>
+        </li><li>
+          <strong>Tietojen minimointi</strong><ul>
+            <li>Tietoja kerätään ja käsitellään vain tarvittavissa määrin.</li>
+          </ul>
+        </li><li>
+          <strong>Täsmällisyys</strong><ul>
+            <li>
+              Virheelliset tiedot oikaistaan, vanhentuneet tiedot päivitetään ja tarpeettomaksi
+              käyneet tiedot tuhotaan asianmukaisella tavalla luottamuksellisesti.
+            </li>
+          </ul>
+        </li><li>
+          <strong>Säilytyksen rajoittaminen</strong><ul>
+            <li>
+              Tiedot poistetaan, kun niitä ei enää tarkoituksen toteuttamiseen tarvita. Ellei niitä
+              yleisen edun mukaisesti arkistoida taikka käytetä tieteellisiin, historiallisiin tai
+              tilastollisiin tarkoituksiin.
+            </li>
+          </ul>
+        </li><li>
+          <strong>Tietojen eheys ja luottamuksellisuus</strong><ul>
+            <li>
+              Yleisestä tietoturvan tasosta huolehditaan asianmukaisin teknisin ja organisatorisin
+              toimin.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </article>
+    <div></div>
+  </main>
+</Layout>
