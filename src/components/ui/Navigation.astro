@@ -1,6 +1,6 @@
 ---
 import { pageProps } from "@/schemas";
-import { ChevronDown } from "@lucide/astro";
+import { ChevronDown, X, Menu } from "@lucide/astro";
 
 const matches = import.meta.glob(["@/pages/*.astro", "!**/index.astro"], { eager: true });
 const allPages = Object.values(matches) as any[];
@@ -12,8 +12,8 @@ const navItems = allPages
   .sort((a, b) => a.navOrder - b.navOrder);
 ---
 
-<nav>
-  <ul class="flex flex-wrap text-white">
+<nav class="hidden xl:flex">
+  <ul class="flex text-white">
     {
       navItems.map((page) => {
         return (
@@ -28,3 +28,76 @@ const navItems = allPages
     }
   </ul>
 </nav>
+
+<!-- Mobile nav -->
+
+<input type="checkbox" id="mobile-menu-toggle" class="peer sr-only" />
+<label
+  for="mobile-menu-toggle"
+  class="text-tuo-yellow fixed top-2 right-4 z-20 cursor-pointer peer-checked:hidden xl:hidden"
+  aria-label="Open Menu">
+  <Menu size={60} />
+</label>
+<label
+  for="mobile-menu-toggle"
+  class="text-tuo-yellow fixed top-2 right-4 z-20 hidden cursor-pointer peer-checked:block"
+  aria-label="Close Menu">
+  <X size={60} />
+</label>
+
+<nav
+  class="bg-tuo-blue border-tuo-yellow fixed top-18.75 right-0 z-20 h-full translate-x-full border-t-2 transition-all duration-300 ease-out peer-checked:translate-x-0">
+  <ul class="flex flex-col gap-3 text-white xl:hidden">
+    {
+      navItems.map((page) => {
+        const hasSubmenu = page.submenu && page.submenu.length > 0;
+        const submenuId = `submenu-${page.navOrder}`;
+
+        return (
+          <li class="hover:text-tuo-yellow hover:bg-tuo-dark-blue/10 grid w-full px-4">
+            {hasSubmenu ? (
+              <>
+                <input type="checkbox" id={submenuId} class="peer sr-only" />
+
+                <div class="hover:bg-tuo-dark-blue/10 flex items-center justify-between px-4 py-3">
+                  <a class="grow font-medium" href={page.url}>
+                    {page.title}
+                  </a>
+
+                  <label
+                    for={submenuId}
+                    class="text-tuo-yellow cursor-pointer p-1 transition-transform duration-300 peer-checked:rotate-180"
+                    aria-label={`Toggle ${page.title} Submenu`}>
+                    <ChevronDown size={20} />
+                  </label>
+                </div>
+
+                <ul class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out peer-checked:max-h-96">
+                  {page.submenu.map((subItem) => (
+                    <li class="hover:text-tuo-yellow block px-8 py-2 text-sm text-gray-200">
+                      <a href={"id" in subItem ? `${page.url}/${subItem.id}` : subItem.url}>
+                        {subItem.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </>
+            ) : (
+              <a
+                class="hover:text-tuo-yellow hover:bg-tuo-dark-blue/10 block px-4 py-3 font-medium"
+                href={page.url}>
+                {page.title}
+              </a>
+            )}
+          </li>
+        );
+      })
+    }
+  </ul>
+</nav>
+
+<label
+  for="mobile-menu-toggle"
+  class="bg-tuo-dark-blue/50 fixed inset-0 z-10 hidden peer-checked:block"
+  aria-label="Close Menu Backdrop">
+</label>

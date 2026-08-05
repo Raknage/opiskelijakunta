@@ -1,12 +1,15 @@
 ---
 import { Image } from "astro:assets";
 import Navigation from "@/components/ui/Navigation.astro";
+
+// logo z-21, nav z-10, navmenu z-20, backdrop z-10, header z-10
 ---
 
-<header class="bg-tuo-blue flex w-full items-center justify-between text-base font-bold uppercase">
-  <a href="/" class="mr-7.5 flex items-center">
+<header
+  class="bg-tuo-blue fixed z-10 flex w-full items-center justify-between text-base font-bold uppercase">
+  <a href="/" class="mr-7.5 flex items-center py-2">
     <Image
-      class="w-75"
+      class="z-21 w-75"
       inferSize
       fetchpriority="high"
       decoding="async"
@@ -16,115 +19,4 @@ import Navigation from "@/components/ui/Navigation.astro";
   </a>
 
   <Navigation />
-
-  <!-- <div class="flex">
-    <nav class="">
-      <ul class="flex gap-2 p-7">
-        <li>
-          <a href="/opiskelijakunta/">Opiskelijakunta</a>
-          <ul class="hidden">
-            <li>
-              <a href="/opiskelijakunta/#meista">Tietoa meistä</a>
-            </li><li>
-              <a
-                target="_blank"
-                href="https://drive.google.com/drive/folders/1SEF2-BdoH69qyV8FtQBjdjrWZJWuvBKM?usp=share_link">
-                Materiaalipankki
-              </a>
-            </li><li>
-              <a href="/opiskelijakunta/#hallitus">Hallitus</a>
-            </li><li>
-              <a href="/opiskelijakunta/#henkilokunta">Henkilökunta</a>
-            </li><li>
-              <a href="/opiskelijakunta/#edustajisto">Edustajisto</a>
-            </li><li>
-              <a href="/opiskelijakunta/#yhdistykset">Kumppaniyhdistykset</a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <a href="/jasenyys/">Jäsenyys</a>
-          <ul class="hidden">
-            <li>
-              <a href="/jasenyys/#liity">Liity jäseneksi</a>
-            </li><li>
-              <a href="/jasenyys/#edut">Jäsenedut</a>
-            </li><li>
-              <a href="/jasenyys/#ehdot">Jäsenyyden ehdot</a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <a href="/ajankohtaista/">Ajankohtaista</a>
-          <ul class="hidden">
-            <li>
-              <a href="/ajankohtaista/#uutiset">Uutiset ja blogit</a>
-            </li><li>
-              <a href="/ajankohtaista/#kalenteri">Tapahtumakalenteri</a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <a href="/edunvalvonta/">Edunvalvonta</a>
-          <ul class="hidden">
-            <li>
-              <a href="/edunvalvonta/#edunvalvonta">Edunvalvonta</a>
-            </li><li>
-              <a href="/edunvalvonta/#hairinta">Häirintäyhdyshenkilö</a>
-            </li><li>
-              <a href="/edunvalvonta/#edustajat">Opiskelijaedustajat</a>
-            </li><li>
-              <a href="/edunvalvonta/#aktiivit">Aktiivit</a>
-            </li><li>
-              <a href="/edunvalvonta/#johtoryhma">Johtoryhmävastaavat</a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <a href="/palvelut/">Palvelut</a>
-          <ul class="hidden">
-            <li>
-              <a href="/palvelut/#olohuone">Tuo Lounge</a>
-            </li><li>
-              <a href="/palvelut/#tapahtumat">Tapahtumat</a>
-            </li><li>
-              <a href="/palvelut/#lainaus">Lainaus</a>
-            </li><li>
-              <a href="/palvelut/#oikeusapu">Oikeusapu</a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <a href="/yhteystiedot/">Yhteystiedot</a>
-          <ul class="hidden">
-            <li>
-              <a href="/yhteystiedot/#lounge">Tuo Lounge</a>
-            </li><li>
-              <a href="/yhteystiedot/#henkilosto">Toimisto</a>
-            </li><li>
-              <a href="/yhteystiedot/#henkilosto">Meidän yhteystiedot</a>
-            </li><li>
-              <a href="/yhteystiedot/#laskutus">Laskutustiedot</a>
-            </li><li>
-              <a href="/yhteystiedot/#palaute">Anna palautetta</a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <a href="/ukk/">UKK</a>
-        </li><li>
-          <a href="/en/">
-            <Image
-              decoding="async"
-              src="https://opiskelijakunta.net/wp-content/plugins/translatepress-multilingual/assets/images/flags/en_GB.png"
-              width="18"
-              height="12"
-              alt="en_GB"
-              title="English"
-            />
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </div> -->
 </header>
