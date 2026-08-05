@@ -1,0 +1,24 @@
+---
+import { getCollection } from "astro:content";
+
+import BlogCard from "@/components/ui/BlogCard.astro";
+import TUOButton from "@/components/ui/TUOButton.astro";
+
+const posts = (await getCollection("posts"))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 3);
+---
+
+<section class="bg-tuo-bg flex w-full flex-col items-center py-4">
+  <div class="mx-auto grid w-11/12 max-w-7xl grid-cols-1 gap-6 md:grid-cols-3">
+    {
+      posts.map((post) => {
+        return <BlogCard {...post} />;
+      })
+    }
+  </div>
+
+  <div class="mt-4 grid place-content-center">
+    <TUOButton link="/ajankohtaista/" text="Katso kaikki" />
+  </div>
+</section>

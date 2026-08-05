@@ -1,0 +1,38 @@
+---
+import { Image } from "astro:assets";
+import { type CollectionEntry } from "astro:content";
+import FormattedDate from "../FormattedDate.astro";
+
+import FallbackImage from "@/assets/blog-placeholder-1.jpg";
+
+type Props = CollectionEntry<"posts">;
+
+const post = Astro.props;
+---
+
+<a
+  href={`blog/${post.data.slug}`}
+  class="group shadow-tuo-dark-blue bg-tuo-blue relative m-4 overflow-hidden rounded-md text-white shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg">
+  <div class="grid grid-cols-1 grid-rows-1">
+    <Image
+      class="col-start-1 row-start-1 mb-30 h-80 w-full object-cover"
+      src={post.data.featuredImage ? post.data.featuredImage?.node.guid : FallbackImage.src}
+      alt={post.data.featuredImage?.node.title}
+      loading="lazy"
+      inferSize={true}
+    />
+
+    <div
+      class="from-tuo-blue via-tuo-blue col-start-1 row-start-1 h-full w-full bg-linear-to-t to-transparent">
+    </div>
+
+    <div class="z-10 col-start-1 row-start-1 flex flex-col justify-end gap-2 self-end p-6">
+      <h4 class="text-tuo-yellow text-xl leading-tight font-bold">{post.data.title}</h4>
+      <FormattedDate date={post.data.date} />
+      <p class="line-clamp-2 text-sm text-gray-200">{post.data.content}</p>
+      <p class="text-tuo-yellow font-bold transition-transform group-hover:translate-x-1">
+        Lue lisää →
+      </p>
+    </div>
+  </div>
+</a>
