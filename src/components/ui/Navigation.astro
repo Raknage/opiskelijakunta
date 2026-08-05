@@ -13,15 +13,37 @@ const navItems = allPages
 ---
 
 <nav class="hidden xl:flex">
-  <ul class="flex text-white">
+  <ul class="flex items-center text-white">
     {
       navItems.map((page) => {
+        const hasSubmenu = page.submenu && page.submenu.length > 0;
+
         return (
-          <li class="flex items-center py-6.5 pr-5">
-            <a class="" href={page.url}>
+          <li class="group relative flex items-center py-6.5 pr-5">
+            <a class="hover:text-tuo-yellow transition-colors" href={page.url}>
               {page.title}
             </a>
-            {page.submenu[0] && <ChevronDown size={20} />}
+
+            {hasSubmenu && (
+              <>
+                <ChevronDown
+                  size={20}
+                  class="text-tuo-yellow ml-1 transition-transform duration-200 group-hover:rotate-180"
+                />
+
+                <ul class="bg-tuo-blue border-tuo-yellow shadow-tuo-dark-blue/50 pointer-events-none invisible absolute top-full left-0 z-30 min-w-50 rounded-b-sm border-t-2 py-2 opacity-0 shadow-xl transition-all duration-200 ease-out group-hover:pointer-events-auto group-hover:visible group-hover:opacity-100">
+                  {page.submenu.map((subItem) => (
+                    <li>
+                      <a
+                        class="hover:text-tuo-yellow hover:bg-tuo-dark-blue/20 block px-4 py-2.5 text-sm transition-colors"
+                        href={"id" in subItem ? `${page.url}/${subItem.id}` : subItem.url}>
+                        {subItem.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </>
+            )}
           </li>
         );
       })
@@ -59,16 +81,16 @@ const navItems = allPages
               <>
                 <input type="checkbox" id={submenuId} class="peer sr-only" />
 
-                <div class="hover:bg-tuo-dark-blue/10 flex items-center justify-between px-4 py-3">
+                <div class="hover:bg-tuo-dark-blue/10 flex items-center justify-between px-4 py-3 peer-checked:[&_svg]:rotate-180">
                   <a class="grow font-medium" href={page.url}>
                     {page.title}
                   </a>
 
                   <label
                     for={submenuId}
-                    class="text-tuo-yellow cursor-pointer p-1 transition-transform duration-300 peer-checked:rotate-180"
+                    class="text-tuo-yellow cursor-pointer p-1"
                     aria-label={`Toggle ${page.title} Submenu`}>
-                    <ChevronDown size={20} />
+                    <ChevronDown size={20} class="transition-transform duration-300" />
                   </label>
                 </div>
 
