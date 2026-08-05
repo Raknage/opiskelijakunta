@@ -1,12 +1,13 @@
 ---
-import SymbolRound from "./ui/BlurbSymbol.astro";
+import SymbolRound from "@/components/ui/BlurbSymbol.astro";
+import TUOButton from "@/components/ui/TUOButton.astro";
 
 type Blurb = {
   symbol: "heart" | "star" | "users" | "handshake" | "shopping" | "coffee";
   heading: string;
   text: string;
   link: string;
-  external?: "_blank";
+  target?: "_blank" | "_self";
 };
 
 const blurbs = [
@@ -33,13 +34,13 @@ const blurbs = [
     heading: "Verkkokauppa",
     text: "Osaksi yhteisöä kotisohvalta",
     link: "https://kide.app/community/b7ba5770-37be-47e6-bafa-d0dd10fc520e/products",
-    external: "_blank",
+    target: "_blank",
   },
 ] as Blurb[];
 ---
 
 <section
-  class="border-tuo-yellow shadow-tuo-dark-blue/30 m-auto my-[-10%] w-fit max-w-9/10 rounded-[15px] border-t-18 bg-white tracking-wider text-[#333] shadow-md">
+  class="border-tuo-yellow shadow-tuo-dark-blue/30 m-auto mt-[-10%] mb-8 w-fit max-w-9/10 rounded-[15px] border-t-18 bg-white tracking-wider text-[#333] shadow-md">
   <div class="grid sm:grid-cols-2 lg:grid-cols-4">
     {
       blurbs.map((b) => {
@@ -48,17 +49,10 @@ const blurbs = [
             <SymbolRound icon={b.symbol} />
             <h4 class="pb-2.5 text-lg font-black text-neutral-800 uppercase">{b.heading}</h4>
             <p class="font-normal text-neutral-700">{b.text}</p>
-            <a
-              href={b.link}
-              target={b.external}
-              class="bg-tuo-blue text-tuo-yellow hover:bg-tuo-dark-blue mt-5 min-w-fit rounded-md px-8 py-2.5 font-bold">
-              Lue lisää
-            </a>
+            <TUOButton link={b.link} text="Lue lisää" target={b.target} />
           </div>
         );
       })
     }
   </div>
 </section>
-
-<div class="pt-13.5 pb-50"></div>

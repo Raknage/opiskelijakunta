@@ -1,0 +1,16 @@
+---
+interface Props {
+  link: string;
+  target?: "_self" | "_blank" | undefined;
+  text: string;
+}
+const { link, target = "_self", text } = Astro.props;
+---
+
+<a
+  href={link}
+  target={target}
+  rel="noreferrer"
+  class="bg-tuo-blue text-tuo-yellow hover:bg-tuo-dark-blue shadow-tuo-dark-blue/50 mt-5 min-w-fit rounded-md px-8 py-2.5 font-bold shadow-sm">
+  {text}
+</a>
