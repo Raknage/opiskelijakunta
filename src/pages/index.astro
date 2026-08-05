@@ -3,10 +3,11 @@ import Hero from "@/components/Hero.astro";
 import Blurb from "@/components/Blurb.astro";
 import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
+import Slider from "@/components/Slider.astro";
 ---
 
 <Layout>
-  <main>
+  <main class="bg-tuo-bg">
     <Hero title="Luomassa parempaa opiskelijaelämää" />
     <Blurb />
     <article>
@@ -55,5 +56,7 @@ import { Image } from "astro:assets";
       </article>
       <a href="https://opiskelijakunta.net/ajankohtaista/">Katso kaikki</a>
     </article>
+
+    <Slider size={250} />
   </main>
 </Layout>

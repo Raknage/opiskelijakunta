@@ -15,6 +15,18 @@
   --color-tuo-red: #aa0061;
   --color-tuo-dark-blue: #007a8b;
   --color-tuo-bg: #f7f7f7;
+
+  --animate-infinite-scroll: infinite-scroll 60s linear infinite;
+
+  @keyframes infinite-scroll {
+    from {
+      transform: translateX(0%);
+    }
+
+    to {
+      transform: translateX(-100%);
+    }
+  }
 }
 
 :root {

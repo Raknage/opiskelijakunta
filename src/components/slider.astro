@@ -1,248 +1,100 @@
 ---
 import { Image } from "astro:assets";
+
+interface Props {
+  size: number;
+}
+
+const items = [
+  {
+    src: "https://opiskelijakunta.net/wp-content/uploads/2024/06/2_85.png",
+    alt: "Yhteistyökumppanit",
+    href: "/",
+  },
+  {
+    src: "https://opiskelijakunta.net/wp-content/uploads/2023/08/tok-logo-min.jpg",
+    alt: "TOK",
+    href: "https://tok.fi/s-etukortti/opiskelijalle",
+  },
+  {
+    src: "https://opiskelijakunta.net/wp-content/uploads/2026/03/TS-logo.jpg",
+    alt: "Turun Sanomat",
+    href: "https://asiakaspalvelu.ts.fi/tilaa/opiskelija/",
+  },
+  {
+    src: "https://opiskelijakunta.net/wp-content/uploads/2023/05/Unica_TUOnettisivut600x600-min.jpg",
+    alt: "Unica",
+    href: "https://www.unica.fi/ravintolat/",
+  },
+  {
+    src: "https://opiskelijakunta.net/wp-content/uploads/2024/01/2_33.png",
+    alt: "Panda Turva",
+    href: "https://pandaturva.fi/",
+  },
+  {
+    src: "https://opiskelijakunta.net/wp-content/uploads/2023/02/Nimeton-suunn.malli-16-min.jpg",
+    alt: "Viking Line",
+    href: "https://www.vikingline.fi/",
+  },
+];
+
+const { size } = Astro.props;
 ---
 
-<div
-  data-settings='{"effect":"slide","desktop":"7","tablet":"1","mobile":"1","variable_width":"off","loop":true,"item_spacing":"30px","item_spacing_tablet":"","item_spacing_phone":"","arrow":"off","dots":"off","autoplay":"on","auto_delay":"4000","speed":"500","pause_hover":"off","centeredSlides":"off","order":"0","use_lightbox":"off","use_lightbox_caption":"off"}'
-  data-item="7"
-  data-itemtablet="1"
-  data-itemphone="1">
-  <div style="transition-duration: 0ms; transform: translate3d(-2739px, 0px, 0px);">
-    <div data-swiper-slide-index="0" style="width: 219px; margin-right: 30px;">
-      <div data-src="https://opiskelijakunta.net/wp-content/uploads/2024/06/2_85.png">
-        <Image
-          decoding="async"
-          src="https://opiskelijakunta.net/wp-content/uploads/2024/06/2_85.png"
-          alt=""
-          inferSize={true}
-        />
-
-        <div data-swiper-slide-index="1" style="width: 219px; margin-right: 30px;">
-          <div data-src="https://opiskelijakunta.net/wp-content/uploads/2023/08/tok-logo-min.jpg">
+<div>
+  <section
+    class="group bg-tuo-bg no-scrollbar flex h-full w-full touch-pan-x overflow-x-auto py-10 select-none md:overflow-hidden">
+    <div
+      class="animate-infinite-scroll flex h-full min-w-full shrink-0 items-center justify-around group-hover:[animation-play-state:paused]">
+      {
+        items.map((item) => (
+          <a
+            href={item.href}
+            class="shadow-tuo-dark-blue/50 mx-4 flex h-full shrink-0 items-center rounded-2xl shadow-xl sm:mx-6">
             <Image
+              height={size}
+              width={size}
               decoding="async"
-              src="https://opiskelijakunta.net/wp-content/uploads/2023/08/tok-logo-min.jpg"
-              alt=""
-              inferSize={true}
+              src={item.src}
+              alt={item.alt}
+              class="h-full w-auto rounded-2xl object-contain"
             />
-
-            <div data-swiper-slide-index="2" style="width: 219px; margin-right: 30px;">
-              <div data-src="https://opiskelijakunta.net/wp-content/uploads/2026/03/TS-logo.jpg">
-                <Image
-                  decoding="async"
-                  src="https://opiskelijakunta.net/wp-content/uploads/2026/03/TS-logo.jpg"
-                  alt=""
-                  inferSize={true}
-                />
-
-                <div data-swiper-slide-index="3" style="width: 219px; margin-right: 30px;">
-                  <div
-                    data-src="https://opiskelijakunta.net/wp-content/uploads/2023/05/Unica_TUOnettisivut600x600-min.jpg">
-                    <Image
-                      decoding="async"
-                      src="https://opiskelijakunta.net/wp-content/uploads/2023/05/Unica_TUOnettisivut600x600-min.jpg"
-                      alt=""
-                      inferSize={true}
-                    />
-
-                    <div data-swiper-slide-index="4" style="width: 219px; margin-right: 30px;">
-                      <div
-                        data-src="https://opiskelijakunta.net/wp-content/uploads/2024/01/2_33.png">
-                        <Image
-                          decoding="async"
-                          src="https://opiskelijakunta.net/wp-content/uploads/2024/01/2_33.png"
-                          alt=""
-                          inferSize={true}
-                        />
-
-                        <div data-swiper-slide-index="5" style="width: 219px; margin-right: 30px;">
-                          <div
-                            data-src="https://opiskelijakunta.net/wp-content/uploads/2023/02/Nimeton-suunn.malli-16-min.jpg">
-                            <Image
-                              decoding="async"
-                              src="https://opiskelijakunta.net/wp-content/uploads/2023/02/Nimeton-suunn.malli-16-min.jpg"
-                              alt=""
-                              inferSize={true}
-                            />
-
-                            <div
-                              data-swiper-slide-index="0"
-                              style="width: 219px; margin-right: 30px;">
-                              <div
-                                data-src="https://opiskelijakunta.net/wp-content/uploads/2024/06/2_85.png">
-                                <Image
-                                  decoding="async"
-                                  src="https://opiskelijakunta.net/wp-content/uploads/2024/06/2_85.png"
-                                  alt=""
-                                  inferSize={true}
-                                />
-
-                                <div
-                                  data-swiper-slide-index="1"
-                                  style="width: 219px; margin-right: 30px;">
-                                  <div
-                                    data-src="https://opiskelijakunta.net/wp-content/uploads/2023/08/tok-logo-min.jpg">
-                                    <Image
-                                      decoding="async"
-                                      src="https://opiskelijakunta.net/wp-content/uploads/2023/08/tok-logo-min.jpg"
-                                      alt=""
-                                      inferSize={true}
-                                    />
-
-                                    <div
-                                      data-swiper-slide-index="2"
-                                      style="width: 219px; margin-right: 30px;">
-                                      <div
-                                        data-src="https://opiskelijakunta.net/wp-content/uploads/2026/03/TS-logo.jpg">
-                                        <Image
-                                          decoding="async"
-                                          src="https://opiskelijakunta.net/wp-content/uploads/2026/03/TS-logo.jpg"
-                                          alt=""
-                                          inferSize={true}
-                                        />
-
-                                        <div
-                                          data-swiper-slide-index="3"
-                                          style="width: 219px; margin-right: 30px;">
-                                          <div
-                                            data-src="https://opiskelijakunta.net/wp-content/uploads/2023/05/Unica_TUOnettisivut600x600-min.jpg">
-                                            <Image
-                                              decoding="async"
-                                              src="https://opiskelijakunta.net/wp-content/uploads/2023/05/Unica_TUOnettisivut600x600-min.jpg"
-                                              alt=""
-                                              inferSize={true}
-                                            />
-
-                                            <div
-                                              data-swiper-slide-index="4"
-                                              style="width: 219px; margin-right: 30px;">
-                                              <div
-                                                data-src="https://opiskelijakunta.net/wp-content/uploads/2024/01/2_33.png">
-                                                <Image
-                                                  decoding="async"
-                                                  src="https://opiskelijakunta.net/wp-content/uploads/2024/01/2_33.png"
-                                                  alt=""
-                                                  inferSize={true}
-                                                />
-
-                                                <div
-                                                  data-swiper-slide-index="5"
-                                                  style="width: 219px; margin-right: 30px;">
-                                                  <div
-                                                    data-src="https://opiskelijakunta.net/wp-content/uploads/2023/02/Nimeton-suunn.malli-16-min.jpg">
-                                                    <Image
-                                                      decoding="async"
-                                                      src="https://opiskelijakunta.net/wp-content/uploads/2023/02/Nimeton-suunn.malli-16-min.jpg"
-                                                      alt=""
-                                                      inferSize={true}
-                                                    />
-
-                                                    <div
-                                                      data-swiper-slide-index="0"
-                                                      style="width: 219px; margin-right: 30px;">
-                                                      <div
-                                                        data-src="https://opiskelijakunta.net/wp-content/uploads/2024/06/2_85.png">
-                                                        <Image
-                                                          decoding="async"
-                                                          src="https://opiskelijakunta.net/wp-content/uploads/2024/06/2_85.png"
-                                                          alt=""
-                                                          inferSize={true}
-                                                        />
-
-                                                        <div
-                                                          data-swiper-slide-index="1"
-                                                          style="width: 219px; margin-right: 30px;">
-                                                          <div
-                                                            data-src="https://opiskelijakunta.net/wp-content/uploads/2023/08/tok-logo-min.jpg">
-                                                            <Image
-                                                              decoding="async"
-                                                              src="https://opiskelijakunta.net/wp-content/uploads/2023/08/tok-logo-min.jpg"
-                                                              alt=""
-                                                              inferSize={true}
-                                                            />
-
-                                                            <div
-                                                              data-swiper-slide-index="2"
-                                                              style="width: 219px; margin-right: 30px;">
-                                                              <div
-                                                                data-src="https://opiskelijakunta.net/wp-content/uploads/2026/03/TS-logo.jpg">
-                                                                <Image
-                                                                  decoding="async"
-                                                                  src="https://opiskelijakunta.net/wp-content/uploads/2026/03/TS-logo.jpg"
-                                                                  alt=""
-                                                                  inferSize={true}
-                                                                />
-
-                                                                <div
-                                                                  data-swiper-slide-index="3"
-                                                                  style="width: 219px; margin-right: 30px;">
-                                                                  <div
-                                                                    data-src="https://opiskelijakunta.net/wp-content/uploads/2023/05/Unica_TUOnettisivut600x600-min.jpg">
-                                                                    <Image
-                                                                      decoding="async"
-                                                                      src="https://opiskelijakunta.net/wp-content/uploads/2023/05/Unica_TUOnettisivut600x600-min.jpg"
-                                                                      alt=""
-                                                                      inferSize={true}
-                                                                    />
-
-                                                                    <div
-                                                                      data-swiper-slide-index="4"
-                                                                      style="width: 219px; margin-right: 30px;">
-                                                                      <div
-                                                                        data-src="https://opiskelijakunta.net/wp-content/uploads/2024/01/2_33.png">
-                                                                        <Image
-                                                                          decoding="async"
-                                                                          src="https://opiskelijakunta.net/wp-content/uploads/2024/01/2_33.png"
-                                                                          alt=""
-                                                                          inferSize={true}
-                                                                        />
-
-                                                                        <div
-                                                                          data-swiper-slide-index="5"
-                                                                          style="width: 219px; margin-right: 30px;">
-                                                                          <div
-                                                                            data-src="https://opiskelijakunta.net/wp-content/uploads/2023/02/Nimeton-suunn.malli-16-min.jpg">
-                                                                            <Image
-                                                                              decoding="async"
-                                                                              src="https://opiskelijakunta.net/wp-content/uploads/2023/02/Nimeton-suunn.malli-16-min.jpg"
-                                                                              alt=""
-                                                                              inferSize={true}
-                                                                            />
-                                                                          </div>
-                                                                        </div>
-                                                                      </div>
-                                                                    </div>
-                                                                  </div>
-                                                                </div>
-                                                              </div>
-                                                            </div>
-                                                          </div>
-                                                        </div>
-                                                      </div>
-                                                    </div>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+          </a>
+        ))
+      }
     </div>
-  </div>
+
+    <div
+      class="animate-infinite-scroll flex h-full min-w-full shrink-0 items-center justify-around group-hover:[animation-play-state:paused]"
+      aria-hidden="true">
+      {
+        items.map((item) => (
+          <a
+            href={item.href}
+            class="shadow-tuo-dark-blue/50 mx-4 flex h-full shrink-0 items-center rounded-2xl shadow-xl sm:mx-6"
+            tabindex="-1">
+            <Image
+              height={size}
+              width={size}
+              decoding="async"
+              src={item.src}
+              alt={item.alt}
+              class="h-full w-auto rounded-2xl object-contain"
+            />
+          </a>
+        ))
+      }
+    </div>
+  </section>
 </div>
+
+<style>
+  /* Utility to hide the scrollbar UI on mobile while maintaining native swipe/drag functionality */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+</style>
