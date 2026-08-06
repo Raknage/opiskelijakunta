@@ -1,0 +1,14 @@
+{
+  "name": "Opiskelijakunta TUO",
+  "short_name": "TUO",
+  "icons": [
+    { "src": "/icon-192.png", "type": "image/png", "sizes": "192x192" },
+    { "src": "/icon-mask.png", "type": "image/png", "sizes": "512x512", "purpose": "maskable" },
+    { "src": "/icon-512.png", "type": "image/png", "sizes": "512x512" }
+  ],
+  "start_url": "/",
+  "theme_color": "#00AEC7",
+  "background_color": "#007A8B",
+  "display": "standalone",
+  "description": "Turun Ammattikorkeakoulun Opiskelijakunta TUOn verkkosivut"
+}
