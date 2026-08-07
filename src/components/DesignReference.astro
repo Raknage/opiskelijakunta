@@ -1,0 +1,56 @@
+---
+
+---
+
+<container class="grid min-h-fit w-full grid-cols-1 place-items-center gap-2 py-10">
+  <h1
+    class="font-heading bg-tuo-blue/50 px-1 py-3 text-4xl text-white uppercase backdrop-blur-xs backdrop-grayscale-100 sm:text-5xl lg:text-6xl">
+    <span>Luomassa</span>{" "}
+    <span>parempaa</span>{" "}
+    <span>opiskelijaelämää!</span>
+  </h1>
+  <h2
+    class="font-mano-negra [&>div:nth-child(odd)]:text-tuo-yellow bg-tuo-blue -rotate-4 py-3 text-6xl text-white">
+    <div class="">Luomassa</div>{" "}
+    <div>parempaa</div>{" "}
+    <div class="translate-x-50">opiskelijaelämää!</div>
+  </h2>
+  <h3 class="font-montserrat text-tuo-red bg-tuo-dark-blue py-3 text-4xl font-bold uppercase">
+    Heading 3
+  </h3>
+  <h4 class="">Heading 4</h4>
+  <p class="font-montserrat">Leipäteksti</p>
+  <p class="font-montserrat font-bold">Leipäteksti</p>
+
+  <div class="flex w-9/10 flex-wrap justify-center gap-10 bg-white py-10">
+    <div class="rounded-sm shadow-sm">sm</div>
+    <div class="rounded-md shadow-md">md</div>
+    <div class="rounded-lg shadow-lg">lg</div>
+    <div class="rounded-xl shadow-xl">xl</div>
+    <div class="rounded-2xl shadow-2xl">2xl</div>
+    <div class="tuo-card">tuo-card</div>
+    <div class="shadow-tuo-md rounded-tuo">shadow-tuo-md</div>
+    <div class="shadow-tuo-lg rounded-tuo">shadow-tuo-lg</div>
+    <div class="shadow-tuo-xl rounded-tuo">shadow-tuo-xl</div>
+    <div class="shadow-tuo-dark-blue/30 rounded-xl shadow-md">blurb</div>
+    <div class="shadow-tuo-dark-blue rounded-md shadow-md">blogcard</div>
+  </div>
+</container>
+
+<style>
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  p {
+    @apply w-9/10 overflow-hidden text-center;
+  }
+
+  div > div {
+    background: white;
+    aspect-ratio: 4/5;
+    height: 250px;
+    text-align: center;
+  }
+</style>

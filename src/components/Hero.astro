@@ -3,9 +3,10 @@ const { title } = Astro.props;
 ---
 
 <section
-  class="bg-[url(https://opiskelijakunta.net/wp-content/uploads/2022/10/Nimeton-suunn.malli-12-min-1.jpg)] bg-cover bg-bottom pt-[20vh] pb-[12vh] text-white">
-  <div class="bg-tuo-blue/50 py-2.5 backdrop-blur-xs backdrop-grayscale-100">
-    <h1 class="font-lato mx-auto w-8/10 text-center text-6xl font-extrabold uppercase">
+  class="overflow-clip bg-[url(https://opiskelijakunta.net/wp-content/uploads/2022/10/Nimeton-suunn.malli-12-min-1.jpg)] bg-cover bg-bottom pt-[20vh] pb-[12vh] text-white">
+  <div class="bg-tuo-blue/50 px-1 py-2.5 backdrop-blur-xs backdrop-grayscale-100">
+    <h1
+      class="font-lato mx-auto text-center text-4xl font-extrabold uppercase sm:text-5xl lg:text-6xl">
       {title}
     </h1>
   </div>

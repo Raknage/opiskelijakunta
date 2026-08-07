@@ -6,15 +6,20 @@
   --font-lato: var(--font-lato);
   --font-bobby-jones: var(--font-bobby-jones);
   --font-montserrat: var(--font-montserrat);
+  --font-mano-negra: var(--font-mano-negra);
 
-  --font-sans: var(--font-montserrat), var(--font-open-sans);
+  --font-sans: var(--font-lato), var(--font-open-sans), "Open Sans", Arial, Helvetica, sans-serif;
   --font-heading: var(--font-bobby-jones), var(--font-lato);
 
   --color-tuo-blue: #00aec7;
   --color-tuo-yellow: #ffd900;
   --color-tuo-red: #aa0061;
   --color-tuo-dark-blue: #007a8b;
-  --color-tuo-bg: #f7f7f7;
+
+  --shadow-tuo-md: 0 4px 6px -1px rgba(0, 122, 139, 0.2), 0 2px 4px -2px rgba(0, 122, 139, 0.2);
+  --shadow-tuo-lg: 0 10px 15px -3px rgb(0 122 139 / 0.5), 0 4px 6px -4px rgb(0 122 139 / 0.3);
+  --shadow-tuo-xl: 0 20px 25px -5px rgb(0 122 139 / 0.7), 0 8px 10px -6px rgb(0 122 139 / 0.7);
+  --radius-tuo: var(--radius-md);
 
   --animate-infinite-scroll: infinite-scroll 60s linear infinite;
 
@@ -29,8 +34,27 @@
   }
 }
 
-:root {
-  background-color: #fff;
-  color: #000;
-  font-family: var(--font-lato), Arial, Helvetica, sans-serif;
+@utility tuo-card {
+  @apply bg-tuo-blue rounded-md shadow-md transition-all;
+  box-shadow:
+    var(--shadow-md),
+    0 4px 14px var(--color-tuo-dark-blue);
+}
+
+@layer base {
+  :root {
+    background-color: #f7f7f7;
+    color: #1a1a1a;
+    font-family: var(--font-sans);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  img,
+  svg {
+    display: block;
+    max-width: 100%;
+  }
 }

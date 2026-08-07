@@ -14,20 +14,14 @@ export default defineConfig({
   fonts: [
     {
       provider: fontProviders.local(),
-      name: "Atkinson",
-      cssVariable: "--font-atkinson",
-      fallbacks: ["sans-serif"],
+      name: "BobbyJonesSoftRegular",
+      cssVariable: "--font-bobby-jones",
+      fallbacks: ["Lato", "Helvetica", "Arial", "Lucida", "sans-serif"],
       options: {
         variants: [
           {
-            src: ["./src/assets/fonts/atkinson-regular.woff"],
-            weight: 400,
-            style: "normal",
-            display: "swap",
-          },
-          {
-            src: ["./src/assets/fonts/atkinson-bold.woff"],
-            weight: 700,
+            src: ["./src/assets/fonts/BobbyJonesSoftRegular.woff2"],
+            weight: "normal",
             style: "normal",
             display: "swap",
           },
@@ -36,13 +30,13 @@ export default defineConfig({
     },
     {
       provider: fontProviders.local(),
-      name: "BobbyJonesSoftRegular",
-      cssVariable: "--font-bobby-jones",
+      name: "WCManoNegraBoldBta",
+      cssVariable: "--font-mano-negra",
       fallbacks: ["Lato", "Helvetica", "Arial", "Lucida", "sans-serif"],
       options: {
         variants: [
           {
-            src: ["./src/assets/fonts/BobbyJonesSoftRegular.woff2"],
+            src: ["./src/assets/fonts/WCManoNegraBoldBta.woff"],
             weight: "normal",
             style: "normal",
             display: "swap",

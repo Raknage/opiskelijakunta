@@ -1,8 +1,11 @@
 ---
 import BaseHead from "@/components/BaseHead.astro";
+import DesignReference from "@/components/DesignReference.astro";
 import TUOFooter from "@/components/TUOFooter.astro";
 import TUOHeader from "@/components/TUOHeader.astro";
 import { SITE_DESCRIPTION, SITE_TITLE } from "@/consts";
+
+const isDev = import.meta.env.DEV;
 ---
 
 <!doctype html>
@@ -10,9 +13,10 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "@/consts";
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
-  <body class="flex h-screen flex-col content-center items-center justify-between">
+  <body class="flex h-screen flex-col content-center justify-between">
     <TUOHeader />
     <slot />
     <TUOFooter />
+    {isDev && <DesignReference />}
   </body>
 </html>
