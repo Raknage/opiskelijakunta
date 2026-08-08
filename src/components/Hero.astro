@@ -1,9 +1,23 @@
 ---
+import { Image } from "astro:assets";
+
+interface Props {
+  title: string;
+}
+
+const heroBg =
+  "https://opiskelijakunta.net/wp-content/uploads/2022/10/Nimeton-suunn.malli-12-min-1.jpg";
 const { title } = Astro.props;
 ---
 
-<section
-  class="overflow-clip bg-[url(https://opiskelijakunta.net/wp-content/uploads/2022/10/Nimeton-suunn.malli-12-min-1.jpg)] bg-cover bg-bottom pt-[20vh] pb-[12vh] text-white">
+<section class="relative overflow-clip pt-[20vh] pb-[12vh] text-white">
+  <Image
+    src={heroBg}
+    alt=""
+    loading="eager"
+    class="absolute inset-0 -z-10 h-full w-full object-cover object-center"
+    inferSize
+  />
   <div class="bg-tuo-blue/50 px-1 py-2.5 backdrop-blur-xs backdrop-grayscale-100">
     <h1
       class="font-lato mx-auto text-center text-4xl font-extrabold uppercase sm:text-5xl lg:text-6xl">
