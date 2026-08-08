@@ -1,0 +1,100 @@
+# Fill in people by section in this format:
+# example:
+#   id:
+#     name:
+#     title:
+#     role:
+#     email:
+#     phone:
+#     image:
+
+hallitus:
+  olga:
+    name: Olga Hellman
+    title: Hallituksen puheenjohtaja
+    email: olga.u.hellman@turkuamk.fi
+    phone: 045 670 5011
+    image: https://opiskelijakunta.net/wp-content/uploads/2026/01/Hallituskuvat-kotisivuille-2026.png
+
+  duy:
+    name: Duy Nguyen
+    title: Hallituksen varapuheenjohtaja
+    role: Tapahtumat
+    email: duy.q.nguyen@turkuamk.fi
+    image: https://opiskelijakunta.net/wp-content/uploads/2026/01/Hallituskuvat-kotisivuille-2026-1.png
+
+  milla:
+    name: Milla Mesiranta
+    title: Hallituksen jäsen
+    role: Tapahtumat ja viestintä
+    email: milla.mesiranta1@turkuamk.fi
+    image: https://opiskelijakunta.net/wp-content/uploads/2026/01/Hallituskuvat-kotisivuille-2026-3.png
+
+  jasmin:
+    name: Jasmin Anttila
+    title: Hallituksen jäsen
+    role: Koulutuspolitiikka
+    email: jasmin.anttila1@turkuamk.fi
+    image: https://opiskelijakunta.net/wp-content/uploads/2025/01/4_108.png
+
+  stiina:
+    name: Stiina Yläkoski
+    title: Hallituksen jäsen
+    role: Sosiaalipolitiikka
+    email: stiina.ylakoski1@turkuamk.fi
+    image: https://opiskelijakunta.net/wp-content/uploads/2026/01/Hallituskuvat-kotisivuille-2026-6.png
+
+  toni:
+    name: Toni Haila
+    title: Hallituksen jäsen
+    role: Yhteisö ja aktiivit
+    email: toni.haila1@turkuamk.fi
+    image: https://opiskelijakunta.net/wp-content/uploads/2026/01/Hallituskuvat-kotisivuille-2026-7.png
+
+  miska:
+    name: Miska Risku
+    title: Hallituksen jäsen
+    role: Hallinto ja talous
+    email: miska.risku1@turkuamk.fi
+    image: https://opiskelijakunta.net/wp-content/uploads/2026/01/Hallituskuvat-kotisivuille-2026-4.png
+
+henkilokunta:
+  marko:
+    name: Marko Grönlund
+    title: Toiminnanjohtaja
+    email: marko.gronlund@turkuamk.fi
+    phone: 0456706650
+    image: https://opiskelijakunta.net/wp-content/uploads/2024/06/4_58.png
+
+  jukka_pekka:
+    name: Jukka-Pekka Salmela
+    title: Edunvalvonnan asiantuntija
+    email: jukka.salmela@turkuamk.fi
+    phone: 0413123874
+    image: https://opiskelijakunta.net/wp-content/uploads/2024/06/5_44.png
+
+  aino:
+    name: Aino Mustalahti
+    title: viestinnän ja opiskelijakulttuurin asiantuntija
+    email: aino.mustalahti@turkuamk.fi
+    phone: 0458814050
+    image: https://opiskelijakunta.net/wp-content/uploads/2024/06/Nimeton-malli-18.png
+
+  mauri:
+    name: Mauri
+    title: Siisteys- ja puhtaanapitovastaava
+    email: mauri@opiskelijakunta.net
+    image: https://opiskelijakunta.net/wp-content/uploads/2023/04/Nimeton-suunn.malli-33-min.jpg
+
+edustajisto:
+  niilo:
+    name: Niilo Tähti
+    title: Edustajiston puheenjohtaja
+    email: niilo.tahti1@turkuamk.fi
+    image: https://opiskelijakunta.net/wp-content/uploads/2026/01/Hallituskuvat-kotisivuille-2026-5.png
+
+  ville:
+    name: Ville Soikkeli
+    title: Edustajiston varapuheenjohtaja
+    email: ville.soikkeli1@turkuamk.fi
+    image: https://opiskelijakunta.net/wp-content/uploads/2026/01/Hallituskuvat-kotisivuille-2026-8.png

@@ -1,0 +1,80 @@
+kumppaniyhdistykset:
+  elba:
+    name: ELBA ry
+    image: https://opiskelijakunta.net/wp-content/uploads/2023/02/IMG_20230220_201458_386-min.jpg
+    link: https://www.facebook.com/opiskelijayhdistyselba/
+
+  mome:
+    name: MoMe ry
+    image: https://opiskelijakunta.net/wp-content/uploads/2022/10/Mome-Logo-min.jpg
+    link: https://www.facebook.com/mometurku/
+
+  tasokas:
+    name: Tasokas ry
+    image: https://opiskelijakunta.net/wp-content/uploads/2022/10/Tasokas-Logo-min.jpg
+    link: https://nouw.com/tasokasry
+
+  suukko:
+    name: SUUKKO ry
+    image: https://opiskelijakunta.net/wp-content/uploads/2023/09/suukko-uusi-logo-min.jpg
+    link: https://suukottaa.blogspot.com/
+
+  tio:
+    name: TIO ry
+    image: https://opiskelijakunta.net/wp-content/uploads/2023/09/tio-uusi-logo-min.jpg
+    link: https://www.tio.fi/
+
+  toy:
+    name: TOY ry
+    image: https://opiskelijakunta.net/wp-content/uploads/2022/10/TOY-logo-min.jpg
+    link: https://www.toyry.fi/
+
+  trade:
+    name: TRADE ry
+    image: https://opiskelijakunta.net/wp-content/uploads/2022/10/Trade-logo-min.jpg
+    link: https://tradery.fi/
+
+  tsts:
+    name: TSTS ry
+    image: https://opiskelijakunta.net/wp-content/uploads/2023/09/TSTS-uusi-logo-min.jpg
+    link: https://www.tstsry.fi/
+
+  trok:
+    name: TROK ry
+    image: https://opiskelijakunta.net/wp-content/uploads/2022/10/TROK-logo-min.jpg
+    link: https://trok.fi/
+
+  collegium_musicum_turku:
+    name: Collegium Musicum Turku ry
+    image: https://opiskelijakunta.net/wp-content/uploads/2023/08/CMTlogo-min.jpg
+    link: http://www.cmtorkesteri.fi/
+
+  turun_wappuradio:
+    name: Turun Wappuradio
+    image: https://opiskelijakunta.net/wp-content/uploads/2022/10/wappuradio-logo-min.jpg
+    link: https://www.turunwappuradio.com/
+
+  esn_uni_turku:
+    name: ESN Uni Turku
+    image: https://opiskelijakunta.net/wp-content/uploads/2025/05/Aukioloajat-insta.jpg
+    link: https://esnuniturku.fi/
+
+  tukores:
+    name: TuKoRes ry
+    image: https://opiskelijakunta.net/wp-content/uploads/2022/10/cropped-front_tukores_new_3-2-min.jpg
+    link: https://www.tukores.fi/
+
+  beer_pong_turku:
+    name: Beer Pong Turku ry
+    image: https://opiskelijakunta.net/wp-content/uploads/2025/09/logo_uusi.png
+    link: https://www.beerpongturku.fi/
+
+  tuas_tornadoes:
+    name: TUAS Tornadoes
+    image: https://opiskelijakunta.net/wp-content/uploads/2022/10/Nimeton-suunn.malli-1-min.jpg
+    link: https://www.facebook.com/TUASTornadoes/
+
+  kings_of_kupittaa:
+    name: Kings of Kupittaa Ry
+    image: https://opiskelijakunta.net/wp-content/uploads/2025/10/HAALARIMERKIT-4-4.png
+    link: https://www.instagram.com/kingsofkupittaa/
