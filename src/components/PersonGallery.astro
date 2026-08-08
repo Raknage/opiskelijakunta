@@ -1,0 +1,18 @@
+---
+import Portrait from "@/components/ui/Portrait.astro";
+import type { People } from "@/lib/schemas";
+
+interface Props {
+  people: People;
+}
+
+const { people } = Astro.props;
+---
+
+<section class="flex flex-row flex-wrap">
+  {
+    Object.entries(people).map((person) => {
+      return <Portrait person={person[1]} />;
+    })
+  }
+</section>

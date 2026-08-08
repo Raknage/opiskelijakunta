@@ -1,0 +1,18 @@
+---
+import PartnerPortrait from "@/components/ui/PartnerPortrait.astro";
+import type { Partners } from "@/lib/schemas";
+
+interface Props {
+  partners: Partners;
+}
+
+const { partners } = Astro.props;
+---
+
+<section class="flex flex-row flex-wrap">
+  {
+    Object.entries(partners).map((partner) => {
+      return <PartnerPortrait partner={partner[1]} />;
+    })
+  }
+</section>

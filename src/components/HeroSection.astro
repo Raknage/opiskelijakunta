@@ -1,0 +1,63 @@
+---
+import { Image } from "astro:assets";
+
+interface Props {
+  reverse?: boolean;
+  title: string;
+  img?: string;
+  id?: string;
+  alt?: string;
+}
+
+const {
+  reverse = false,
+  title,
+  img = "https://opiskelijakunta.net/wp-content/uploads/2022/10/Nimeton-suunn.malli-9-min.jpg",
+  id,
+  alt = "",
+} = Astro.props;
+const rev = reverse ? "lg:flex-row-reverse" : "lg:flex-row";
+---
+
+<div class="hero bg-white py-10">
+  <div class:list={["hero-content flex-col", rev]}>
+    <Image
+      src={img}
+      alt={alt}
+      class="max-w-sm rounded-lg shadow-2xl"
+      loading="lazy"
+      decoding="async"
+      inferSize
+    />
+    <div class="*:py-2">
+      <h1 id={id} class="text-5xl font-bold">{title}</h1>
+      <slot />
+    </div>
+  </div>
+</div>
+
+<style>
+  @reference "@/styles/global.css";
+
+  .hero {
+    @layer daisyui.l1.l2.l3 {
+      @apply grid w-full place-items-center bg-cover bg-center;
+
+      & > * {
+        @apply col-start-1 row-start-1;
+      }
+    }
+  }
+
+  .hero-overlay {
+    @layer daisyui.l1.l2.l3 {
+      @apply col-start-1 row-start-1 h-full w-full bg-neutral-600/50;
+    }
+  }
+
+  .hero-content {
+    @layer daisyui.l1.l2.l3 {
+      @apply isolate flex max-w-7xl items-center justify-center gap-4 p-4;
+    }
+  }
+</style>

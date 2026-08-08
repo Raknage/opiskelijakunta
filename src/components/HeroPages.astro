@@ -1,0 +1,29 @@
+---
+import { Image } from "astro:assets";
+
+interface Props {
+  title: string;
+  img: string;
+}
+
+const {
+  title,
+  img = "https://opiskelijakunta.net/wp-content/uploads/2022/10/Nimeton-suunn.malli-9-min.jpg",
+} = Astro.props;
+---
+
+<section class="relative overflow-clip pt-[15vh] pb-[10vh] text-white">
+  <Image
+    src={img}
+    alt=""
+    loading="eager"
+    class="absolute inset-0 -z-10 h-full w-full object-cover object-center"
+    inferSize
+  />
+  <div class="bg-tuo-blue/50 px-1 py-2.5 backdrop-blur-xs backdrop-grayscale-100">
+    <h1
+      class="font-lato mx-auto text-center text-4xl font-extrabold uppercase sm:text-5xl lg:text-6xl">
+      {title}
+    </h1>
+  </div>
+</section>

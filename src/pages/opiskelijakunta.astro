@@ -1,6 +1,33 @@
 ---
 import type { PageProps } from "@/schemas";
-import { Image } from "astro:assets";
+import { getEntry } from "astro:content";
+import Layout from "@/layouts/Layout.astro";
+import HeroPages from "@/components/HeroPages.astro";
+import PageNav from "@/components/PageNav.astro";
+import HeroSection from "@/components/HeroSection.astro";
+import PersonGallery from "@/components/PersonGallery.astro";
+import Collapsible from "@/components/ui/Collapsible.astro";
+import PartnerGallery from "@/components/PartnerGallery.astro";
+
+const hallitus = await getEntry("people", "hallitus");
+if (!hallitus) {
+  throw new Error("getEntry 'hallitus' failed!");
+}
+
+const henkilokunta = await getEntry("people", "henkilokunta");
+if (!henkilokunta) {
+  throw new Error("getEntry 'henkilokunta' failed!");
+}
+
+const edustajisto = await getEntry("people", "edustajisto");
+if (!edustajisto) {
+  throw new Error("getEntry 'edustajisto' failed!");
+}
+
+const kumppaniyhdistykset = await getEntry("partners", "kumppaniyhdistykset");
+if (!kumppaniyhdistykset) {
+  throw new Error("getEntry 'kumppaniyhdistykset' failed!");
+}
 
 export const props: PageProps = {
   title: "Opiskelijakunta",
@@ -19,696 +46,190 @@ export const props: PageProps = {
 };
 ---
 
-<article>
-  <h1>Opiskelijakunta</h1>
-
-  <nav>
-    <ul>
-      <li>
-        <a href="https://opiskelijakunta.net/opiskelijakunta/#meista" aria-current="page">Meistä</a>
-      </li><li>
-        <a
-          target="_blank"
-          href="https://drive.google.com/drive/folders/1SEF2-BdoH69qyV8FtQBjdjrWZJWuvBKM?usp=sharing">
-          Materiaalipankki
-        </a>
-      </li><li>
-        <a href="https://opiskelijakunta.net/opiskelijakunta/#hallitus" aria-current="page">
-          Hallitus
-        </a>
-      </li><li>
-        <a href="https://opiskelijakunta.net/opiskelijakunta/#henkilokunta" aria-current="page">
-          Henkilökunta
-        </a>
-      </li><li>
-        <a href="https://opiskelijakunta.net/opiskelijakunta/#edustajisto" aria-current="page">
-          Edustajisto
-        </a>
-      </li><li>
-        <a href="https://opiskelijakunta.net/opiskelijakunta/#yhdistykset" aria-current="page">
-          Kumppaniyhdistykset
-        </a>
-      </li>
-    </ul>
-  </nav>
-
-  <ul>
-    <li>
-      <a href="https://opiskelijakunta.net/opiskelijakunta/#meista" aria-current="page">Meistä</a>
-    </li><li>
-      <a
-        target="_blank"
-        href="https://drive.google.com/drive/folders/1SEF2-BdoH69qyV8FtQBjdjrWZJWuvBKM?usp=sharing">
-        Materiaalipankki
-      </a>
-    </li><li>
-      <a href="https://opiskelijakunta.net/opiskelijakunta/#hallitus" aria-current="page">
-        Hallitus
-      </a>
-    </li><li>
-      <a href="https://opiskelijakunta.net/opiskelijakunta/#henkilokunta" aria-current="page">
-        Henkilökunta
-      </a>
-    </li><li>
-      <a href="https://opiskelijakunta.net/opiskelijakunta/#edustajisto" aria-current="page">
-        Edustajisto
-      </a>
-    </li><li>
-      <a href="https://opiskelijakunta.net/opiskelijakunta/#yhdistykset" aria-current="page">
-        Kumppaniyhdistykset
-      </a>
-    </li>
-  </ul>
-
-  <h3>Tietoa opiskelijakunnasta</h3>
-
-  <p>
-    Turun ammattikorkeakoulun opiskelijakunta – TUOn tarkoitus on valvoa opiskelijoiden etua ja
-    tuoda opiskelijoiden ääni kuuluviin ammattikorkeakoulussa ja kaupunkien päätöksenteossa –
-    Salossa ja Turussa. TUO on uskonnollisesti ja poliittisesti sitoutumaton sekä
-    ammattiyhdistyksistä riippumaton.
-  </p>
-
-  <p>
-    Opiskelijakunta TUOn jäsenenä saat monenlaisia etuja sekä paikallisesti että valtakunnallisesti.
-    Saat esimerkiksi alennuksia tapahtumalipuista ja yhteistyöyritysten palveluista sekä
-    henkilökohtaista apua ja tukea opiskelijaelämän ongelmatilanteissa.
-  </p>
-
-  <Image
-    loading="lazy"
-    decoding="async"
-    width="800"
-    height="400"
-    src="https://opiskelijakunta.net/wp-content/uploads/2022/10/Nimeton-suunn.malli-9-min.jpg"
-    alt=""
-    title="Nimetön suunn.malli (9)-min"
-    srcset="https://opiskelijakunta.net/wp-content/uploads/2022/10/Nimeton-suunn.malli-9-min.jpg 800w, https://opiskelijakunta.net/wp-content/uploads/2022/10/Nimeton-suunn.malli-9-min-480x240.jpg 480w"
-    sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) 800px, 100vw"
-  />
-
-  <h5>Strategia</h5>
-
-  <p>
-    Opiskelijakunnan strategia ohjaa toimintaa useammalle vuodelle. Strategia ohjaa kaikkea
-    toimintaa opiskelijakunnassa.
-  </p><p>
-    Opiskelijakunnan strategian löydät <a
-      href="https://drive.google.com/file/d/1kaxYQDjE1ld2hR7-TN2nRncl9Wd2h6R2/view?usp=sharing"
-      target="_blank"
-      rel="noopener">
-      täältä
-    </a>
-  </p>
-
-  <h5>Säännöt</h5>
-
-  <p>
-    Opiskelijakunnan säännöt ohjaavat toimintaa ja pitävät sisällään mm. edustajiston ja hallituksen
-    toimintaa.
-  </p><p>
-    Opiskelijakunnan säännöt löydät
-    <a
-      href="https://drive.google.com/file/d/1LN4-HF7AEFq2PsKbzaFPqrK_C8ygZ3cR/view?usp=sharing"
-      style="color: #ffff00;"
-      target="_blank"
-      rel="noopener">
-      täältä
-    </a>
-    !
-  </p>
-
-  <h5>Johto- ja hallintosääntö</h5>
-  <p>
-    Opiskelijakunnan johto- ja hallintosääntö tarkentaa sääntöjä ja keskittyy enemmän käytännön
-    asioihin.
-  </p><p>
-    Opiskelijakunnan johto- ja hallintosäännön löydät
-    <a
-      href="https://drive.google.com/file/d/1-nnWPP8BSFVG6sETnKlSJv5HpavTYRcA/view?usp=sharing"
-      style="color: #ffff99;"
-      target="_blank"
-      rel="noopener">
-      täältä
-    </a>
-    !
-  </p>
-
-  <Image
-    loading="lazy"
-    decoding="async"
-    width="1920"
-    height="1080"
-    src="https://opiskelijakunta.net/wp-content/uploads/2026/01/FIN-InfoTUOkio-2026-kevat-3.png"
-    alt=""
-    title="FIN InfoTUOkio 2026 kevät (3)"
-    srcset="https://opiskelijakunta.net/wp-content/uploads/2026/01/FIN-InfoTUOkio-2026-kevat-3.png 1920w, https://opiskelijakunta.net/wp-content/uploads/2026/01/FIN-InfoTUOkio-2026-kevat-3-1280x720.png 1280w, https://opiskelijakunta.net/wp-content/uploads/2026/01/FIN-InfoTUOkio-2026-kevat-3-980x551.png 980w, https://opiskelijakunta.net/wp-content/uploads/2026/01/FIN-InfoTUOkio-2026-kevat-3-480x270.png 480w"
-    sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) and (max-width: 980px) 980px, (min-width: 981px) and (max-width: 1280px) 1280px, (min-width: 1281px) 1920px, 100vw"
-  />
-
-  <h3>Hallitus</h3>
-
-  <p>
-    Opiskelijakunta TUOn hallituksen valitsee opiskelijoista koostuva edustajistomme
-    kalenterivuodeksi kerrallaan. Nämä opiskelijakunnan operatiivisen toiminnan toteuttajat
-    noudattavat edustajiston hyväksymää toimintasuunnitelmaa sekä edustavat opiskelijoita niin
-    päättävissä tärkeissä pöydissä kuin erilaisissa opiskelijatapahtumissa ja vapaamuotoisissa
-    tilaisuuksissa. Hallituksen jäsenet toimivat tiiviissä yhteistyössä opiskelijakunnan henkilöstön
-    kanssa opiskelijan paremman huomisen eteen.
-  </p><p>
-    Hallituksen jäsenet ovat täällä koko yhteisöä varten. Voit aina ottaa yhteyttä meihin tai ottaa
-    käytävällä hihasta kiinni. Olemme täällä juuri sinua varten.
-  </p>
-
-  <Image
-    loading="lazy"
-    decoding="async"
-    width="1080"
-    height="1080"
-    src="https://opiskelijakunta.net/wp-content/uploads/2026/01/Hallituskuvat-kotisivuille-2026.png"
-    alt="Olga Hellman"
-    srcset="https://opiskelijakunta.net/wp-content/uploads/2026/01/Hallituskuvat-kotisivuille-2026.png 1080w, https://opiskelijakunta.net/wp-content/uploads/2026/01/Hallituskuvat-kotisivuille-2026-980x980.png 980w, https://opiskelijakunta.net/wp-content/uploads/2026/01/Hallituskuvat-kotisivuille-2026-480x480.png 480w"
-    sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) and (max-width: 980px) 980px, (min-width: 981px) 1080px, 100vw"
-  />
-
-  <h4>Olga Hellman</h4><p>Hallituksen puheenjohtaja</p>
-  <p>
-    <a href="mailto:olga.u.hellman@turkuamk.fi" target="_blank" rel="noopener">
-      olga.u.hellman@turkuamk.fi
-    </a><br />045 670 5011
-  </p>
-
-  <Image
-    loading="lazy"
-    decoding="async"
-    width="1080"
-    height="1080"
-    src="https://opiskelijakunta.net/wp-content/uploads/2026/01/Hallituskuvat-kotisivuille-2026-1.png"
-    alt="Duy Nguyen"
-    srcset="https://opiskelijakunta.net/wp-content/uploads/2026/01/Hallituskuvat-kotisivuille-2026-1.png 1080w, https://opiskelijakunta.net/wp-content/uploads/2026/01/Hallituskuvat-kotisivuille-2026-1-980x980.png 980w, https://opiskelijakunta.net/wp-content/uploads/2026/01/Hallituskuvat-kotisivuille-2026-1-480x480.png 480w"
-    sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) and (max-width: 980px) 980px, (min-width: 981px) 1080px, 100vw"
-  />
-
-  <h4>Duy Nguyen</h4><p>Hallituksen varapuheenjohtaja</p>
-  <p>
-    Tapahtumat<br /><a href="mailto:duy.q.nguyen@turkuamk.fi" target="_blank" rel="noopener">
-      duy.q.nguyen@turkuamk.fi
-    </a>
-  </p>
-
-  <Image
-    loading="lazy"
-    decoding="async"
-    width="1080"
-    height="1080"
-    src="https://opiskelijakunta.net/wp-content/uploads/2026/01/Hallituskuvat-kotisivuille-2026-3.png"
-    alt="Milla Mesiranta"
-    srcset="https://opiskelijakunta.net/wp-content/uploads/2026/01/Hallituskuvat-kotisivuille-2026-3.png 1080w, https://opiskelijakunta.net/wp-content/uploads/2026/01/Hallituskuvat-kotisivuille-2026-3-980x980.png 980w, https://opiskelijakunta.net/wp-content/uploads/2026/01/Hallituskuvat-kotisivuille-2026-3-480x480.png 480w"
-    sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) and (max-width: 980px) 980px, (min-width: 981px) 1080px, 100vw"
-  />
-
-  <h4>Milla Mesiranta</h4><p>Hallituksen jäsen</p>
-  <p>
-    Tapahtumat ja viestintä<br /><a
-      href="mailto:milla.mesiranta1@turkuamk.fi"
-      target="_blank"
-      rel="noopener">
-      milla.mesiranta1@turkuamk.fi
-    </a>
-  </p>
-
-  <Image
-    loading="lazy"
-    decoding="async"
-    width="540"
-    height="540"
-    src="https://opiskelijakunta.net/wp-content/uploads/2025/01/4_108.png"
-    alt="Jasmin Anttila"
-    srcset="https://opiskelijakunta.net/wp-content/uploads/2025/01/4_108.png 540w, https://opiskelijakunta.net/wp-content/uploads/2025/01/4_108-480x480.png 480w"
-    sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) 540px, 100vw"
-  />
-
-  <h4>Jasmin Anttila</h4><p>Hallituksen jäsen</p>
-  <p>
-    Koulutuspolitiikka<br /><a
-      href="mailto:jasmin.anttila1@turkuamk.fi"
-      target="_blank"
-      rel="noopener">
-      jasmin.anttila1@turkuamk.fi
-    </a><a href="mailto:lara.s.mohammadi@turkuamk.fi" target="_blank" rel="noopener"></a>
-  </p>
-
-  <Image
-    loading="lazy"
-    decoding="async"
-    width="1080"
-    height="1080"
-    src="https://opiskelijakunta.net/wp-content/uploads/2026/01/Hallituskuvat-kotisivuille-2026-6.png"
-    alt="Stiina Yläkoski"
-    srcset="https://opiskelijakunta.net/wp-content/uploads/2026/01/Hallituskuvat-kotisivuille-2026-6.png 1080w, https://opiskelijakunta.net/wp-content/uploads/2026/01/Hallituskuvat-kotisivuille-2026-6-980x980.png 980w, https://opiskelijakunta.net/wp-content/uploads/2026/01/Hallituskuvat-kotisivuille-2026-6-480x480.png 480w"
-    sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) and (max-width: 980px) 980px, (min-width: 981px) 1080px, 100vw"
-  />
-
-  <h4>Stiina Yläkoski</h4><p>Hallituksen jäsen</p>
-  <p>
-    Sosiaalipolitiikka<br /><a
-      href="mailto:stiina.ylakoski1@turkuamk.fi"
-      target="_blank"
-      rel="noopener">
-      stiina.ylakoski1@turkuamk.fi
-    </a>
-  </p>
-
-  <Image
-    loading="lazy"
-    decoding="async"
-    width="1080"
-    height="1080"
-    src="https://opiskelijakunta.net/wp-content/uploads/2026/01/Hallituskuvat-kotisivuille-2026-7.png"
-    alt="Toni Haila"
-    srcset="https://opiskelijakunta.net/wp-content/uploads/2026/01/Hallituskuvat-kotisivuille-2026-7.png 1080w, https://opiskelijakunta.net/wp-content/uploads/2026/01/Hallituskuvat-kotisivuille-2026-7-980x980.png 980w, https://opiskelijakunta.net/wp-content/uploads/2026/01/Hallituskuvat-kotisivuille-2026-7-480x480.png 480w"
-    sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) and (max-width: 980px) 980px, (min-width: 981px) 1080px, 100vw"
-  />
-
-  <h4>Toni Haila</h4><p>Hallituksen jäsen</p>
-  <p>
-    Yhteisö ja aktiivit<br /><a
-      href="mailto:toni.haila1@turkuamk.fi"
-      target="_blank"
-      rel="noopener">
-      toni.haila1@turkuamk.fi
-    </a>
-  </p>
-
-  <Image
-    loading="lazy"
-    decoding="async"
-    width="1080"
-    height="1080"
-    src="https://opiskelijakunta.net/wp-content/uploads/2026/01/Hallituskuvat-kotisivuille-2026-4.png"
-    alt="Miska Risku"
-    srcset="https://opiskelijakunta.net/wp-content/uploads/2026/01/Hallituskuvat-kotisivuille-2026-4.png 1080w, https://opiskelijakunta.net/wp-content/uploads/2026/01/Hallituskuvat-kotisivuille-2026-4-980x980.png 980w, https://opiskelijakunta.net/wp-content/uploads/2026/01/Hallituskuvat-kotisivuille-2026-4-480x480.png 480w"
-    sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) and (max-width: 980px) 980px, (min-width: 981px) 1080px, 100vw"
-  />
-
-  <h4>Miska Risku</h4><p>Hallituksen jäsen</p>
-  <p>
-    Hallinto ja talous<br /><a
-      href="mailto:miska.risku1@turkuamk.fi"
-      target="_blank"
-      rel="noopener">
-      miska.risku1@turkuamk.fi
-    </a>
-  </p>
-
-  <h3>Henkilökunta</h3>
-
-  <p>
-    Opiskelijakunnan päivittäistä toimintaa toimistolla pyörittää henkilöstö yhdessä hallituksen
-    kanssa. Henkilöstön jäsenet toimivat hallituksen tukena toteuttamassa edustajiston hyväksymää
-    toimintasuunnitelmaa. Kaikki henkilöstön jäsenet auttavat niin opiskelijaedustajia, edustajistoa
-    kuin kaikkia yhteisömme jäseniä.
-  </p><p>
-    Meidät tavoitat eripäivinä TUO Loungesta tai sitten suosittelemme ottamaan yhteyttä
-    sähköpostilla. Aina kun näet meidät käytävillä kävelemässä, niin ota hihasta kiinni, jos haluat
-    jutella. Olemme täällä kaikkien yhteisön jäsenten tukena sekä apuna tilanteessa kuin
-    tilanteessa.
-  </p>
-
-  <Image
-    loading="lazy"
-    decoding="async"
-    width="800"
-    height="400"
-    src="https://opiskelijakunta.net/wp-content/uploads/2024/06/Nimeton-malli-16.png"
-    alt=""
-    title="Nimetön malli (16)"
-    srcset="https://opiskelijakunta.net/wp-content/uploads/2024/06/Nimeton-malli-16.png 800w, https://opiskelijakunta.net/wp-content/uploads/2024/06/Nimeton-malli-16-480x240.png 480w"
-    sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) 800px, 100vw"
-  />
-
-  <Image
-    loading="lazy"
-    decoding="async"
-    width="540"
-    height="540"
-    src="https://opiskelijakunta.net/wp-content/uploads/2024/06/4_58.png"
-    alt="Marko Grönlund"
-    srcset="https://opiskelijakunta.net/wp-content/uploads/2024/06/4_58.png 540w, https://opiskelijakunta.net/wp-content/uploads/2024/06/4_58-480x480.png 480w"
-    sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) 540px, 100vw"
-  />
-
-  <h4>Marko Grönlund</h4><p>Toiminnanjohtaja</p>
-  <p>
-    <a href="mailto:marko.gronlund@turkuamk.fi">marko.gronlund@turkuamk.fi</a><br />0456706650
-  </p>
-
-  <Image
-    loading="lazy"
-    decoding="async"
-    width="540"
-    height="540"
-    src="https://opiskelijakunta.net/wp-content/uploads/2024/06/5_44.png"
-    alt="Jukka-Pekka Salmela"
-    srcset="https://opiskelijakunta.net/wp-content/uploads/2024/06/5_44.png 540w, https://opiskelijakunta.net/wp-content/uploads/2024/06/5_44-480x480.png 480w"
-    sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) 540px, 100vw"
-  />
-
-  <h4>Jukka-Pekka Salmela</h4><p>Edunvalvonnan asiantuntija</p>
-  <a href="mailto:jukka.salmela@turkuamk.fi">jukka.salmela@turkuamk.fi</a><br />
-  0413123874
-
-  <Image
-    loading="lazy"
-    decoding="async"
-    width="540"
-    height="540"
-    src="https://opiskelijakunta.net/wp-content/uploads/2024/06/Nimeton-malli-18.png"
-    alt="Aino Mustalahti"
-    srcset="https://opiskelijakunta.net/wp-content/uploads/2024/06/Nimeton-malli-18.png 540w, https://opiskelijakunta.net/wp-content/uploads/2024/06/Nimeton-malli-18-480x480.png 480w"
-    sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) 540px, 100vw"
-  />
-
-  <h4>Aino Mustalahti</h4><p>viestinnän ja opiskelijakulttuurin asiantuntija</p>
-  <a href="mailto:aino.mustalahti@turkuamk.fi">aino.mustalahti@turkuamk.fi</a><br />
-  0458814050
-
-  <Image
-    loading="lazy"
-    decoding="async"
-    width="400"
-    height="400"
-    src="https://opiskelijakunta.net/wp-content/uploads/2023/04/Nimeton-suunn.malli-33-min.jpg"
-    alt="Mauri"
-    srcset="https://opiskelijakunta.net/wp-content/uploads/2023/04/Nimeton-suunn.malli-33-min.jpg 400w, https://opiskelijakunta.net/wp-content/uploads/2023/04/Nimeton-suunn.malli-33-min-300x300.jpg 300w, https://opiskelijakunta.net/wp-content/uploads/2023/04/Nimeton-suunn.malli-33-min-150x150.jpg 150w, https://opiskelijakunta.net/wp-content/uploads/2023/04/Nimeton-suunn.malli-33-min-12x12.jpg 12w"
-    sizes="(max-width: 400px) 100vw, 400px"
-  />
-
-  <h4>Mauri</h4><p>Siisteys- ja puhtaanapitovastaava</p>
-  <p>
-    <a href="mailto:mauri@opiskelijakunta.net">mauri@opiskelijakunta.net</a>&nbsp;
-  </p>
-
-  <Image
-    loading="lazy"
-    decoding="async"
-    width="1080"
-    height="1080"
-    src="https://opiskelijakunta.net/wp-content/uploads/2026/01/Hallituskuvat-kotisivuille-2026-5.png"
-    alt="Niilo Tähti"
-    srcset="https://opiskelijakunta.net/wp-content/uploads/2026/01/Hallituskuvat-kotisivuille-2026-5.png 1080w, https://opiskelijakunta.net/wp-content/uploads/2026/01/Hallituskuvat-kotisivuille-2026-5-980x980.png 980w, https://opiskelijakunta.net/wp-content/uploads/2026/01/Hallituskuvat-kotisivuille-2026-5-480x480.png 480w"
-    sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) and (max-width: 980px) 980px, (min-width: 981px) 1080px, 100vw"
-  />
-
-  <h4>Niilo Tähti</h4><p>Edustajiston puheenjohtaja</p>
-  <p>
-    <a href="mailto:niilo.tahti1@turkuamk.fi" target="_blank" rel="noopener">
-      niilo.tahti1@turkuamk.fi
-    </a>
-  </p>
-
-  <Image
-    loading="lazy"
-    decoding="async"
-    width="1080"
-    height="1080"
-    src="https://opiskelijakunta.net/wp-content/uploads/2026/01/Hallituskuvat-kotisivuille-2026-8.png"
-    alt="Ville Soikkeli"
-    srcset="https://opiskelijakunta.net/wp-content/uploads/2026/01/Hallituskuvat-kotisivuille-2026-8.png 1080w, https://opiskelijakunta.net/wp-content/uploads/2026/01/Hallituskuvat-kotisivuille-2026-8-980x980.png 980w, https://opiskelijakunta.net/wp-content/uploads/2026/01/Hallituskuvat-kotisivuille-2026-8-480x480.png 480w"
-    sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) and (max-width: 980px) 980px, (min-width: 981px) 1080px, 100vw"
-  />
-
-  <h4>Ville Soikkeli</h4><p>Edustajiston varapuheenjohtaja</p>
-  <p>
-    <a href="mailto:ville.soikkeli1@turkuamk.fi" target="_blank" rel="noopener">
-      ville.soikkeli1@turkuamk.fi
-    </a>
-  </p>
-
-  <h3>Edustajisto</h3>
-
-  <p>
-    Opiskelijakunta TUOta johtaa 21-jäseninen edustajisto, joka kokoontuu vähintään kolme kertaa
-    vuodessa. Edustajisto valitaan vaalilla syksyisin ja sen toimikausi on kalenterivuosi.
-    Jokaisella opiskelijakunnan jäsenellä on mahdollisuus sekä asettua ehdolle että äänestää
-    edustajistovaaleissa.
-  </p><p>
-    Edustajisto päättää toimintasuunnitelmasta ja talousarviosta, hyväksyy toimintakertomuksen ja
-    tilinpäätöksen, määrittelee jäsenmaksun suuruuden sekä päättää mahdollisista sääntömuutoksista.
-    Lisäksi edustajisto mm. valitsee TUOn hallituksen ja opiskelijaedustajat Turun
-    ammattikorkeakoulun hallitukseen ja opintotukilautakuntaan.
-  </p><p>
-    Ryhmäpuheenjohtajan tehtävä on edistää tiedonkulkua edustajiston puheenjohtajiston ja oman
-    ryhmänsä välillä. Ryhmäpuheenjohtaja voi myös johtaa ryhmänsä toimintaa järjestämällä
-    ryhmätapaamisia, joissa päätettävistä asioista käydään keskustelua ryhmän kesken.
-  </p><p>
-    Opiskelijakunnan ohjesääntöjen mukaan edustajiston puheenjohtaja on opiskelijakunnan
-    puheenjohtaja. Edustajiston sihteerinä toimii opiskelijakunnan toiminnanjohtaja.
-  </p>
-
-  <h5>Tekniikan Taitajat</h5>
-
-  <p>Varsinaiset jäsenet:</p><p>
-    Oona Kaarmela<br />Eetu Pärssinen<br />Sara Sandberg<br />Roope Autio<br />Anniina Mattila
-  </p>
-
-  <h5>Tradenomivaikuttajat</h5>
-
-  <p>Varsinaiset jäsenet:</p><p>
-    Iitu Kuusrainen<br />Miska Risku<br />Henri Tran<br />Kitisak Paanmongkhon<br />Hannah Nurmi<br
-    />Roosa Mustonen<br />Juulia Tuomenharju<br />Minna Lielahti<br />Elli Nikula
-  </p>
-
-  <h5>TUTA-lista</h5>
-  <p>Varsinaiset jäsenet:</p><p>Pyry Murtoniemi<br />Tuomas Mäkelä</p>
-
-  <h5>Punavihreälista</h5>
-  <p>Varsinaiset jäsenet:</p><p>Milla Mesiranta</p>
-
-  <h5>SOTE-lista</h5>
-  <p>Varsinaiset jäsenet:</p><p>Jesse Mäki<br />Aamu Keinänen</p>
-
-  <h5>Taideakatemia</h5>
-  <p>Varsinaiset jäsenet:</p><p>Heta Lääkkö<br />Veikko Peräkorpi</p>
-
-  <h3>Kumppaniyhdistykset</h3>
-
-  <p>
-    Turun ammattikorkeakoulussa toimii eri koulutusalojen opiskelijoita varten myös monia
-    koulutusalayhdistyksiä. Koulutusalayhdistykset valvovat opiskelijoiden etuja
-    koulutusalakohtaisesti yhdessä TUOn kanssa.
-  </p><p>
-    Koulutusalayhdistyksillä voi olla edunvalvonta-, koulutuspoliittisia ja sosiaalipoliittisia
-    vastaavia, jotka edustavat omaa alaa opettajankokouksissa, keräävät opiskelijoilta palautetta,
-    osallistuvat TUOn edunvalvontatapaamisiin ja tuovat palautetta koulutusohjelmalta
-    opiskelijoille.
-  </p><p>
-    Koulutusalayhdistyksien lisäksi TUOn kumppaniyhdistykseksi voivat hakea yhdistykset, joilla on
-    jäseninä Turun ammattikorkeakoulun opiskelijoita. Lisää voit lukea materiaalipankin
-    kumppaniyhdistysohjesäännöstä.
-  </p>
-
-  <Image
-    loading="lazy"
-    decoding="async"
-    width="800"
-    height="400"
-    src="https://opiskelijakunta.net/wp-content/uploads/2022/10/Nimeton-suunn.malli-12-min.jpg"
-    alt=""
-    title="Nimetön suunn.malli (12)-min"
-    srcset="https://opiskelijakunta.net/wp-content/uploads/2022/10/Nimeton-suunn.malli-12-min.jpg 800w, https://opiskelijakunta.net/wp-content/uploads/2022/10/Nimeton-suunn.malli-12-min-480x240.jpg 480w"
-    sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) 800px, 100vw"
-  />
-
-  <Image
-    loading="lazy"
-    decoding="async"
-    width="964"
-    height="964"
-    src="https://opiskelijakunta.net/wp-content/uploads/2023/02/IMG_20230220_201458_386-min.jpg"
-    alt="ELBA ry"
-    srcset="https://opiskelijakunta.net/wp-content/uploads/2023/02/IMG_20230220_201458_386-min.jpg 964w, https://opiskelijakunta.net/wp-content/uploads/2023/02/IMG_20230220_201458_386-min-480x480.jpg 480w"
-    sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) 964px, 100vw"
-  />
-  <h4>ELBA ry</h4>
-
-  <Image
-    loading="lazy"
-    decoding="async"
-    width="400"
-    height="400"
-    src="https://opiskelijakunta.net/wp-content/uploads/2022/10/Mome-Logo-min.jpg"
-    alt="MoMe ry"
-    srcset="https://opiskelijakunta.net/wp-content/uploads/2022/10/Mome-Logo-min.jpg 400w, https://opiskelijakunta.net/wp-content/uploads/2022/10/Mome-Logo-min-300x300.jpg 300w, https://opiskelijakunta.net/wp-content/uploads/2022/10/Mome-Logo-min-150x150.jpg 150w, https://opiskelijakunta.net/wp-content/uploads/2022/10/Mome-Logo-min-12x12.jpg 12w"
-    sizes="(max-width: 400px) 100vw, 400px"
-  />
-  <h4>MoMe ry</h4>
-
-  <Image
-    loading="lazy"
-    decoding="async"
-    width="400"
-    height="400"
-    src="https://opiskelijakunta.net/wp-content/uploads/2022/10/Tasokas-Logo-min.jpg"
-    alt="Tasokas ry"
-    srcset="https://opiskelijakunta.net/wp-content/uploads/2022/10/Tasokas-Logo-min.jpg 400w, https://opiskelijakunta.net/wp-content/uploads/2022/10/Tasokas-Logo-min-300x300.jpg 300w, https://opiskelijakunta.net/wp-content/uploads/2022/10/Tasokas-Logo-min-150x150.jpg 150w, https://opiskelijakunta.net/wp-content/uploads/2022/10/Tasokas-Logo-min-12x12.jpg 12w"
-    sizes="(max-width: 400px) 100vw, 400px"
-  />
-  <h4>Tasokas ry</h4>
-
-  <Image
-    loading="lazy"
-    decoding="async"
-    width="400"
-    height="400"
-    src="https://opiskelijakunta.net/wp-content/uploads/2023/09/suukko-uusi-logo-min.jpg"
-    alt="SUUKKO ry"
-    srcset="https://opiskelijakunta.net/wp-content/uploads/2023/09/suukko-uusi-logo-min.jpg 400w, https://opiskelijakunta.net/wp-content/uploads/2023/09/suukko-uusi-logo-min-300x300.jpg 300w, https://opiskelijakunta.net/wp-content/uploads/2023/09/suukko-uusi-logo-min-150x150.jpg 150w, https://opiskelijakunta.net/wp-content/uploads/2023/09/suukko-uusi-logo-min-12x12.jpg 12w"
-    sizes="(max-width: 400px) 100vw, 400px"
-  />
-  <h4>SUUKKO ry</h4>
-
-  <Image
-    loading="lazy"
-    decoding="async"
-    width="400"
-    height="400"
-    src="https://opiskelijakunta.net/wp-content/uploads/2023/09/tio-uusi-logo-min.jpg"
-    alt="TIO ry"
-    srcset="https://opiskelijakunta.net/wp-content/uploads/2023/09/tio-uusi-logo-min.jpg 400w, https://opiskelijakunta.net/wp-content/uploads/2023/09/tio-uusi-logo-min-300x300.jpg 300w, https://opiskelijakunta.net/wp-content/uploads/2023/09/tio-uusi-logo-min-150x150.jpg 150w, https://opiskelijakunta.net/wp-content/uploads/2023/09/tio-uusi-logo-min-12x12.jpg 12w"
-    sizes="(max-width: 400px) 100vw, 400px"
-  />
-  <h4>TIO ry</h4>
-
-  <Image
-    loading="lazy"
-    decoding="async"
-    width="400"
-    height="400"
-    src="https://opiskelijakunta.net/wp-content/uploads/2022/10/TOY-logo-min.jpg"
-    alt="TOY ry"
-    srcset="https://opiskelijakunta.net/wp-content/uploads/2022/10/TOY-logo-min.jpg 400w, https://opiskelijakunta.net/wp-content/uploads/2022/10/TOY-logo-min-300x300.jpg 300w, https://opiskelijakunta.net/wp-content/uploads/2022/10/TOY-logo-min-150x150.jpg 150w, https://opiskelijakunta.net/wp-content/uploads/2022/10/TOY-logo-min-12x12.jpg 12w"
-    sizes="(max-width: 400px) 100vw, 400px"
-  />
-  <h4>TOY ry</h4>
-
-  <Image
-    loading="lazy"
-    decoding="async"
-    width="400"
-    height="400"
-    src="https://opiskelijakunta.net/wp-content/uploads/2022/10/Trade-logo-min.jpg"
-    alt="TRADE ry"
-    srcset="https://opiskelijakunta.net/wp-content/uploads/2022/10/Trade-logo-min.jpg 400w, https://opiskelijakunta.net/wp-content/uploads/2022/10/Trade-logo-min-300x300.jpg 300w, https://opiskelijakunta.net/wp-content/uploads/2022/10/Trade-logo-min-150x150.jpg 150w, https://opiskelijakunta.net/wp-content/uploads/2022/10/Trade-logo-min-12x12.jpg 12w"
-    sizes="(max-width: 400px) 100vw, 400px"
-  />
-  <h4>TRADE ry</h4>
-
-  <Image
-    loading="lazy"
-    decoding="async"
-    width="400"
-    height="400"
-    src="https://opiskelijakunta.net/wp-content/uploads/2023/09/TSTS-uusi-logo-min.jpg"
-    alt="TSTS ry"
-    srcset="https://opiskelijakunta.net/wp-content/uploads/2023/09/TSTS-uusi-logo-min.jpg 400w, https://opiskelijakunta.net/wp-content/uploads/2023/09/TSTS-uusi-logo-min-300x300.jpg 300w, https://opiskelijakunta.net/wp-content/uploads/2023/09/TSTS-uusi-logo-min-150x150.jpg 150w, https://opiskelijakunta.net/wp-content/uploads/2023/09/TSTS-uusi-logo-min-12x12.jpg 12w"
-    sizes="(max-width: 400px) 100vw, 400px"
-  />
-  <h4>TSTS ry</h4>
-
-  <Image
-    loading="lazy"
-    decoding="async"
-    width="400"
-    height="400"
-    src="https://opiskelijakunta.net/wp-content/uploads/2022/10/TROK-logo-min.jpg"
-    alt="TROK ry"
-    srcset="https://opiskelijakunta.net/wp-content/uploads/2022/10/TROK-logo-min.jpg 400w, https://opiskelijakunta.net/wp-content/uploads/2022/10/TROK-logo-min-300x300.jpg 300w, https://opiskelijakunta.net/wp-content/uploads/2022/10/TROK-logo-min-150x150.jpg 150w, https://opiskelijakunta.net/wp-content/uploads/2022/10/TROK-logo-min-12x12.jpg 12w"
-    sizes="(max-width: 400px) 100vw, 400px"
-  />
-  <h4>TROK ry</h4>
-
-  <Image
-    loading="lazy"
-    decoding="async"
-    width="400"
-    height="393"
-    src="https://opiskelijakunta.net/wp-content/uploads/2023/08/CMTlogo-min.jpg"
-    alt="Collegium Musicum Turku ry"
-    srcset="https://opiskelijakunta.net/wp-content/uploads/2023/08/CMTlogo-min.jpg 400w, https://opiskelijakunta.net/wp-content/uploads/2023/08/CMTlogo-min-300x295.jpg 300w, https://opiskelijakunta.net/wp-content/uploads/2023/08/CMTlogo-min-12x12.jpg 12w"
-    sizes="(max-width: 400px) 100vw, 400px"
-  />
-  <h4>Collegium Musicum Turku ry</h4>
-
-  <Image
-    loading="lazy"
-    decoding="async"
-    width="400"
-    height="400"
-    src="https://opiskelijakunta.net/wp-content/uploads/2022/10/wappuradio-logo-min.jpg"
-    alt="Turun Wappuradio"
-    srcset="https://opiskelijakunta.net/wp-content/uploads/2022/10/wappuradio-logo-min.jpg 400w, https://opiskelijakunta.net/wp-content/uploads/2022/10/wappuradio-logo-min-300x300.jpg 300w, https://opiskelijakunta.net/wp-content/uploads/2022/10/wappuradio-logo-min-150x150.jpg 150w, https://opiskelijakunta.net/wp-content/uploads/2022/10/wappuradio-logo-min-12x12.jpg 12w"
-    sizes="(max-width: 400px) 100vw, 400px"
-  />
-  <h4>Turun Wappuradio</h4>
-
-  <Image
-    loading="lazy"
-    decoding="async"
-    width="1080"
-    height="1080"
-    src="https://opiskelijakunta.net/wp-content/uploads/2025/05/Aukioloajat-insta.jpg"
-    alt="ESN Uni Turku"
-    srcset="https://opiskelijakunta.net/wp-content/uploads/2025/05/Aukioloajat-insta.jpg 1080w, https://opiskelijakunta.net/wp-content/uploads/2025/05/Aukioloajat-insta-980x980.jpg 980w, https://opiskelijakunta.net/wp-content/uploads/2025/05/Aukioloajat-insta-480x480.jpg 480w"
-    sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) and (max-width: 980px) 980px, (min-width: 981px) 1080px, 100vw"
-  />
-  <h4>ESN Uni Turku</h4>
-
-  <Image
-    loading="lazy"
-    decoding="async"
-    width="287"
-    height="288"
-    src="https://opiskelijakunta.net/wp-content/uploads/2022/10/cropped-front_tukores_new_3-2-min.jpg"
-    alt="TuKoRes ry"
-    srcset="https://opiskelijakunta.net/wp-content/uploads/2022/10/cropped-front_tukores_new_3-2-min.jpg 287w, https://opiskelijakunta.net/wp-content/uploads/2022/10/cropped-front_tukores_new_3-2-min-150x150.jpg 150w, https://opiskelijakunta.net/wp-content/uploads/2022/10/cropped-front_tukores_new_3-2-min-12x12.jpg 12w"
-    sizes="(max-width: 287px) 100vw, 287px"
-  />
-  <h4>TuKoRes ry</h4>
-
-  <Image
-    loading="lazy"
-    decoding="async"
-    width="827"
-    height="768"
-    src="https://opiskelijakunta.net/wp-content/uploads/2025/09/logo_uusi.png"
-    alt="Beer Pong Turku ry"
-    srcset="https://opiskelijakunta.net/wp-content/uploads/2025/09/logo_uusi.png 827w, https://opiskelijakunta.net/wp-content/uploads/2025/09/logo_uusi-480x446.png 480w"
-    sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) 827px, 100vw"
-  />
-  <h4>Beer Pong Turku ry</h4>
-
-  <Image
-    loading="lazy"
-    decoding="async"
-    width="400"
-    height="400"
-    src="https://opiskelijakunta.net/wp-content/uploads/2022/10/Nimeton-suunn.malli-1-min.jpg"
-    alt="TUAS Tornadoes"
-    srcset="https://opiskelijakunta.net/wp-content/uploads/2022/10/Nimeton-suunn.malli-1-min.jpg 400w, https://opiskelijakunta.net/wp-content/uploads/2022/10/Nimeton-suunn.malli-1-min-300x300.jpg 300w, https://opiskelijakunta.net/wp-content/uploads/2022/10/Nimeton-suunn.malli-1-min-150x150.jpg 150w, https://opiskelijakunta.net/wp-content/uploads/2022/10/Nimeton-suunn.malli-1-min-12x12.jpg 12w"
-    sizes="(max-width: 400px) 100vw, 400px"
-  />
-  <h4>TUAS Tornadoes</h4>
-
-  <Image
-    loading="lazy"
-    decoding="async"
-    width="1080"
-    height="1080"
-    src="https://opiskelijakunta.net/wp-content/uploads/2025/10/HAALARIMERKIT-4-4.png"
-    alt="Kings of Kupittaa Ry"
-    srcset="https://opiskelijakunta.net/wp-content/uploads/2025/10/HAALARIMERKIT-4-4.png 1080w, https://opiskelijakunta.net/wp-content/uploads/2025/10/HAALARIMERKIT-4-4-980x980.png 980w, https://opiskelijakunta.net/wp-content/uploads/2025/10/HAALARIMERKIT-4-4-480x480.png 480w"
-    sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) and (max-width: 980px) 980px, (min-width: 981px) 1080px, 100vw"
-  />
-  <h4>Kings of Kupittaa Ry</h4>
-</article>
+<Layout>
+  <main>
+    <HeroPages
+      title="Opiskelijakunta"
+      img="https://opiskelijakunta.net/wp-content/uploads/2022/10/Nimeton-suunn.malli-9-min.jpg"
+    />
+    <PageNav {...props} />
+
+    <HeroSection
+      reverse
+      id="meista"
+      title="Tietoa opiskelijakunnasta"
+      img="https://opiskelijakunta.net/wp-content/uploads/2022/10/Nimeton-suunn.malli-9-min.jpg">
+      <p>
+        Turun ammattikorkeakoulun opiskelijakunta - TUOn tarkoitus on valvoa opiskelijoiden etua ja
+        tuoda opiskelijoiden ääni kuuluviin ammattikorkeakoulussa ja kaupunkien päätöksenteossa -
+        Salossa ja Turussa. TUO on uskonnollisesti ja poliittisesti sitoutumaton sekä
+        ammattiyhdistyksistä riippumaton.
+      </p>
+      <p>
+        Opiskelijakunta TUOn jäsenenä saat monenlaisia etuja sekä paikallisesti että
+        valtakunnallisesti. Saat esimerkiksi alennuksia tapahtumalipuista ja yhteistyöyritysten
+        palveluista sekä henkilökohtaista apua ja tukea opiskelijaelämän ongelmatilanteissa.
+      </p>
+    </HeroSection>
+
+    <section class="grid grid-cols-1 grid-rows-1 gap-4 py-10 md:grid-cols-3">
+      <Collapsible title="Strategia">
+        <p>
+          Opiskelijakunnan strategia ohjaa toimintaa useammalle vuodelle. Strategia ohjaa kaikkea
+          toimintaa opiskelijakunnassa.
+        </p><p>
+          Opiskelijakunnan strategian löydät <a
+            href="https://drive.google.com/file/d/1kaxYQDjE1ld2hR7-TN2nRncl9Wd2h6R2/view?usp=sharing"
+            target="_blank"
+            rel="noopener">
+            täältä
+          </a>
+        </p>
+      </Collapsible>
+      <Collapsible title="Säännöt">
+        <p>
+          Opiskelijakunnan säännöt ohjaavat toimintaa ja pitävät sisällään mm. edustajiston ja
+          hallituksen toimintaa.
+        </p><p>
+          Opiskelijakunnan säännöt löydät
+          <a
+            href="https://drive.google.com/file/d/1LN4-HF7AEFq2PsKbzaFPqrK_C8ygZ3cR/view?usp=sharing"
+            style="color: #ffff00;"
+            target="_blank"
+            rel="noopener">
+            täältä
+          </a>
+          !
+        </p>
+      </Collapsible>
+      <Collapsible title="Johto- ja hallintosääntö">
+        <p>
+          Opiskelijakunnan johto- ja hallintosääntö tarkentaa sääntöjä ja keskittyy enemmän
+          käytännön asioihin.
+        </p><p>
+          Opiskelijakunnan johto- ja hallintosäännön löydät
+          <a
+            href="https://drive.google.com/file/d/1-nnWPP8BSFVG6sETnKlSJv5HpavTYRcA/view?usp=sharing"
+            style="color: #ffff99;"
+            target="_blank"
+            rel="noopener">
+            täältä
+          </a>
+          !
+        </p>
+      </Collapsible>
+    </section>
+
+    <HeroSection
+      title="Hallitus"
+      id="hallitus"
+      img="https://opiskelijakunta.net/wp-content/uploads/2026/01/FIN-InfoTUOkio-2026-kevat-3.png">
+      <p>
+        Opiskelijakunta TUOn hallituksen valitsee opiskelijoista koostuva edustajistomme
+        kalenterivuodeksi kerrallaan. Nämä opiskelijakunnan operatiivisen toiminnan toteuttajat
+        noudattavat edustajiston hyväksymää toimintasuunnitelmaa sekä edustavat opiskelijoita niin
+        päättävissä tärkeissä pöydissä kuin erilaisissa opiskelijatapahtumissa ja vapaamuotoisissa
+        tilaisuuksissa. Hallituksen jäsenet toimivat tiiviissä yhteistyössä opiskelijakunnan
+        henkilöstön kanssa opiskelijan paremman huomisen eteen.
+      </p><p>
+        Hallituksen jäsenet ovat täällä koko yhteisöä varten. Voit aina ottaa yhteyttä meihin tai
+        ottaa käytävällä hihasta kiinni. Olemme täällä juuri sinua varten.
+      </p>
+    </HeroSection>
+
+    <PersonGallery people={hallitus.data} />
+
+    <HeroSection
+      title="Henkilökunta"
+      id="henkilokunta"
+      img="https://opiskelijakunta.net/wp-content/uploads/2024/06/Nimeton-malli-16.png">
+      <p>
+        Opiskelijakunnan päivittäistä toimintaa toimistolla pyörittää henkilöstö yhdessä hallituksen
+        kanssa. Henkilöstön jäsenet toimivat hallituksen tukena toteuttamassa edustajiston
+        hyväksymää toimintasuunnitelmaa. Kaikki henkilöstön jäsenet auttavat niin
+        opiskelijaedustajia, edustajistoa kuin kaikkia yhteisömme jäseniä.
+      </p><p>
+        Meidät tavoitat eripäivinä TUO Loungesta tai sitten suosittelemme ottamaan yhteyttä
+        sähköpostilla. Aina kun näet meidät käytävillä kävelemässä, niin ota hihasta kiinni, jos
+        haluat jutella. Olemme täällä kaikkien yhteisön jäsenten tukena sekä apuna tilanteessa kuin
+        tilanteessa.
+      </p>
+    </HeroSection>
+
+    <PersonGallery people={henkilokunta.data} />
+
+    <PersonGallery people={edustajisto.data} />
+
+    <HeroSection title="Edustajisto" id="edustajisto">
+      <p>
+        Opiskelijakunta TUOta johtaa 21-jäseninen edustajisto, joka kokoontuu vähintään kolme kertaa
+        vuodessa. Edustajisto valitaan vaalilla syksyisin ja sen toimikausi on kalenterivuosi.
+        Jokaisella opiskelijakunnan jäsenellä on mahdollisuus sekä asettua ehdolle että äänestää
+        edustajistovaaleissa.
+      </p><p>
+        Edustajisto päättää toimintasuunnitelmasta ja talousarviosta, hyväksyy toimintakertomuksen
+        ja tilinpäätöksen, määrittelee jäsenmaksun suuruuden sekä päättää mahdollisista
+        sääntömuutoksista. Lisäksi edustajisto mm. valitsee TUOn hallituksen ja opiskelijaedustajat
+        Turun ammattikorkeakoulun hallitukseen ja opintotukilautakuntaan.
+      </p><p>
+        Ryhmäpuheenjohtajan tehtävä on edistää tiedonkulkua edustajiston puheenjohtajiston ja oman
+        ryhmänsä välillä. Ryhmäpuheenjohtaja voi myös johtaa ryhmänsä toimintaa järjestämällä
+        ryhmätapaamisia, joissa päätettävistä asioista käydään keskustelua ryhmän kesken.
+      </p><p>
+        Opiskelijakunnan ohjesääntöjen mukaan edustajiston puheenjohtaja on opiskelijakunnan
+        puheenjohtaja. Edustajiston sihteerinä toimii opiskelijakunnan toiminnanjohtaja.
+      </p>
+    </HeroSection>
+
+    <section class="grid grid-cols-1 grid-rows-1 gap-4 py-10 md:grid-cols-3">
+      <Collapsible title="Tekniikan Taitajat">
+        <h5></h5>
+
+        <p>Varsinaiset jäsenet:</p><p>
+          Oona Kaarmela<br />Eetu Pärssinen<br />Sara Sandberg<br />Roope Autio<br />Anniina Mattila
+        </p>
+      </Collapsible>
+      <Collapsible title="Tradenomivaikuttajat">
+        <p>Varsinaiset jäsenet:</p><p>
+          Iitu Kuusrainen<br />Miska Risku<br />Henri Tran<br />Kitisak Paanmongkhon<br />Hannah
+          Nurmi<br />Roosa Mustonen<br />Juulia Tuomenharju<br />Minna Lielahti<br />Elli Nikula
+        </p>
+      </Collapsible>
+      <Collapsible title="TUTA-lista">
+        <p>Varsinaiset jäsenet:</p><p>Pyry Murtoniemi<br />Tuomas Mäkelä</p>
+      </Collapsible>
+      <Collapsible title="Punavihreälista">
+        <p>Varsinaiset jäsenet:</p><p>Milla Mesiranta</p>
+      </Collapsible>
+      <Collapsible title="SOTE-lista">
+        <p>Varsinaiset jäsenet:</p><p>Jesse Mäki<br />Aamu Keinänen</p>
+      </Collapsible>
+      <Collapsible title="Taideakatemia">
+        <p>Varsinaiset jäsenet:</p><p>Heta Lääkkö<br />Veikko Peräkorpi</p>
+      </Collapsible>
+    </section>
+
+    <HeroSection
+      reverse
+      title="Kumppaniyhdistykset"
+      id="yhdistykset"
+      img="https://opiskelijakunta.net/wp-content/uploads/2022/10/Nimeton-suunn.malli-12-min.jpg">
+      <p>
+        Turun ammattikorkeakoulussa toimii eri koulutusalojen opiskelijoita varten myös monia
+        koulutusalayhdistyksiä. Koulutusalayhdistykset valvovat opiskelijoiden etuja
+        koulutusalakohtaisesti yhdessä TUOn kanssa.
+      </p><p>
+        Koulutusalayhdistyksillä voi olla edunvalvonta-, koulutuspoliittisia ja sosiaalipoliittisia
+        vastaavia, jotka edustavat omaa alaa opettajankokouksissa, keräävät opiskelijoilta
+        palautetta, osallistuvat TUOn edunvalvontatapaamisiin ja tuovat palautetta
+        koulutusohjelmalta opiskelijoille.
+      </p><p>
+        Koulutusalayhdistyksien lisäksi TUOn kumppaniyhdistykseksi voivat hakea yhdistykset, joilla
+        on jäseninä Turun ammattikorkeakoulun opiskelijoita. Lisää voit lukea materiaalipankin
+        kumppaniyhdistysohjesäännöstä.
+      </p>
+    </HeroSection>
+
+    <PartnerGallery partners={kumppaniyhdistykset.data} />
+  </main>
+</Layout>

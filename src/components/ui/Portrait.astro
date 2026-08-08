@@ -1,0 +1,37 @@
+---
+import { Image } from "astro:assets";
+import type { Person } from "@/lib/schemas";
+
+interface Props {
+  person: Person;
+}
+
+const { person } = Astro.props;
+---
+
+<div class="w-64">
+  <div class="">
+    <div class="flex flex-col items-center">
+      <Image
+        loading="lazy"
+        decoding="async"
+        src={person.image}
+        alt={person.name}
+        class="rounded-full"
+        inferSize
+      />
+      <h4 class="">{person.name}</h4>
+      <p class="">{person.title}</p>
+      <p class="">{person.role}</p>
+      <div>
+        <p>
+          <a class="" href=`mailto:${person.email}` target="_blank" rel="noopener">
+            {person.email}
+          </a>
+          <br />
+          {person.phone}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
