@@ -5,8 +5,8 @@ type Props = PageProps;
 const props = Astro.props;
 ---
 
-<nav class="">
-  <ul class="flex justify-center gap-5">
+<nav class="hidden p-2 lg:block">
+  <ul class="flex flex-wrap justify-center gap-7">
     {
       props.submenu?.map((anchor) => {
         return (
@@ -14,7 +14,8 @@ const props = Astro.props;
             <a
               href={"id" in anchor ? `/opiskelijakunta/${anchor.id}` : anchor.url}
               target={"id" in anchor ? "_self" : "_blank"}
-              aria-current="page">
+              aria-current="page"
+              class="hover:text-tuo-dark-blue uppercase">
               {anchor.label}
             </a>
           </li>

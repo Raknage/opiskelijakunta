@@ -9,7 +9,7 @@ interface Props {
 const { people } = Astro.props;
 ---
 
-<section class="flex flex-row flex-wrap">
+<section class="mx-10 flex flex-row flex-wrap justify-center gap-x-10 gap-y-4 py-10 xl:mx-20">
   {
     Object.entries(people).map((person) => {
       return <Portrait person={person[1]} />;

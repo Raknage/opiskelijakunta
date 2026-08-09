@@ -9,22 +9,20 @@ interface Props {
 const { partner } = Astro.props;
 ---
 
-<div class="w-64">
+<div class="w-72 p-4">
   <a class="" href={partner.link} target="_blank" rel="noopener">
-    <div class="">
-      <div class="flex flex-col items-center">
-        <Image
-          loading="lazy"
-          decoding="async"
-          src={partner.image}
-          alt={partner.name}
-          class="rounded-full"
-          inferSize
-        />
-        <h4 class="">{partner.name}</h4>
-        <div>
-          <p></p>
-        </div>
+    <div class="flex flex-col items-center text-center">
+      <Image
+        loading="lazy"
+        decoding="async"
+        src={partner.image}
+        alt={partner.name}
+        class="shadow-tuo-md m-4 rounded-full bg-white"
+        inferSize
+      />
+      <h5 class="uppercase">{partner.name}</h5>
+      <div>
+        <p></p>
       </div>
     </div>
   </a>
