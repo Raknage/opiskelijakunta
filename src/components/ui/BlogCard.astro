@@ -10,10 +10,9 @@ type Props = CollectionEntry<"posts">;
 const post = Astro.props;
 ---
 
-<a
-  href={`blog/${post.data.slug}`}
+<div
   class="shadow-tuo-lg bg-tuo-blue rounded-tuo hover:shadow-tuo-xl m-4 overflow-hidden text-white transition-all duration-150 hover:-translate-y-0.5">
-  <div class="grid grid-cols-1">
+  <div class="flex h-full flex-col">
     <Image
       class="w-full object-cover"
       src={post.data.featuredImage ? post.data.featuredImage?.node.guid : FallbackImage.src}
@@ -21,11 +20,11 @@ const post = Astro.props;
       loading="lazy"
       inferSize={true}
     />
-    <div class="grid grid-cols-1 gap-2 p-4">
-      <h4 class="text-tuo-yellow text-xl">{post.data.title}</h4>
+    <div class="flex h-full flex-col justify-between gap-2 p-4">
+      <h4 class="">{post.data.title}</h4>
       <FormattedDate date={post.data.date} />
-      <p class="line-clamp-3">{post.data.content}</p>
-      <p class="text-tuo-yellow font-bold">Lue lisää</p>
+      <div class="line-clamp-4" set:html={post.data.content} />
+      <a href={`blog/${post.data.slug}`} class="text-tuo-yellow font-bold">Lue lisää</a>
     </div>
   </div>
-</a>
+</div>
