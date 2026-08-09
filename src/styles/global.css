@@ -19,7 +19,7 @@
   --shadow-tuo-md: 0 4px 6px -1px rgba(0, 122, 139, 0.2), 0 2px 4px -2px rgba(0, 122, 139, 0.2);
   --shadow-tuo-lg: 0 10px 15px -3px rgb(0 122 139 / 0.5), 0 4px 6px -4px rgb(0 122 139 / 0.3);
   --shadow-tuo-xl: 0 20px 25px -5px rgb(0 122 139 / 0.7), 0 8px 10px -6px rgb(0 122 139 / 0.7);
-  --radius-tuo: var(--radius-md);
+  --radius-tuo: var(--radius-xl);
 
   --animate-infinite-scroll: infinite-scroll 60s linear infinite;
 
@@ -43,13 +43,31 @@
 
 @layer base {
   :root {
-    background-color: #f7f7f7;
-    color: #1a1a1a;
-    font-family: var(--font-sans);
+    @apply bg-neutral-100 font-sans text-neutral-600;
   }
 
   html {
     scroll-behavior: smooth;
+  }
+
+  h2 {
+    @apply text-tuo-blue pb-2 text-2xl font-black uppercase md:text-4xl;
+  }
+
+  h4 {
+    @apply text-tuo-yellow text-xl font-bold;
+  }
+
+  h5 {
+    @apply text-tuo-blue text-xl font-bold;
+  }
+
+  h6 {
+    @apply text-tuo-blue font-bold;
+  }
+
+  summary {
+    display: block;
   }
 
   img,

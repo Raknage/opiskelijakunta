@@ -40,14 +40,14 @@ const blurbs = [
 ---
 
 <section
-  class="border-tuo-yellow rounded-tuo shadow-tuo-md m-auto mt-[-10%] mb-8 w-fit max-w-9/10 border-t-18 bg-white tracking-wider">
+  class="border-tuo-yellow rounded-tuo shadow-tuo-md isolate m-auto mt-[-10%] mb-8 w-fit max-w-9/10 border-t-18 bg-white tracking-wider 2xl:mt-[-5%]">
   <div class="grid sm:grid-cols-2 lg:grid-cols-4">
     {
       blurbs.map((b) => {
         return (
           <div class="grid min-w-60 grid-rows-[auto_1fr_1fr_auto] place-items-center px-10 py-5 text-center lg:py-7.5">
             <SymbolRound icon={b.symbol} />
-            <h4 class="pb-2.5 text-lg font-black uppercase">{b.heading}</h4>
+            <h5 class="pb-2.5 text-lg font-black uppercase">{b.heading}</h5>
             <p class="font-normal">{b.text}</p>
             <TUOButton link={b.link} text="Lue lisää" target={b.target} />
           </div>
