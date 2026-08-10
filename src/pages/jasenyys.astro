@@ -1,6 +1,11 @@
 ---
+import HeroPages from "@/components/HeroPages.astro";
+import HeroSection from "@/components/HeroSection.astro";
+import PageNav from "@/components/PageNav.astro";
+import Collapsible from "@/components/ui/Collapsible.astro";
+import Layout from "@/layouts/Layout.astro";
 import type { PageProps } from "@/schemas";
-import { Image } from "astro:assets";
+import { CircleCheckBig } from "@lucide/astro";
 
 export const props: PageProps = {
   title: "Jäsenyys",
@@ -14,175 +19,242 @@ export const props: PageProps = {
 };
 ---
 
-<article>
-  <h1>Jäsenyys</h1>
+<Layout>
+  <main>
+    <HeroPages title="Jäsenyys" />
 
-  <nav>
-    <ul>
-      <li>
-        <a href="https://opiskelijakunta.net/jasenyys/#liity" aria-current="page">
-          Liity jäseneksi
-        </a>
-      </li><li>
-        <a href="https://opiskelijakunta.net/jasenyys/#edut" aria-current="page">Jäsenedut</a>
-      </li><li>
-        <a href="https://opiskelijakunta.net/jasenyys/#ehdot" aria-current="page">
-          Jäsenyyden ehdot
-        </a>
-      </li>
-    </ul>
-  </nav>
+    <PageNav {...props} />
 
-  <ul>
-    <li>
-      <a href="https://opiskelijakunta.net/jasenyys/#liity" aria-current="page">Liity jäseneksi</a>
-    </li><li>
-      <a href="https://opiskelijakunta.net/jasenyys/#edut" aria-current="page">Jäsenedut</a>
-    </li><li>
-      <a href="https://opiskelijakunta.net/jasenyys/#ehdot" aria-current="page">Jäsenyyden ehdot</a>
-    </li>
-  </ul>
+    <HeroSection
+      reverse
+      title="Luomassa parempaa opiskelijayhteisöä!"
+      img="https://opiskelijakunta.net/wp-content/uploads/2022/10/Nimeton-suunn.malli-3-min.jpg">
+      <p>
+        Tervetuloa mukaan luomaan vieläkin parempaa opiskelijayhteisöä meille kaikille.
+        Opiskelijakunta TUO ei olisi mitään ilman sen jäseniä ja heidän ajatuksiaan sekä ideoita
+        minkälainen on Suomen paras yhteisö. Haluamme olla luomassa yhdessä parasta yhteisöä meille
+        kaikille, mutta tarvitsemme juuri sinua avuksi. Oletko valmis tulemaan mukaan?
+      </p><p>
+        Yhteisön kehittämiseen osallistuvat niin jäsenemme, edustajistomme, hallituksemme kuin
+        henkilökuntamme. Haluamme kaikki olla omalta osaltamme luomassa opiskelijan parempaa
+        huomista ja hyvinvoivaa yhteisöä meille kaikille. Toivottavasti sinäkin lähdet mukaan
+        luomaan entistä parempaa yhteisöä.
+      </p><p>
+        Olemme aktiivisesti mukana OPKU+ yhteistyössä luomassa uusia etuja, palveluita sekä
+        toimintaa paremman opiskelijaelämän tueksi. Uskomme, että opiskelijoiden asioiden
+        parantaminen etenee yhteistyöllä. Jäsenenämme pääset osaksi tätäkin yhteistyötä sekä
+        tulevaisuuden luomista.
+      </p>
+      <h4 class="pb-2.5 text-lg font-black uppercase">Liity jäseneksi tästä</h4>
+    </HeroSection>
 
-  <h3>Luomassa parempaa opiskelijayhteisöä!</h3>
+    <section
+      class="border-tuo-yellow rounded-tuo shadow-tuo-md isolate m-auto my-8 w-fit max-w-9/10 border-t-18 bg-white tracking-wider">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4">
+        <div
+          class="grid min-w-60 grid-rows-[auto_1fr_1fr_auto] place-items-center px-10 py-5 text-center lg:py-7.5">
+          <p class="text-tuo-blue text-[70px]">1600+</p>
+          <h3 class="font-bold uppercase">Jäseniä</h3>
+        </div>
 
-  <p>
-    Tervetuloa mukaan luomaan vieläkin parempaa opiskelijayhteisöä meille kaikille. Opiskelijakunta
-    TUO ei olisi mitään ilman sen jäseniä ja heidän ajatuksiaan sekä ideoita minkälainen on Suomen
-    paras yhteisö. Haluamme olla luomassa yhdessä parasta yhteisöä meille kaikille, mutta
-    tarvitsemme juuri sinua avuksi. Oletko valmis tulemaan mukaan?
-  </p><p>
-    Yhteisön kehittämiseen osallistuvat niin jäsenemme, edustajistomme, hallituksemme kuin
-    henkilökuntamme. Haluamme kaikki olla omalta osaltamme luomassa opiskelijan parempaa huomista ja
-    hyvinvoivaa yhteisöä meille kaikille. Toivottavasti sinäkin lähdet mukaan luomaan entistä
-    parempaa yhteisöä.
-  </p><p>
-    Olemme aktiivisesti mukana OPKU+ yhteistyössä luomassa uusia etuja, palveluita sekä toimintaa
-    paremman opiskelijaelämän tueksi. Uskomme, että opiskelijoiden asioiden parantaminen etenee
-    yhteistyöllä. Jäsenenämme pääset osaksi tätäkin yhteistyötä sekä tulevaisuuden luomista.
-  </p>
+        <div
+          class="grid min-w-60 grid-rows-[auto_1fr_1fr_auto] place-items-center px-10 py-5 text-center lg:py-7.5">
+          <p class="text-tuo-blue text-[70px]">10</p>
+          <h3 class="font-bold uppercase">Omia tapahtumia</h3>
+        </div>
 
-  <h2>Liity jäseneksi tästä</h2>
+        <div
+          class="grid min-w-60 grid-rows-[auto_1fr_1fr_auto] place-items-center px-10 py-5 text-center lg:py-7.5">
+          <p class="text-tuo-blue text-[70px]">1000+</p>
+          <h3 class="font-bold uppercase">Etuja</h3>
+        </div>
 
-  <p>1600+</p><h3>Jäseniä</h3><canvas height="0" width="0"></canvas>
+        <div
+          class="grid min-w-60 grid-rows-[auto_1fr_1fr_auto] place-items-center px-10 py-5 text-center lg:py-7.5">
+          <p class="text-tuo-blue text-[70px]">25+</p>
+          <h3 class="font-bold uppercase">Muita alennettuja tapahtumia</h3>
+        </div>
+      </div>
+    </section>
 
-  <p>10</p><h3>Omia tapahtumia</h3><canvas height="0" width="0"></canvas>
+    <HeroSection
+      title="Jäsenedut"
+      img="https://opiskelijakunta.net/wp-content/uploads/2022/10/Nimeton-suunn.malli-6-min.jpg">
+      <p>
+        TUOn jäsenyys on avain huikeisiin jäsenetuihin niin paikallisesti kuin valtakunnallisesti.
+        Jäsenenä saat eksklusiivisia vaihtuvia etuja sekä alennusta TUO Loungen tuotteista, kuten
+        haalarimerkeistä ja Turku AMK-brändituotteista. TUOn jäsenet saavat myös merkittäviä
+        alennuksia tapahtumistamme.
+      </p><p>
+        Jäsenenämme saat lisäksi ASK-, Helga-, HUMAKO-, Laureamko-, METKA-, JAMKO- ja
+        O’Diako-opiskelijakuntien tuotteet sekä tapahtumat edullisempaan jäsenhintaan. Jos
+        esimerkiksi haluat osallistua kyseisten opiskelijakuntien tapahtumiin, niin muista hyödyntää
+        jäsenetusi.
+      </p><p>
+        TUOlta saat myös henkilökohtaista neuvontaa ja apua opiskelun ongelmatilanteissa. TUOn
+        asiantuntijat sekä häirintäyhdyshenkilöt ovat jäseniemmekin käytössä opiskeluun liittyvien
+        haasteiden ratkaisemisessa. Voit myös kääntyä oikeusaputoimikunnan puoleen esimerkiksi
+        vuokrasopimuksen teon kanssa.
+      </p><p>
+        TUO-jäsenyys tarkoittaa siis tätä ja paljon muuta. Voit liittyä jäseneksi <a
+          href="https://kide.app/fi/memberships/32252127-03f1-4d1e-abdf-9755cdd5e849"
+          target="_blank"
+          rel="noopener"
+          class="text-tuo-yellow">
+          tästä
+        </a>!
+      </p>
+    </HeroSection>
 
-  <p>1000+</p><h3>Etuja</h3><canvas height="0" width="0"></canvas>
+    <section class="mx-10 grid grid-cols-1 grid-rows-1 gap-4 py-10 md:grid-cols-2 lg:mx-20">
+      <Collapsible title="Tapahtumat">
+        <p>
+          Opiskelijakunta järjestää vuosittain useita tapahtumia, kuten legendaariset
+          Keltanokkabileet, tuttavallisimmin KNB:n. Kaikki opiskelijakunnan tapahtumat ovat
+          alennettuun hintaan jäsenille.
+        </p>
+      </Collapsible>
+      <Collapsible title="OPKU+">
+        <p>
+          OPKU+ opiskelijakuntiin kuuluvat Metka, Helga, Laureamko, HUMAKO, O'Diako sekä JAMKO.
+          Kolme ensin mainittua toimii pääkaupunkiseudulla, kaksi seuraavaa toimivat usealla
+          paikkakunnalla ja JAMKO toimii Jyväskylässä. Opiskelijakunnan jäsenet ovat oikeutettuja
+          OPKU+ jäsenille tarkoitettuihin tuote sekä tapahtuma-alennuksiin.
+        </p>
+      </Collapsible>
+      <Collapsible title="Tuotealennukset">
+        <p>
+          Opiskelijakunnan jäsenenä saat alennuksia kaikista TUO Loungen tuotteista ja Loungessa
+          myytävistä Turku AMK:n brändituotteista.
+        </p>
+      </Collapsible>
+      <Collapsible title="Asiantuntijat tukenasi">
+        <p>
+          TUOn asiantuntijat sekä häirintäyhdyshenkilöt ovat myös jäseniemme käytössä opiskeluun
+          liittyvien haasteiden ratkaisemiseksi.
+        </p>
+      </Collapsible>
+    </section>
 
-  <p>25+</p><h3>Muita alennettuja tapahtumia</h3><canvas height="0" width="0"></canvas>
+    <div class="flex bg-white py-10">
+      <div class="bg-tuo-blue text-tuo-yellow rounded-full">
+        <CircleCheckBig size={45} />
+      </div>
+      <div class="*:py-2">
+        <p>
+          Jäsenenä saat käyttöösi digitaalisen jäsenkortin heti Kide.appin lompakkoon kohtaan
+          Jäsenyydet. Täältä näet myös jäsenyytesi voimassaoloajan helposti.
+        </p>
 
-  <Image
-    decoding="async"
-    src="https://opiskelijakunta.net/wp-content/uploads/2022/10/Nimeton-suunn.malli-6-min.jpg"
-    alt=""
-    title="Nimetön suunn.malli (6)-min"
-    inferSize={true}
-  />
+        <p>
+          Jäsenkortin voit päivittää viralliseksi opiskelijakortiksi Kide.appin lompakon kautta.
+          Tämä virallinen opiskelijakortti oikeuttaa julkisen liikenteen alennuksiin (VR,
+          Matkahuolto, Föli), Kelan ateriatukeen (päätoimiset opiskelijat) sekä TUOn alueellisiin
+          etuihin Turussa ja Salossa ja useisiin valtakunnallisiin alennuksiin.
+        </p>
 
-  <h3>Jäsenedut</h3>
+        <p>
+          Saat merkittäviä alennuksia kaikista TUOn tapahtumista ja voit ostaa TUO Loungen tuotteita
+          edullisempaan jäsenhintaan. Lisäksi olet oikeutettu vaihtuviin, vain jäsenillemme
+          tarkoitettuihin etuihin.
+        </p>
 
-  <p>
-    TUOn jäsenyys on avain huikeisiin jäsenetuihin niin paikallisesti kuin valtakunnallisesti.
-    Jäsenenä saat eksklusiivisia vaihtuvia etuja sekä alennusta TUO Loungen tuotteista, kuten
-    haalarimerkeistä ja Turku AMK-brändituotteista. TUOn jäsenet saavat myös merkittäviä alennuksia
-    tapahtumistamme.
-  </p><p>
-    Jäsenenämme saat lisäksi ASK-, Helga-, HUMAKO-, Laureamko-, METKA-, JAMKO- ja
-    O’Diako-opiskelijakuntien tuotteet sekä tapahtumat edullisempaan jäsenhintaan. Jos esimerkiksi
-    haluat osallistua kyseisten opiskelijakuntien tapahtumiin, niin muista hyödyntää jäsenetusi.
-  </p><p>
-    TUOlta saat myös henkilökohtaista neuvontaa ja apua opiskelun ongelmatilanteissa. TUOn
-    asiantuntijat sekä häirintäyhdyshenkilöt ovat jäseniemmekin käytössä opiskeluun liittyvien
-    haasteiden ratkaisemisessa. Voit myös kääntyä oikeusaputoimikunnan puoleen esimerkiksi
-    vuokrasopimuksen teon kanssa.
-  </p><p>
-    TUO-jäsenyys tarkoittaa siis tätä ja paljon muuta. Voit liittyä jäseneksi <a
-      href="https://kide.app/fi/memberships/32252127-03f1-4d1e-abdf-9755cdd5e849"
-      target="_blank"
-      rel="noopener">
-      tästä
-    </a>!
-  </p>
+        <p>
+          TUO auttaa ja tukee läpi opintojesi – opiskelijakunta voi auttaa, jos esimerkiksi kohtaat
+          korkeakouluyhteisössä kiusaamista tai häirintää tai jos kurssiarvosanasi ovat myöhässä.
+          TUOn jäsenenä varmistat, että saat apua silloin, kun sitä tarvitset.
+        </p>
 
-  <h5>Tapahtumat</h5>
+        <p>
+          TUOn jäsentiedotteesta saat ensimmäisenä tiedon tulevista tapahtumista ja
+          opiskelijaelämään liittyvistä uutisista.
+        </p>
 
-  <p>
-    Opiskelijakunta järjestää vuosittain useita tapahtumia, kuten legendaariset Keltanokkabileet,
-    tuttavallisimmin KNB:n. Kaikki opiskelijakunnan tapahtumat ovat alennettuun hintaan jäsenille.
-  </p>
+        <p>
+          Jäsenenä voit vaikuttaa opiskelijakunnan, Turun AMK:n ja Turun alueen asioihin. Saat
+          äänioikeuden TUOn edustajistovaaleissa ja voit asettua itse ehdolle. 21-paikkainen
+          edustajisto on TUOn ylintä päätösvaltaa käyttävä elin.
+        </p>
+      </div>
+    </div>
 
-  <h5>OPKU+</h5>
+    <HeroSection
+      title"Jäsenyyden
+      ehdot"
+      img="https://opiskelijakunta.net/wp-content/uploads/2022/10/Nimeton-suunn.malli-7-min.jpg">
+      <p>
+        <em>
+          Opiskelijakunta TUOn jäsenistä ja jäsenyyden ehdoista on säädetty Turun
+          ammattikorkeakoulun opiskelijakunta – TUOn säännöissä, jotka löytyvät <a
+            href="https://drive.google.com/drive/folders/1SEF2-BdoH69qyV8FtQBjdjrWZJWuvBKM?usp=sharing"
+            target="_blank"
+            rel="noopener">
+            materiaalipankista
+          </a>.
+        </em>
+      </p><p>
+        Opiskelijakunta TUOn jäseniksi voivat liittyä Turun ammattikorkeakoulussa tutkintoon
+        johtavassa koulutuksessa opiskelevat läsnäoleviksi ilmoittautuneet opiskelijat.
+        Opiskelijakunnan jäseniksi voivat liittyä myös seuraavat Turun ammattikorkeakoulun
+        opiskelijat: tutkintotavoitteisessa koulutuksessa opiskelevat vaihto-opiskelijat,
+        polkuopiskelijat (ns. vihreä opiskelijakortti), korkeakouludiplomia suorittavat opiskelijat
+        (ns. vihreä opiskelijakortti) sekä erillisellä opinto-oikeudella opiskelevat opiskelijat
+        (ns. vihreä opiskelijakortti).
+      </p>
+    </HeroSection>
 
-  <p>
-    OPKU+ opiskelijakuntiin kuuluvat Metka, Helga, Laureamko, HUMAKO, O’Diako sekä JAMKO. Kolme
-    ensin mainittua toimii pääkaupunkiseudulla, kaksi seuraavaa toimivat usealla paikkakunnalla ja
-    JAMKO toimii Jyväskylässä. Opiskelijakunnan jäsenet ovat oikeutettuja OPKU+ jäsenille
-    tarkoitettuihin tuote sekä tapahtuma-alennuksiin.
-  </p>
+    <div class="mx-10 grid grid-cols-1 grid-rows-1 gap-4 py-10 md:grid-cols-2 lg:mx-20">
+      <Collapsible title="HAKA-tunnistautuminen" group="ehdot">
+        <p>
+          Jäsenet hyväksytään opiskelijakunnan hallituksen toimesta ehdollisesti jäseniksi siihen
+          saakka kunnes opiskelija on tehnyt HAKA-tunnistautumisen.&nbsp;
+        </p><p>
+          Opiskelijakuntaan voivat kuulua varsinaisina jäseninä ammattikorkeakoulun tutkintoon
+          johtavassa koulutuksessa olevat opiskelijat. Opiskelijakunta voi hyväksyä varsinaisiksi
+          jäsenikseen myös muita ammattikorkeakoulun opiskelijoita. Opiskelijakunnan jäsenen on
+          oltava läsnäoleva opiskelija. Jäsenet hyväksytään opiskelijakunnan hallituksen toimesta
+          ehdollisesti jäseniksi siihen saakka kunnes opiskelija on tehnyt HAKA-tunnistautumisen.
+        </p><p>
+          Syksyisin:<br />HAKA-tunnistautumisen takarajana sama päivä, jolloin vahvistetaan
+          äänioikeudelliset jäsenet opiskelijakunnan edustajistovaaleihin. Kyseinen päivä
+          ilmoitetaan opiskelijakunnan sosiaalisen median kanavissa sekä kotisivuilla viimeistään
+          kuukautta ennen kyseistä päivämäärää. Tämän päivän jälkeen opiskelijalla on vielä
+          mahdollisuus tehdä tunnistautuminen ilman äänioikeuden saamista vaaleihin joukukuun
+          ensimmäiseen päivään saakka. Joulukuun toisena päivänä kaikki ei HAKA-tunnistautumista
+          tehneet jäsenet poistetaan rekisteristä ja rahoja ei palauteta.
+        </p><p>&nbsp;</p><p>
+          Keväisin:&nbsp;<br />HAKA-tunnistautumisen takarajan päivä ilmoitetaan opiskelijakunnan
+          sosiaalisessa mediassa ja kotisivuilla kolmesti ennen määräaikaa kerran kuukaudessa.
+          Ensimmäinen ilmoitus tehdään joulukuussa ensimmäisen kerran. Takaraja koskee ennen vuotta
+          2025 ostettuja jäsenyyksiä. Takarajan jälkeen ei HAKA-tunnistautuneet jäsenet poistetaan
+          rekisteristä ja rahoja ei palauteta opiskelijalle.
+        </p>
+      </Collapsible>
+      <Collapsible title="Opiskelijakunnan jäsenyydestä eroaminen" group="ehdot">
+        <p>
+          Opiskelijakunnan jäsenyydestä voi erota ilmoittamalla siitä opiskelijakunnalle ja
+          täyttämällä Jäsenyydestä eroaminen –lomakkeen. Lomake löytyy nettisivujen
+          materiaalipankista.
+        </p><p>
+          Jäsenmaksua ei palauteta, mikäli jäsenyyden ehdot edelleen täyttyvät: käyttämätön
+          jäsenmaksu voidaan palauttaa vain silloin, mikäli opiskelija on eronnut Turun
+          ammattikorkeakoulusta tai valmistunut. Opiskelijakunta perii kaikista maksupalautuksista
+          kymmenen euron käsittelymaksun.
+        </p><p>
+          Jäsenmaksupalautus lasketaan kunkin vuoden jäsenmaksujen ja muiden kulujen mukaisesti.
+          Syksystä 2023 pienin palautettava jäsenmaksu tulee vastaamaan suurinta mahdollista
+          jäsenmaksun määrää (90€).&nbsp;
+        </p><p>
+          Opiskelijakunnna jäsenyydestä eroamisesta sekä jäsenmaksun palautuksesta on säädetty Turun
+          ammattikorkeakoulun opiskelijakunta – TUOn Johto- ja hallintosäännössä, joka löytyy
+          nettisivujen materiaalipankista.
+        </p>
+      </Collapsible>
+    </div>
+  </main>
+</Layout>
 
-  <h5>Tuotealennukset</h5>
-
-  <p>
-    Opiskelijakunnan jäsenenä saat alennuksia kaikista TUO Loungen tuotteista ja Loungessa
-    myytävistä Turku AMK:n brändituotteista.
-  </p>
-
-  <h5>Asiantuntijat tukenasi</h5>
-
-  <p>
-    TUOn asiantuntijat sekä häirintäyhdyshenkilöt ovat myös jäseniemme käytössä opiskeluun
-    liittyvien haasteiden ratkaisemiseksi.
-  </p>
-
-  R
-
-  <p>
-    Jäsenenä saat käyttöösi digitaalisen jäsenkortin heti Kide.appin lompakkoon kohtaan Jäsenyydet.
-    Täältä näet myös jäsenyytesi voimassaoloajan helposti.
-  </p>
-
-  R
-
-  <p>
-    Jäsenkortin voit päivittää viralliseksi opiskelijakortiksi Kide.appin lompakon kautta. Tämä
-    virallinen opiskelijakortti oikeuttaa julkisen liikenteen alennuksiin (VR, Matkahuolto, Föli),
-    Kelan ateriatukeen (päätoimiset opiskelijat) sekä TUOn alueellisiin etuihin Turussa ja Salossa
-    ja useisiin valtakunnallisiin alennuksiin.
-  </p>
-
-  R
-
-  <p>
-    Saat merkittäviä alennuksia kaikista TUOn tapahtumista ja voit ostaa TUO Loungen tuotteita
-    edullisempaan jäsenhintaan. Lisäksi olet oikeutettu vaihtuviin, vain jäsenillemme
-    tarkoitettuihin etuihin.
-  </p>
-
-  R
-
-  <p>
-    TUO auttaa ja tukee läpi opintojesi – opiskelijakunta voi auttaa, jos esimerkiksi kohtaat
-    korkeakouluyhteisössä kiusaamista tai häirintää tai jos kurssiarvosanasi ovat myöhässä. TUOn
-    jäsenenä varmistat, että saat apua silloin, kun sitä tarvitset.
-  </p>
-
-  R
-
-  <p>
-    TUOn jäsentiedotteesta saat ensimmäisenä tiedon tulevista tapahtumista ja opiskelijaelämään
-    liittyvistä uutisista.
-  </p>
-
-  R
-
-  <p>
-    Jäsenenä voit vaikuttaa opiskelijakunnan, Turun AMK:n ja Turun alueen asioihin. Saat
-    äänioikeuden TUOn edustajistovaaleissa ja voit asettua itse ehdolle. 21-paikkainen edustajisto
-    on TUOn ylintä päätösvaltaa käyttävä elin.
-  </p>
-
-  <div
-    data-settings='{"effect":"slide","desktop":"1","tablet":"1","mobile":"1","variable_width":"off","loop":true,"item_spacing":"30px","item_spacing_tablet":"","item_spacing_phone":"","arrow":"off","dots":"off","autoplay":"on","auto_delay":"2000","speed":"800","pause_hover":"off","centeredSlides":"off","order":"0","use_lightbox":"off","use_lightbox_caption":"off"}'
+<!-- data-settings='{"effect":"slide","desktop":"1","tablet":"1","mobile":"1","variable_width":"off","loop":true,"item_spacing":"30px","item_spacing_tablet":"","item_spacing_phone":"","arrow":"off","dots":"off","autoplay":"on","auto_delay":"2000","speed":"800","pause_hover":"off","centeredSlides":"off","order":"0","use_lightbox":"off","use_lightbox_caption":"off"}'
     data-item="1"
     data-itemtablet="1"
     data-itemphone="1">
@@ -235,104 +307,4 @@ export const props: PageProps = {
                             inferSize={true}
                           />
 
-                          <Image
-                            decoding="async"
-                            width="800"
-                            height="400"
-                            src="https://opiskelijakunta.net/wp-content/uploads/2022/10/Nimeton-suunn.malli-7-min.jpg"
-                            alt=""
-                            title="Nimetön suunn.malli (7)-min"
-                            srcset="https://opiskelijakunta.net/wp-content/uploads/2022/10/Nimeton-suunn.malli-7-min.jpg 800w, https://opiskelijakunta.net/wp-content/uploads/2022/10/Nimeton-suunn.malli-7-min-480x240.jpg 480w"
-                            sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) 800px, 100vw"
-                          />
-
-                          <h3>Jäsenyyden ehdot</h3>
-
-                          <p>
-                            <em>
-                              Opiskelijakunta TUOn jäsenistä ja jäsenyyden ehdoista on säädetty
-                              Turun ammattikorkeakoulun opiskelijakunta – TUOn säännöissä, jotka
-                              löytyvät <a
-                                href="https://drive.google.com/drive/folders/1SEF2-BdoH69qyV8FtQBjdjrWZJWuvBKM?usp=sharing"
-                                target="_blank"
-                                rel="noopener">
-                                materiaalipankista
-                              </a>.
-                            </em>
-                          </p><p>
-                            Opiskelijakunta TUOn jäseniksi voivat liittyä Turun
-                            ammattikorkeakoulussa tutkintoon johtavassa koulutuksessa opiskelevat
-                            läsnäoleviksi ilmoittautuneet opiskelijat. Opiskelijakunnan jäseniksi
-                            voivat liittyä myös seuraavat Turun ammattikorkeakoulun opiskelijat:
-                            tutkintotavoitteisessa koulutuksessa opiskelevat vaihto-opiskelijat,
-                            polkuopiskelijat (ns. vihreä opiskelijakortti), korkeakouludiplomia
-                            suorittavat opiskelijat (ns. vihreä opiskelijakortti) sekä erillisellä
-                            opinto-oikeudella opiskelevat opiskelijat (ns. vihreä opiskelijakortti).
-                          </p>
-
-                          <h5>HAKA-tunnistautuminen</h5>
-
-                          <p>
-                            Jäsenet hyväksytään opiskelijakunnan hallituksen toimesta ehdollisesti
-                            jäseniksi siihen saakka kunnes opiskelija on tehnyt
-                            HAKA-tunnistautumisen.&nbsp;
-                          </p><p>
-                            Opiskelijakuntaan voivat kuulua varsinaisina jäseninä
-                            ammattikorkeakoulun tutkintoon johtavassa koulutuksessa olevat
-                            opiskelijat. Opiskelijakunta voi hyväksyä varsinaisiksi jäsenikseen myös
-                            muita ammattikorkeakoulun opiskelijoita. Opiskelijakunnan jäsenen on
-                            oltava läsnäoleva opiskelija. Jäsenet hyväksytään opiskelijakunnan
-                            hallituksen toimesta ehdollisesti jäseniksi siihen saakka kunnes
-                            opiskelija on tehnyt HAKA-tunnistautumisen.
-                          </p><p>
-                            Syksyisin:<br />HAKA-tunnistautumisen takarajana sama päivä, jolloin
-                            vahvistetaan äänioikeudelliset jäsenet opiskelijakunnan
-                            edustajistovaaleihin. Kyseinen päivä ilmoitetaan opiskelijakunnan
-                            sosiaalisen median kanavissa sekä kotisivuilla viimeistään kuukautta
-                            ennen kyseistä päivämäärää. Tämän päivän jälkeen opiskelijalla on vielä
-                            mahdollisuus tehdä tunnistautuminen ilman äänioikeuden saamista
-                            vaaleihin joukukuun ensimmäiseen päivään saakka. Joulukuun toisena
-                            päivänä kaikki ei HAKA-tunnistautumista tehneet jäsenet poistetaan
-                            rekisteristä ja rahoja ei palauteta.
-                          </p><p>&nbsp;</p><p>
-                            Keväisin:&nbsp;<br />HAKA-tunnistautumisen takarajan päivä ilmoitetaan
-                            opiskelijakunnan sosiaalisessa mediassa ja kotisivuilla kolmesti ennen
-                            määräaikaa kerran kuukaudessa. Ensimmäinen ilmoitus tehdään joulukuussa
-                            ensimmäisen kerran. Takaraja koskee ennen vuotta 2025 ostettuja
-                            jäsenyyksiä. Takarajan jälkeen ei HAKA-tunnistautuneet jäsenet
-                            poistetaan rekisteristä ja rahoja ei palauteta opiskelijalle.
-                          </p>
-
-                          <h5>Opiskelijakunnan jäsenyydestä eroaminen</h5>
-
-                          <p>
-                            Opiskelijakunnan jäsenyydestä voi erota ilmoittamalla siitä
-                            opiskelijakunnalle ja täyttämällä Jäsenyydestä eroaminen –lomakkeen.
-                            Lomake löytyy nettisivujen materiaalipankista.
-                          </p><p>
-                            Jäsenmaksua ei palauteta, mikäli jäsenyyden ehdot edelleen täyttyvät:
-                            käyttämätön jäsenmaksu voidaan palauttaa vain silloin, mikäli opiskelija
-                            on eronnut Turun ammattikorkeakoulusta tai valmistunut. Opiskelijakunta
-                            perii kaikista maksupalautuksista kymmenen euron käsittelymaksun.
-                          </p><p>
-                            Jäsenmaksupalautus lasketaan kunkin vuoden jäsenmaksujen ja muiden
-                            kulujen mukaisesti. Syksystä 2023 pienin palautettava jäsenmaksu tulee
-                            vastaamaan suurinta mahdollista jäsenmaksun määrää (90€).&nbsp;
-                          </p><p>
-                            Opiskelijakunnna jäsenyydestä eroamisesta sekä jäsenmaksun palautuksesta
-                            on säädetty Turun ammattikorkeakoulun opiskelijakunta – TUOn Johto- ja
-                            hallintosäännössä, joka löytyy nettisivujen materiaalipankista.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
+ -->
