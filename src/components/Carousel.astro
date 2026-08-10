@@ -1,0 +1,54 @@
+---
+const { buttons } = Astro.props;
+---
+
+<div class="embla">
+  <div class="embla__viewport">
+    <div class="embla__container *:embla__slide aspect-square *:h-auto *:w-full">
+      <slot />
+    </div>
+  </div>
+
+  {
+    buttons && (
+      <>
+        <button class="embla__prev">Scroll to prev</button>
+        <button class="embla__next">Scroll to next</button>
+      </>
+    )
+  }
+</div>
+
+<style>
+  .embla__viewport {
+    overflow: hidden;
+  }
+
+  .embla__container {
+    display: flex;
+    touch-action: pan-y pinch-zoom;
+  }
+
+  .embla__slide {
+    flex: 0 0 100%;
+    min-width: 0;
+  }
+</style>
+
+<script>
+  import EmblaCarousel from "embla-carousel";
+  import Autoplay from "embla-carousel-autoplay";
+
+  const wrapperNode = document.querySelector(".embla")!;
+
+  const viewportNode = wrapperNode.querySelector(".embla__viewport") as HTMLElement;
+  const prevButtonNode = wrapperNode.querySelector(".embla__prev")!;
+  const nextButtonNode = wrapperNode.querySelector(".embla__next")!;
+
+  const emblaApi = EmblaCarousel(viewportNode, { loop: true }, [Autoplay()]);
+
+  prevButtonNode.addEventListener("click", () => emblaApi.scrollPrev(), false);
+  nextButtonNode.addEventListener("click", () => emblaApi.scrollNext(), false);
+
+  emblaApi.plugins().autoplay?.play();
+</script>

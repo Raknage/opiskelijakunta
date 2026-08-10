@@ -1,4 +1,5 @@
 ---
+import Carousel from "@/components/Carousel.astro";
 import HeroPages from "@/components/HeroPages.astro";
 import HeroSection from "@/components/HeroSection.astro";
 import PageNav from "@/components/PageNav.astro";
@@ -6,6 +7,7 @@ import Collapsible from "@/components/ui/Collapsible.astro";
 import Layout from "@/layouts/Layout.astro";
 import type { PageProps } from "@/schemas";
 import { CircleCheckBig } from "@lucide/astro";
+import { Image } from "astro:assets";
 
 export const props: PageProps = {
   title: "Jäsenyys",
@@ -136,47 +138,68 @@ export const props: PageProps = {
       </Collapsible>
     </section>
 
-    <div class="flex bg-white py-10">
-      <div class="bg-tuo-blue text-tuo-yellow rounded-full">
-        <CircleCheckBig size={45} />
+    <section class="">
+      <div class="mx-5 flex flex-col items-center gap-8 py-4 lg:mx-20 lg:flex-row">
+        <div class="flex lg:w-2/3">
+          <div class="bg-tuo-blue text-tuo-yellow rounded-full">
+            <CircleCheckBig size={45} />
+          </div>
+          <div class="*:py-2">
+            <p>
+              Jäsenenä saat käyttöösi digitaalisen jäsenkortin heti Kide.appin lompakkoon kohtaan
+              Jäsenyydet. Täältä näet myös jäsenyytesi voimassaoloajan helposti.
+            </p>
+            <p>
+              Jäsenkortin voit päivittää viralliseksi opiskelijakortiksi Kide.appin lompakon kautta.
+              Tämä virallinen opiskelijakortti oikeuttaa julkisen liikenteen alennuksiin (VR,
+              Matkahuolto, Föli), Kelan ateriatukeen (päätoimiset opiskelijat) sekä TUOn
+              alueellisiin etuihin Turussa ja Salossa ja useisiin valtakunnallisiin alennuksiin.
+            </p>
+            <p>
+              Saat merkittäviä alennuksia kaikista TUOn tapahtumista ja voit ostaa TUO Loungen
+              tuotteita edullisempaan jäsenhintaan. Lisäksi olet oikeutettu vaihtuviin, vain
+              jäsenillemme tarkoitettuihin etuihin.
+            </p>
+            <p>
+              TUO auttaa ja tukee läpi opintojesi – opiskelijakunta voi auttaa, jos esimerkiksi
+              kohtaat korkeakouluyhteisössä kiusaamista tai häirintää tai jos kurssiarvosanasi ovat
+              myöhässä. TUOn jäsenenä varmistat, että saat apua silloin, kun sitä tarvitset.
+            </p>
+            <p>
+              TUOn jäsentiedotteesta saat ensimmäisenä tiedon tulevista tapahtumista ja
+              opiskelijaelämään liittyvistä uutisista.
+            </p>
+            <p>
+              Jäsenenä voit vaikuttaa opiskelijakunnan, Turun AMK:n ja Turun alueen asioihin. Saat
+              äänioikeuden TUOn edustajistovaaleissa ja voit asettua itse ehdolle. 21-paikkainen
+              edustajisto on TUOn ylintä päätösvaltaa käyttävä elin.
+            </p>
+          </div>
+        </div>
+        <div class="rounded-tuo shadow-tuo-md overflow-hidden lg:w-1/3">
+          <Carousel>
+            <Image
+              decoding="async"
+              src="https://opiskelijakunta.net/wp-content/uploads/2026/03/TS-logo.jpg"
+              alt=""
+              inferSize
+            />
+            <Image
+              decoding="async"
+              src="https://opiskelijakunta.net/wp-content/uploads/2024/01/2_33.png"
+              alt=""
+              inferSize
+            />
+            <Image
+              decoding="async"
+              src="https://opiskelijakunta.net/wp-content/uploads/2023/02/Nimeton-suunn.malli-16-min.jpg"
+              alt=""
+              inferSize
+            />
+          </Carousel>
+        </div>
       </div>
-      <div class="*:py-2">
-        <p>
-          Jäsenenä saat käyttöösi digitaalisen jäsenkortin heti Kide.appin lompakkoon kohtaan
-          Jäsenyydet. Täältä näet myös jäsenyytesi voimassaoloajan helposti.
-        </p>
-
-        <p>
-          Jäsenkortin voit päivittää viralliseksi opiskelijakortiksi Kide.appin lompakon kautta.
-          Tämä virallinen opiskelijakortti oikeuttaa julkisen liikenteen alennuksiin (VR,
-          Matkahuolto, Föli), Kelan ateriatukeen (päätoimiset opiskelijat) sekä TUOn alueellisiin
-          etuihin Turussa ja Salossa ja useisiin valtakunnallisiin alennuksiin.
-        </p>
-
-        <p>
-          Saat merkittäviä alennuksia kaikista TUOn tapahtumista ja voit ostaa TUO Loungen tuotteita
-          edullisempaan jäsenhintaan. Lisäksi olet oikeutettu vaihtuviin, vain jäsenillemme
-          tarkoitettuihin etuihin.
-        </p>
-
-        <p>
-          TUO auttaa ja tukee läpi opintojesi – opiskelijakunta voi auttaa, jos esimerkiksi kohtaat
-          korkeakouluyhteisössä kiusaamista tai häirintää tai jos kurssiarvosanasi ovat myöhässä.
-          TUOn jäsenenä varmistat, että saat apua silloin, kun sitä tarvitset.
-        </p>
-
-        <p>
-          TUOn jäsentiedotteesta saat ensimmäisenä tiedon tulevista tapahtumista ja
-          opiskelijaelämään liittyvistä uutisista.
-        </p>
-
-        <p>
-          Jäsenenä voit vaikuttaa opiskelijakunnan, Turun AMK:n ja Turun alueen asioihin. Saat
-          äänioikeuden TUOn edustajistovaaleissa ja voit asettua itse ehdolle. 21-paikkainen
-          edustajisto on TUOn ylintä päätösvaltaa käyttävä elin.
-        </p>
-      </div>
-    </div>
+    </section>
 
     <HeroSection
       title"Jäsenyyden
@@ -253,58 +276,3 @@ export const props: PageProps = {
     </div>
   </main>
 </Layout>
-
-<!-- data-settings='{"effect":"slide","desktop":"1","tablet":"1","mobile":"1","variable_width":"off","loop":true,"item_spacing":"30px","item_spacing_tablet":"","item_spacing_phone":"","arrow":"off","dots":"off","autoplay":"on","auto_delay":"2000","speed":"800","pause_hover":"off","centeredSlides":"off","order":"0","use_lightbox":"off","use_lightbox_caption":"off"}'
-    data-item="1"
-    data-itemtablet="1"
-    data-itemphone="1">
-    <div style="transition-duration: 800ms; transform: translate3d(-2736px, 0px, 0px);">
-      <div data-swiper-slide-index="2" style="width: 654px; margin-right: 30px;">
-        <div data-src="https://opiskelijakunta.net/wp-content/uploads/2026/03/TS-logo.jpg">
-          <Image
-            decoding="async"
-            src="https://opiskelijakunta.net/wp-content/uploads/2026/03/TS-logo.jpg"
-            alt=""
-            inferSize={true}
-          />
-
-          <div data-swiper-slide-index="0" style="width: 654px; margin-right: 30px;">
-            <div data-src="https://opiskelijakunta.net/wp-content/uploads/2024/01/2_33.png">
-              <Image
-                decoding="async"
-                src="https://opiskelijakunta.net/wp-content/uploads/2024/01/2_33.png"
-                alt=""
-                inferSize={true}
-              />
-
-              <div data-swiper-slide-index="1" style="width: 654px; margin-right: 30px;">
-                <div
-                  data-src="https://opiskelijakunta.net/wp-content/uploads/2023/02/Nimeton-suunn.malli-16-min.jpg">
-                  <Image
-                    decoding="async"
-                    src="https://opiskelijakunta.net/wp-content/uploads/2023/02/Nimeton-suunn.malli-16-min.jpg"
-                    alt=""
-                    inferSize={true}
-                  />
-
-                  <div data-swiper-slide-index="2" style="width: 654px; margin-right: 30px;">
-                    <div
-                      data-src="https://opiskelijakunta.net/wp-content/uploads/2026/03/TS-logo.jpg">
-                      <Image
-                        decoding="async"
-                        src="https://opiskelijakunta.net/wp-content/uploads/2026/03/TS-logo.jpg"
-                        alt=""
-                        inferSize={true}
-                      />
-
-                      <div data-swiper-slide-index="0" style="width: 654px; margin-right: 30px;">
-                        <div
-                          data-src="https://opiskelijakunta.net/wp-content/uploads/2024/01/2_33.png">
-                          <Image
-                            decoding="async"
-                            src="https://opiskelijakunta.net/wp-content/uploads/2024/01/2_33.png"
-                            alt=""
-                            inferSize={true}
-                          />
-
- -->
