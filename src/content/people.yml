@@ -98,3 +98,25 @@ edustajisto:
     title: Edustajiston varapuheenjohtaja
     email: ville.soikkeli1@turkuamk.fi
     image: https://opiskelijakunta.net/wp-content/uploads/2026/01/Hallituskuvat-kotisivuille-2026-8.png
+
+hairintayhdyshenkilo:
+  olga:
+    name: Olga Hellman
+    title: Hallituksen puheenjohtaja
+    email: olga.u.hellman@turkuamk.fi
+    image: https://opiskelijakunta.net/wp-content/uploads/2026/01/Hallituskuvat-kotisivuille-2026.png
+  toni:
+    name: Toni Haila
+    title: Hallituksen jäsen
+    email: toni.haila1@turkuamk.fi
+    image: https://opiskelijakunta.net/wp-content/uploads/2026/01/Hallituskuvat-kotisivuille-2026-7.png
+  jasmin:
+    name: Jasmin Anttila
+    title: Hallituksen jäsen
+    email: jasmin.anttila1@turkuamk.fi
+    image: https://opiskelijakunta.net/wp-content/uploads/2025/01/4_108.png
+  ville:
+    name: Ville Soikkeli
+    title: Edustajiston varapuheenjohtaja
+    email: ville.soikkeli1@turkuamk.fi
+    image: https://opiskelijakunta.net/wp-content/uploads/2026/01/Hallituskuvat-kotisivuille-2026-8.png
