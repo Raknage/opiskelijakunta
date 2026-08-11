@@ -8,6 +8,7 @@ export const pageProps = z.object({
   title: z.string(),
   navOrder: z.number(),
   visible: z.boolean().default(true),
+  path: z.string(),
   submenu: z
     .array(
       z.union([
