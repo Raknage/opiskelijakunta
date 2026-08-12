@@ -1,4 +1,8 @@
 ---
+import HeroPages from "@/components/HeroPages.astro";
+import HeroSection from "@/components/HeroSection.astro";
+import PageNav from "@/components/PageNav.astro";
+import Layout from "@/layouts/Layout.astro";
 import type { PageProps } from "@/schemas";
 import { Image } from "astro:assets";
 
@@ -17,335 +21,251 @@ export const props: PageProps = {
 };
 ---
 
-<article>
-  <h1>Edunvalvonta</h1>
+<Layout>
+  <main>
+    <HeroPages title="Edunvalvonta" />
+    <PageNav {...props} />
 
-  <nav>
-    <ul>
-      <li>
-        <a href="https://opiskelijakunta.net/edunvalvonta/#edunvalvonta" aria-current="page">
-          Edunvalvonta
-        </a>
-      </li><li>
-        <a href="https://opiskelijakunta.net/edunvalvonta/#hairinta" aria-current="page">
-          Häirintäyhdyshenkilö
-        </a>
-      </li><li>
-        <a href="https://opiskelijakunta.net/edunvalvonta/#edustajat" aria-current="page">
-          Opiskelijaedustajat
-        </a>
-      </li><li>
-        <a href="https://opiskelijakunta.net/edunvalvonta/#aktiivit" aria-current="page">
-          Aktiivit
-        </a>
-      </li><li>
-        <a href="https://opiskelijakunta.net/edunvalvonta/#johtoryhma" aria-current="page">
-          Johtoryhmävastaavat
-        </a>
-      </li>
-    </ul>
-  </nav>
+    <HeroSection
+      title="Ratkaistaan ongelmat yhdessä"
+      img="https://opiskelijakunta.net/wp-content/uploads/2022/10/Nimeton-suunn.malli-5-min.jpg">
+      <p>
+        Turun ammattikorkeakoulun opiskelijakunta – TUOn tarkoitus on valvoa opiskelijoiden etua ja
+        tuoda opiskelijoiden ääni kuuluviin ammattikorkeakoulussa ja kaupunkien päätöksenteossa –
+        Salossa ja Turussa. TUO on uskonnollisesti ja poliittisesti sitoutumaton sekä
+        ammattiyhdistyksistä riippumaton.
+      </p><p>
+        Voit kääntyä TUOn puoleen aina, kun sinulla on opintoihin liittyvä ongelma tai kysymys.
+        Opiskelijakunnan vaikuttamisen asiantuntija voi esimerkiksi olla mukana selvittämässä
+        ristiriitatilanteita, parantamassa koulutuksen laatua koulutusohjelmassa sekä toimia
+        opiskelijoiden ja koulun henkilöstön välisenä viestinviejänä. Vaikuttamisen asiantuntijat
+        käsittelevät luottamuksellisesti yhteydenotot.
+      </p><p>
+        Ota yhteyttä sähköpostitse <a
+          href="mailto:edunvalvonta@opiskelijakunta.net"
+          target="_blank"
+          rel="noopener">
+          edunvalvonta@opiskelijakunta.net
+        </a>.
+      </p>
+    </HeroSection>
 
-  <ul>
-    <li>
-      <a href="https://opiskelijakunta.net/edunvalvonta/#edunvalvonta" aria-current="page">
-        Edunvalvonta
+    <section
+      class="border-tuo-yellow rounded-tuo shadow-tuo-md isolate m-auto my-8 w-fit max-w-9/10 border-t-18 bg-white tracking-wider">
+      <div class="grid md:grid-cols-3">
+        <div
+          class="grid min-w-60 grid-rows-[auto_1fr_1fr_auto] place-items-center px-10 py-5 text-center lg:py-7.5">
+          <p class="text-tuo-blue text-[70px]">20+</p>
+          <h3 class="font-bold uppercase">yhteydenottoja vuodessa</h3>
+        </div>
+
+        <div
+          class="grid min-w-60 grid-rows-[auto_1fr_1fr_auto] place-items-center px-10 py-5 text-center lg:py-7.5">
+          <p class="text-tuo-blue text-[70px]">15+</p>
+          <h3 class="font-bold uppercase">Häirintäilmoituksia vuodessa</h3>
+        </div>
+
+        <div
+          class="grid min-w-60 grid-rows-[auto_1fr_1fr_auto] place-items-center px-10 py-5 text-center lg:py-7.5">
+          <p class="text-tuo-blue text-[70px]">5+</p>
+          <h3 class="font-bold uppercase">Kannanotot ja lausunnot vuodessa</h3>
+        </div>
+      </div>
+    </section>
+
+    <HeroSection title="Häirintäyhdyshenkilö">
+      <p>
+        Häirintä on toimintaa, jonka häiritty kokee jollakin tavalla epämiellyttäväksi. Se voi olla
+        yhteydessä häirityn etnisyyteen, seksuaalisuuteen, varallisuuteen, uskontoon, fyysisiin
+        ominaisuuksiin tai sukupuoleen. Häirinnän piiriin luetaan&nbsp;myös korkeakoulukiusaaminen
+        ja syrjintä.
+      </p><p>
+        Jokaisella opiskelijalla on oikeus tasa-arvoiseen kohteluun&nbsp;ja&nbsp;fyysiseen
+        sekä&nbsp;psyykkiseen koskemattomuuteen&nbsp;korkeakoulussa. Yhdenvertaisuuslain nojalla
+        opiskelijoita ei saa erotella toisistaan heidän ominaisuuksiinsa perustuen. Sukupuolten
+        välisestä tasa-arvosta säätävän lain tulee puolestaan taata sukupuolten välinen tasa-arvo
+        myös opiskeluissa. Sukupuolten moninaisuus tulee tunnistaa ja tunnustaa
+        korkeakouluyhteisössä.
+      </p>
+
+      <h3>Ota yhteyttä</h3>
+
+      <p>
+        Voit ottaa TUOn häirintäyhdyshenkilöön yhteyttä, mikäli tarvitset puolueettoman kuulijan
+        huolillesi. Häirintäyhdyshenkilöt antavat myös tukea häirintä- tai yhdenvertaisuusasioiden
+        eteenpäin viemiseen. Kaikki keskustelut ovat luottamuksellisia eikä niistä tehdä
+        muistiinpanoja. Ainoan poikkeuksen muodostavat tilanteet, joissa opiskelijaan itseensä tai
+        muuhun korkeakouluyhteisöön kohdistuu väkivallan uhka.
+      </p><p>
+        Voit ottaa yhteyttä häirintäyhdyshenkilöihin <a
+          href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=hrwyq_ISOEuyYsV3WYLiQeSDfQ7wFmlOh7GmSyEnwitUMlFJVFFCQVo5UUI3S0tGUENPR0Y5QjBPTi4u"
+          target="_blank"
+          rel="noopener">
+          lomakkeen kautta
+        </a> tai sähköpostitse.
+      </p>
+
+      <Image
+        loading="lazy"
+        decoding="async"
+        width="1080"
+        height="1080"
+        src="https://opiskelijakunta.net/wp-content/uploads/2026/01/Hallituskuvat-kotisivuille-2026.png"
+        alt="Olga Hellman"
+        srcset="https://opiskelijakunta.net/wp-content/uploads/2026/01/Hallituskuvat-kotisivuille-2026.png 1080w, https://opiskelijakunta.net/wp-content/uploads/2026/01/Hallituskuvat-kotisivuille-2026-980x980.png 980w, https://opiskelijakunta.net/wp-content/uploads/2026/01/Hallituskuvat-kotisivuille-2026-480x480.png 480w"
+        sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) and (max-width: 980px) 980px, (min-width: 981px) 1080px, 100vw"
+      />
+
+      <h4>Olga Hellman</h4><p>Hallituksen pj</p>
+      <p>
+        <a href="mailto:olga.u.hellman@turkuamk.fi">olga.u.hellman@turkuamk.fi</a>
+      </p>
+
+      <Image
+        loading="lazy"
+        decoding="async"
+        width="540"
+        height="540"
+        src="https://opiskelijakunta.net/wp-content/uploads/2025/01/4_108.png"
+        alt="Jasmin Anttila"
+        srcset="https://opiskelijakunta.net/wp-content/uploads/2025/01/4_108.png 540w, https://opiskelijakunta.net/wp-content/uploads/2025/01/4_108-480x480.png 480w"
+        sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) 540px, 100vw"
+      />
+
+      <h4>Jasmin Anttila</h4><p>Hallituksen jäsen</p>
+      <p>
+        <a href="mailto:jasmin.anttila1@turkuamk.fi" target="_blank" rel="noopener">
+          jasmin.anttila1@turkuamk.fi
+        </a>
+      </p>
+
+      <Image
+        loading="lazy"
+        decoding="async"
+        width="1080"
+        height="1080"
+        src="https://opiskelijakunta.net/wp-content/uploads/2026/01/Hallituskuvat-kotisivuille-2026-7.png"
+        alt="Toni Haila"
+        srcset="https://opiskelijakunta.net/wp-content/uploads/2026/01/Hallituskuvat-kotisivuille-2026-7.png 1080w, https://opiskelijakunta.net/wp-content/uploads/2026/01/Hallituskuvat-kotisivuille-2026-7-980x980.png 980w, https://opiskelijakunta.net/wp-content/uploads/2026/01/Hallituskuvat-kotisivuille-2026-7-480x480.png 480w"
+        sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) and (max-width: 980px) 980px, (min-width: 981px) 1080px, 100vw"
+      />
+
+      <h4>Toni Haila</h4><p>Hallituksen jäsen</p>
+      <p>
+        <a href="mailto:toni.haila1@turkuamk.fi" target="_blank" rel="noopener">
+          toni.haila1@turkuamk.fi
+        </a>
+      </p>
+
+      <Image
+        loading="lazy"
+        decoding="async"
+        width="1080"
+        height="1080"
+        src="https://opiskelijakunta.net/wp-content/uploads/2026/01/Hallituskuvat-kotisivuille-2026-8.png"
+        alt="Ville Soikkeli"
+        srcset="https://opiskelijakunta.net/wp-content/uploads/2026/01/Hallituskuvat-kotisivuille-2026-8.png 1080w, https://opiskelijakunta.net/wp-content/uploads/2026/01/Hallituskuvat-kotisivuille-2026-8-980x980.png 980w, https://opiskelijakunta.net/wp-content/uploads/2026/01/Hallituskuvat-kotisivuille-2026-8-480x480.png 480w"
+        sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) and (max-width: 980px) 980px, (min-width: 981px) 1080px, 100vw"
+      />
+
+      <h4>Ville Soikkeli</h4><p>Edustajiston vpj</p>
+      <p>
+        <a href="mailto:ville.soikkeli1@turkuamk.fi" target="_blank" rel="noopener">
+          ville.soikkeli1@turkuamk.fi
+        </a>
+      </p>
+    </HeroSection>
+
+    <HeroSection
+      title="Opiskelijaedustajat"
+      img="https://opiskelijakunta.net/wp-content/uploads/2022/10/Nimeton-suunn.malli-9-min.jpg">
+      <p>
+        Opiskelijakunta TUO valitsee vuosittain opiskelijaedustajia erilaisiin tärkeisiin
+        vaikuttamistehtäviin niin korkeakoulun sisällä kuin sen ulkopuolelle. Nämä
+        opiskelijayhteisön supersankarit vievät jokaisen Turku AMK:n opiskelijan näkemyksiä
+        päättäviin pöytiin, joissa opiskelijoiden asioista tehdään päätöksiä. Opiskelijaedustajan
+        yksi tärkeimmistä tehtävistä on tietää, mitä ns. käytävillä puhutaan ja mihin tuli puuttua,
+        jotta kaikilla olisi hyvä opiskella sekä olla korkeakoulu yhteisössä. Tätä työtä ei
+        tietenkään tarvitse tehdä yksin vaan TUOn henkilöstö on aina tukena sekä apuna aina kun
+        tarvetta on. Olisitko sinä seuraava opiskelijaedustaja, opiskelijoiden supersankari?
+      </p>
+    </HeroSection>
+
+    <h5>Turku AMK:n sisäiset</h5>
+
+    <p><strong>Tutkintolautakunta<br /></strong>Marko Grönlund</p><p>
+      <strong>Opintoasioiden lautakunta<br /></strong>Juulia Santanen<strong>
+        <br />
+      </strong>Vara: Marko Grönlund
+    </p><p>
+      <strong>Turun ammattikorkeakoulun OY:n hallitus</strong><br /><span data-teams="true">
+        OpiskelijaedustajaCia Lehtola
+
+        <br />Turun AMK Oy:n hallitus<br /><a href="mailto:cia.lehtola@edu.turkuamk.fi">
+          cia.lehtola@edu.turkuamk.fi
+        </a><br />
+      </span>
+
+      <h5>Turku AMK:n ulkopuoliset</h5>
+
+      <p><strong>Turun Ylioppilaskyläsäätiön hallitus</strong></p><p>Roosa Koli</p><p>
+        <strong>Maakunnan yhteistyöryhmä (MYR)*</strong><br />Toni Saari
+      </p><p>* Varsinainen edustaja valitaan TUOsta joka toinen vuosi</p>
+
+      <h5>YTHS</h5>
+      <p><b>YTHS valtuuskunnan jäsen</b></p><p>Marko Grönlund</p>
+
+      <Image
+        loading="lazy"
+        decoding="async"
+        width="800"
+        height="400"
+        src="https://opiskelijakunta.net/wp-content/uploads/2022/10/Nimeton-suunn.malli-8-min.jpg"
+        alt=""
+        title="Nimetön suunn.malli (8)-min"
+        srcset="https://opiskelijakunta.net/wp-content/uploads/2022/10/Nimeton-suunn.malli-8-min.jpg 800w, https://opiskelijakunta.net/wp-content/uploads/2022/10/Nimeton-suunn.malli-8-min-480x240.jpg 480w"
+        sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) 800px, 100vw"
+      />
+
+      <h3>TUOn Aktiivit</h3>
+
+      TUOn aktiivina pääset ideoimaan ja järjestämään vapaa-ajan toimintaa yhdessä TUOn hallituksen
+      jäsenten kanssa. Opiskelijakunnalla on vakiintunut tapahtumien kirjo, mutta myös uusia ja
+      raikkaita ideoita kaivataan! Aktiivitoimintaan voit osallistua omalla haluamallasi panoksella.
+      Jos haluat mukaan, heitä sähköpostilla&nbsp;
+      <strong>tuo@opiskelijakunta.net</strong>ja&nbsp;liity<a
+        href="https://chat.whatsapp.com/EWKs4FqlalK9txTomM4L5Z">
+        TUO-yhteisön WhatsApp-ryhmään.
       </a>
-    </li><li>
-      <a href="https://opiskelijakunta.net/edunvalvonta/#hairinta" aria-current="page">
-        Häirintäyhdyshenkilö
-      </a>
-    </li><li>
-      <a href="https://opiskelijakunta.net/edunvalvonta/#edustajat" aria-current="page">
-        Opiskelijaedustajat
-      </a>
-    </li><li>
-      <a href="https://opiskelijakunta.net/edunvalvonta/#aktiivit" aria-current="page">Aktiivit</a>
-    </li><li>
-      <a href="https://opiskelijakunta.net/edunvalvonta/#johtoryhma" aria-current="page">
-        Johtoryhmävastaavat
-      </a>
-    </li>
-  </ul>
 
-  <h3>Ratkaistaan ongelmat yhdessä</h3>
+      <h5>Tekniikka ja liiketoiminta</h5>
 
-  <p>
-    Turun ammattikorkeakoulun opiskelijakunta – TUOn tarkoitus on valvoa opiskelijoiden etua ja
-    tuoda opiskelijoiden ääni kuuluviin ammattikorkeakoulussa ja kaupunkien päätöksenteossa –
-    Salossa ja Turussa. TUO on uskonnollisesti ja poliittisesti sitoutumaton sekä
-    ammattiyhdistyksistä riippumaton.
-  </p><p>
-    Voit kääntyä TUOn puoleen aina, kun sinulla on opintoihin liittyvä ongelma tai kysymys.
-    Opiskelijakunnan vaikuttamisen asiantuntija voi esimerkiksi olla mukana selvittämässä
-    ristiriitatilanteita, parantamassa koulutuksen laatua koulutusohjelmassa sekä toimia
-    opiskelijoiden ja koulun henkilöstön välisenä viestinviejänä. Vaikuttamisen asiantuntijat
-    käsittelevät luottamuksellisesti yhteydenotot.
-  </p><p>
-    Ota yhteyttä sähköpostitse <a
-      href="mailto:edunvalvonta@opiskelijakunta.net"
-      target="_blank"
-      rel="noopener">
-      edunvalvonta@opiskelijakunta.net
-    </a>.
-  </p>
-
-  <Image
-    loading="lazy"
-    decoding="async"
-    width="800"
-    height="400"
-    src="https://opiskelijakunta.net/wp-content/uploads/2022/10/Nimeton-suunn.malli-5-min.jpg"
-    alt=""
-    title="Nimetön suunn.malli (5)-min"
-    srcset="https://opiskelijakunta.net/wp-content/uploads/2022/10/Nimeton-suunn.malli-5-min.jpg 800w, https://opiskelijakunta.net/wp-content/uploads/2022/10/Nimeton-suunn.malli-5-min-480x240.jpg 480w"
-    sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) 800px, 100vw"
-  />
-
-  <p>20+</p><h3>yhteydenottoja vuodessa</h3><canvas height="0" width="0"></canvas>
-
-  <p>15+</p><h3>Häirintäilmoituksia vuodessa</h3><canvas height="0" width="0"></canvas>
-
-  <p>5+</p><h3>Kannanotot ja lausunnot vuodessa</h3><canvas height="0" width="0"></canvas>
-
-  <h3>Häirintäyhdyshenkilö</h3>
-
-  <p>
-    Häirintä on toimintaa, jonka häiritty kokee jollakin tavalla epämiellyttäväksi. Se voi olla
-    yhteydessä häirityn etnisyyteen, seksuaalisuuteen, varallisuuteen, uskontoon, fyysisiin
-    ominaisuuksiin tai sukupuoleen. Häirinnän piiriin luetaan&nbsp;myös korkeakoulukiusaaminen ja
-    syrjintä.
-  </p><p>
-    Jokaisella opiskelijalla on oikeus tasa-arvoiseen kohteluun&nbsp;ja&nbsp;fyysiseen
-    sekä&nbsp;psyykkiseen koskemattomuuteen&nbsp;korkeakoulussa. Yhdenvertaisuuslain nojalla
-    opiskelijoita ei saa erotella toisistaan heidän ominaisuuksiinsa perustuen. Sukupuolten
-    välisestä tasa-arvosta säätävän lain tulee puolestaan taata sukupuolten välinen tasa-arvo myös
-    opiskeluissa. Sukupuolten moninaisuus tulee tunnistaa ja tunnustaa korkeakouluyhteisössä.
-  </p>
-
-  <h3>Ota yhteyttä</h3>
-
-  <p>
-    Voit ottaa TUOn häirintäyhdyshenkilöön yhteyttä, mikäli tarvitset puolueettoman kuulijan
-    huolillesi. Häirintäyhdyshenkilöt antavat myös tukea häirintä- tai yhdenvertaisuusasioiden
-    eteenpäin viemiseen. Kaikki keskustelut ovat luottamuksellisia eikä niistä tehdä muistiinpanoja.
-    Ainoan poikkeuksen muodostavat tilanteet, joissa opiskelijaan itseensä tai muuhun
-    korkeakouluyhteisöön kohdistuu väkivallan uhka.
-  </p><p>
-    Voit ottaa yhteyttä häirintäyhdyshenkilöihin <a
-      href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=hrwyq_ISOEuyYsV3WYLiQeSDfQ7wFmlOh7GmSyEnwitUMlFJVFFCQVo5UUI3S0tGUENPR0Y5QjBPTi4u"
-      target="_blank"
-      rel="noopener">
-      lomakkeen kautta
-    </a> tai sähköpostitse.
-  </p>
-
-  <Image
-    loading="lazy"
-    decoding="async"
-    width="1080"
-    height="1080"
-    src="https://opiskelijakunta.net/wp-content/uploads/2026/01/Hallituskuvat-kotisivuille-2026.png"
-    alt="Olga Hellman"
-    srcset="https://opiskelijakunta.net/wp-content/uploads/2026/01/Hallituskuvat-kotisivuille-2026.png 1080w, https://opiskelijakunta.net/wp-content/uploads/2026/01/Hallituskuvat-kotisivuille-2026-980x980.png 980w, https://opiskelijakunta.net/wp-content/uploads/2026/01/Hallituskuvat-kotisivuille-2026-480x480.png 480w"
-    sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) and (max-width: 980px) 980px, (min-width: 981px) 1080px, 100vw"
-  />
-
-  <h4>Olga Hellman</h4><p>Hallituksen pj</p>
-  <p>
-    <a href="mailto:olga.u.hellman@turkuamk.fi">olga.u.hellman@turkuamk.fi</a>
-  </p>
-
-  <Image
-    loading="lazy"
-    decoding="async"
-    width="540"
-    height="540"
-    src="https://opiskelijakunta.net/wp-content/uploads/2025/01/4_108.png"
-    alt="Jasmin Anttila"
-    srcset="https://opiskelijakunta.net/wp-content/uploads/2025/01/4_108.png 540w, https://opiskelijakunta.net/wp-content/uploads/2025/01/4_108-480x480.png 480w"
-    sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) 540px, 100vw"
-  />
-
-  <h4>Jasmin Anttila</h4><p>Hallituksen jäsen</p>
-  <p>
-    <a href="mailto:jasmin.anttila1@turkuamk.fi" target="_blank" rel="noopener">
-      jasmin.anttila1@turkuamk.fi
-    </a>
-  </p>
-
-  <Image
-    loading="lazy"
-    decoding="async"
-    width="1080"
-    height="1080"
-    src="https://opiskelijakunta.net/wp-content/uploads/2026/01/Hallituskuvat-kotisivuille-2026-7.png"
-    alt="Toni Haila"
-    srcset="https://opiskelijakunta.net/wp-content/uploads/2026/01/Hallituskuvat-kotisivuille-2026-7.png 1080w, https://opiskelijakunta.net/wp-content/uploads/2026/01/Hallituskuvat-kotisivuille-2026-7-980x980.png 980w, https://opiskelijakunta.net/wp-content/uploads/2026/01/Hallituskuvat-kotisivuille-2026-7-480x480.png 480w"
-    sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) and (max-width: 980px) 980px, (min-width: 981px) 1080px, 100vw"
-  />
-
-  <h4>Toni Haila</h4><p>Hallituksen jäsen</p>
-  <p>
-    <a href="mailto:toni.haila1@turkuamk.fi" target="_blank" rel="noopener">
-      toni.haila1@turkuamk.fi
-    </a>
-  </p>
-
-  <Image
-    loading="lazy"
-    decoding="async"
-    width="1080"
-    height="1080"
-    src="https://opiskelijakunta.net/wp-content/uploads/2026/01/Hallituskuvat-kotisivuille-2026-8.png"
-    alt="Ville Soikkeli"
-    srcset="https://opiskelijakunta.net/wp-content/uploads/2026/01/Hallituskuvat-kotisivuille-2026-8.png 1080w, https://opiskelijakunta.net/wp-content/uploads/2026/01/Hallituskuvat-kotisivuille-2026-8-980x980.png 980w, https://opiskelijakunta.net/wp-content/uploads/2026/01/Hallituskuvat-kotisivuille-2026-8-480x480.png 480w"
-    sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) and (max-width: 980px) 980px, (min-width: 981px) 1080px, 100vw"
-  />
-
-  <h4>Ville Soikkeli</h4><p>Edustajiston vpj</p>
-  <p>
-    <a href="mailto:ville.soikkeli1@turkuamk.fi" target="_blank" rel="noopener">
-      ville.soikkeli1@turkuamk.fi
-    </a>
-  </p>
-
-  <h3>Opiskelijaedustajat</h3>
-
-  <p>
-    Opiskelijakunta TUO valitsee vuosittain opiskelijaedustajia erilaisiin tärkeisiin
-    vaikuttamistehtäviin niin korkeakoulun sisällä kuin sen ulkopuolelle. Nämä opiskelijayhteisön
-    supersankarit vievät jokaisen Turku AMK:n opiskelijan näkemyksiä päättäviin pöytiin, joissa
-    opiskelijoiden asioista tehdään päätöksiä. Opiskelijaedustajan yksi tärkeimmistä tehtävistä on
-    tietää, mitä ns. käytävillä puhutaan ja mihin tuli puuttua, jotta kaikilla olisi hyvä opiskella
-    sekä olla korkeakoulu yhteisössä. Tätä työtä ei tietenkään tarvitse tehdä yksin vaan TUOn
-    henkilöstö on aina tukena sekä apuna aina kun tarvetta on. Olisitko sinä seuraava
-    opiskelijaedustaja, opiskelijoiden supersankari?
-  </p>
-
-  <Image
-    loading="lazy"
-    decoding="async"
-    width="800"
-    height="400"
-    src="https://opiskelijakunta.net/wp-content/uploads/2022/10/Nimeton-suunn.malli-9-min.jpg"
-    alt=""
-    title="Nimetön suunn.malli (9)-min"
-    srcset="https://opiskelijakunta.net/wp-content/uploads/2022/10/Nimeton-suunn.malli-9-min.jpg 800w, https://opiskelijakunta.net/wp-content/uploads/2022/10/Nimeton-suunn.malli-9-min-480x240.jpg 480w"
-    sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) 800px, 100vw"
-  />
-
-  <h5>Turku AMK:n sisäiset</h5>
-
-  <p><strong>Tutkintolautakunta<br /></strong>Marko Grönlund</p><p>
-    <strong>Opintoasioiden lautakunta<br /></strong>Juulia Santanen<strong>
-      <br />
-    </strong>Vara: Marko Grönlund
-  </p><p>
-    <strong>Turun ammattikorkeakoulun OY:n hallitus</strong><br /><span data-teams="true">
-      OpiskelijaedustajaCia Lehtola
-
-      <br />Turun AMK Oy:n hallitus<br /><a href="mailto:cia.lehtola@edu.turkuamk.fi">
-        cia.lehtola@edu.turkuamk.fi
-      </a><br />
-    </span>
-
-    <h5>Turku AMK:n ulkopuoliset</h5>
-
-    <p><strong>Turun Ylioppilaskyläsäätiön hallitus</strong></p><p>Roosa Koli</p><p>
-      <strong>Maakunnan yhteistyöryhmä (MYR)*</strong><br />Toni Saari
-    </p><p>* Varsinainen edustaja valitaan TUOsta joka toinen vuosi</p>
-
-    <h5>YTHS</h5>
-    <p><b>YTHS valtuuskunnan jäsen</b></p><p>Marko Grönlund</p>
-
-    <Image
-      loading="lazy"
-      decoding="async"
-      width="800"
-      height="400"
-      src="https://opiskelijakunta.net/wp-content/uploads/2022/10/Nimeton-suunn.malli-8-min.jpg"
-      alt=""
-      title="Nimetön suunn.malli (8)-min"
-      srcset="https://opiskelijakunta.net/wp-content/uploads/2022/10/Nimeton-suunn.malli-8-min.jpg 800w, https://opiskelijakunta.net/wp-content/uploads/2022/10/Nimeton-suunn.malli-8-min-480x240.jpg 480w"
-      sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) 800px, 100vw"
-    />
-
-    <h3>TUOn Aktiivit</h3>
-
-    TUOn aktiivina pääset ideoimaan ja järjestämään vapaa-ajan toimintaa yhdessä TUOn hallituksen
-    jäsenten kanssa. Opiskelijakunnalla on vakiintunut tapahtumien kirjo, mutta myös uusia ja
-    raikkaita ideoita kaivataan! Aktiivitoimintaan voit osallistua omalla haluamallasi panoksella.
-    Jos haluat mukaan, heitä sähköpostilla&nbsp;
-    <strong>tuo@opiskelijakunta.net</strong>ja&nbsp;liity<a
-      href="https://chat.whatsapp.com/EWKs4FqlalK9txTomM4L5Z">
-      TUO-yhteisön WhatsApp-ryhmään.
-    </a>
-
-    <h5>Tekniikka ja liiketoiminta</h5>
-
-    <ul>
-      <li>
-        Degree programme in International Business (1 paikka): <span data-teams="true">
-          Enrique Romero Valderrama
-        </span><li>
-          Degree programme in Information and Communications Technology (1 paikka): <span
-            data-teams="true">
-            Artturi Lunnas
-          </span><li>Liiketalous, Turku (1 paikka): Henna Kääntö</li><li>
-            Myyntityö (1 paikka): Paikka auki!
-          </li><li>Liiketoiminnan logistiikka (1 paikka): Tony Paldan</li><li>
-            Tietojenkäsittely (1 paikka): Iitu Kuusrainen
-          </li><li>Tieto- ja viestintätekniikka (1 paikka): Sara Sandberg</li><li>
-            Ajoneuvo- ja kuljetustekniikka (1 paikka): Roope Autio
-          </li><li>Energia- ja ympäristötekniikka (1 paikka): Oona Kaarmela</li><li>
-            Konetekniikka (1 paikka): Petteri Alatalo
-          </li><li>Sähkö- ja automaatiotekniikka (1 paikka): Eetu Pärssinen</li><li>
-            Prosessi- ja materiaalitekniikka (1 paikka): Linda Aholainen
-          </li><li>Rakennus- ja yhdyskuntatekniikka (1 paikka): Paikka auki!</li><li>
-            Tuotantotalous (1 paikka): Tuomas Mäkelä
-          </li><li>
-            Rakennus- ja yhdyskuntatekniikka, rakennusmestari (1 paikka): Josefina Satto
-          </li><li>Finassipalvelut (1 paikka):&nbsp; Henri Tran</li><li>
-            Rakennusarkkitehti (1 paikka): Mio Luukkonen
-          </li><li>Taloushallinto (1 paikka): Miska Risku</li><li>
-            Matkailu ja wellness liiketoimintana (1 paikka): Juulia Tuomenharju
-          </li>
-        </li><p>
-          Laita viestiä avoimista paikoista <a href="mailto:edunvalvonta@opiskelijakunta.net">
-            edunvalvonta@opiskelijakunta.net
-          </a>, niin sinusta voi tulla seuraava opiskelijoiden supersankari!
-        </p>
-
-        <h5>Terveys ja hyvinvointi</h5>
-
-        <ul>
-          <li>Hammasteknikko / Suuhygienisti (1 paikka): Paikka auki!</li><li>
-            Bioanalyytikko / Röntgenhoitaja (1 paikka): Paikka auki!
-          </li><li>Fysioterapeutti / Toimintaterapeutti (1 paikka): Paikka auki!</li><li>
-            Sosiaalikasvatus (1 paikka): Rosa Hynynen
-          </li><li>Terveydenhoitaja / Kätilö / Ensihoitaja (1 paikka): Paikka auki!</li><li>
-            Sairaanhoitaja, Turku &amp; Salo (2 paikkaa): Jesse Mäki, yksi paikka auki!
-          </li><li>Master School (1 paikka): Paikka auki!</li>
-        </ul><p>
-          Laita viestiä avoimista paikoista <a href="mailto:edunvalvonta@opiskelijakunta.net">
-            edunvalvonta@opiskelijakunta.net
-          </a>, niin sinusta voi tulla seuraava opiskelijoiden supersankari!
-        </p>
-
-        <h5>Taideakatemia</h5>
-
-        <ul>
-          <li>
-            Kuvataide (kuvataide 1 paikka, valokuva 1 paikka, animaatio 1 paikka): yhteensä 3
-            paikkaa: Paikka auki!
-          </li><li>
-            Media-ala (elokuva 1 paikka, journalismi 1 paikka, mainonnan suunnittelu 1 paikka,
-            tuotanto ja projektihallinta 1 paikka): yhteensä 4 paikkaa: <span data-teams="true">
-              Santeri Rautiainen, kolme paikkaa auki!
-            </span><li>
-              Esittävät taiteet (musiikki 1 paikka, tanssi 1 paikka, sirkus 1 paikka, teatteri 1
-              paikka): yhteensä 4 paikkaa: Jasmin Anttila kolme p aikkaa auki!
+      <ul>
+        <li>
+          Degree programme in International Business (1 paikka): <span data-teams="true">
+            Enrique Romero Valderrama
+          </span><li>
+            Degree programme in Information and Communications Technology (1 paikka): <span
+              data-teams="true">
+              Artturi Lunnas
+            </span><li>Liiketalous, Turku (1 paikka): Henna Kääntö</li><li>
+              Myyntityö (1 paikka): Paikka auki!
+            </li><li>Liiketoiminnan logistiikka (1 paikka): Tony Paldan</li><li>
+              Tietojenkäsittely (1 paikka): Iitu Kuusrainen
+            </li><li>Tieto- ja viestintätekniikka (1 paikka): Sara Sandberg</li><li>
+              Ajoneuvo- ja kuljetustekniikka (1 paikka): Roope Autio
+            </li><li>Energia- ja ympäristötekniikka (1 paikka): Oona Kaarmela</li><li>
+              Konetekniikka (1 paikka): Petteri Alatalo
+            </li><li>Sähkö- ja automaatiotekniikka (1 paikka): Eetu Pärssinen</li><li>
+              Prosessi- ja materiaalitekniikka (1 paikka): Linda Aholainen
+            </li><li>Rakennus- ja yhdyskuntatekniikka (1 paikka): Paikka auki!</li><li>
+              Tuotantotalous (1 paikka): Tuomas Mäkelä
+            </li><li>
+              Rakennus- ja yhdyskuntatekniikka, rakennusmestari (1 paikka): Josefina Satto
+            </li><li>Finassipalvelut (1 paikka):&nbsp; Henri Tran</li><li>
+              Rakennusarkkitehti (1 paikka): Mio Luukkonen
+            </li><li>Taloushallinto (1 paikka): Miska Risku</li><li>
+              Matkailu ja wellness liiketoimintana (1 paikka): Juulia Tuomenharju
             </li>
           </li><p>
             Laita viestiä avoimista paikoista <a href="mailto:edunvalvonta@opiskelijakunta.net">
@@ -353,23 +273,60 @@ export const props: PageProps = {
             </a>, niin sinusta voi tulla seuraava opiskelijoiden supersankari!
           </p>
 
-          <h3>Johtoryhmävastaavat</h3>
+          <h5>Terveys ja hyvinvointi</h5>
 
-          <p>
-            Johtoryhmävastaavat toimivat sanansaattajina oman sektorinsa opiskelijoiden ja
-            henkilöstön välillä. Vastaavan yksi tärkeimmistä tehtävistä on kuunnella käytäviltä
-            kuuluvia haasteita koulutukseen liittyen tai muuhun toimintaan ja kerätä niin ylös,
-            jotta niitä voi kokouksissa nostaa käsiteltäväksi.
-          </p><p>
-            Sektorin sisällä on kuukausittainen tapaaminen yhdessä koulun edustajan ja
-            johtoryhmävastaavien kanssa, tämän lisäksi vastaavat pääsevät osallistumaan sektorinsa
-            johtoryhmän tapaamisiin kaksi kertaa vuodessa.
-          </p><p>
-            Opiskelijakunta kouluttaa kaikki johtoryhmävastaavat sekä tukee ja auttaa heitä
-            toiminnassa koko vuoden. Muutetaan asioita yhdessä!&nbsp;
+          <ul>
+            <li>Hammasteknikko / Suuhygienisti (1 paikka): Paikka auki!</li><li>
+              Bioanalyytikko / Röntgenhoitaja (1 paikka): Paikka auki!
+            </li><li>Fysioterapeutti / Toimintaterapeutti (1 paikka): Paikka auki!</li><li>
+              Sosiaalikasvatus (1 paikka): Rosa Hynynen
+            </li><li>Terveydenhoitaja / Kätilö / Ensihoitaja (1 paikka): Paikka auki!</li><li>
+              Sairaanhoitaja, Turku &amp; Salo (2 paikkaa): Jesse Mäki, yksi paikka auki!
+            </li><li>Master School (1 paikka): Paikka auki!</li>
+          </ul><p>
+            Laita viestiä avoimista paikoista <a href="mailto:edunvalvonta@opiskelijakunta.net">
+              edunvalvonta@opiskelijakunta.net
+            </a>, niin sinusta voi tulla seuraava opiskelijoiden supersankari!
           </p>
-        </ul>
-      </li>
-    </ul>
-  </p>
-</article>
+
+          <h5>Taideakatemia</h5>
+
+          <ul>
+            <li>
+              Kuvataide (kuvataide 1 paikka, valokuva 1 paikka, animaatio 1 paikka): yhteensä 3
+              paikkaa: Paikka auki!
+            </li><li>
+              Media-ala (elokuva 1 paikka, journalismi 1 paikka, mainonnan suunnittelu 1 paikka,
+              tuotanto ja projektihallinta 1 paikka): yhteensä 4 paikkaa: <span data-teams="true">
+                Santeri Rautiainen, kolme paikkaa auki!
+              </span><li>
+                Esittävät taiteet (musiikki 1 paikka, tanssi 1 paikka, sirkus 1 paikka, teatteri 1
+                paikka): yhteensä 4 paikkaa: Jasmin Anttila kolme p aikkaa auki!
+              </li>
+            </li><p>
+              Laita viestiä avoimista paikoista <a href="mailto:edunvalvonta@opiskelijakunta.net">
+                edunvalvonta@opiskelijakunta.net
+              </a>, niin sinusta voi tulla seuraava opiskelijoiden supersankari!
+            </p>
+
+            <h3>Johtoryhmävastaavat</h3>
+
+            <p>
+              Johtoryhmävastaavat toimivat sanansaattajina oman sektorinsa opiskelijoiden ja
+              henkilöstön välillä. Vastaavan yksi tärkeimmistä tehtävistä on kuunnella käytäviltä
+              kuuluvia haasteita koulutukseen liittyen tai muuhun toimintaan ja kerätä niin ylös,
+              jotta niitä voi kokouksissa nostaa käsiteltäväksi.
+            </p><p>
+              Sektorin sisällä on kuukausittainen tapaaminen yhdessä koulun edustajan ja
+              johtoryhmävastaavien kanssa, tämän lisäksi vastaavat pääsevät osallistumaan sektorinsa
+              johtoryhmän tapaamisiin kaksi kertaa vuodessa.
+            </p><p>
+              Opiskelijakunta kouluttaa kaikki johtoryhmävastaavat sekä tukee ja auttaa heitä
+              toiminnassa koko vuoden. Muutetaan asioita yhdessä!&nbsp;
+            </p>
+          </ul>
+        </li>
+      </ul>
+    </p>
+  </main>
+</Layout>
