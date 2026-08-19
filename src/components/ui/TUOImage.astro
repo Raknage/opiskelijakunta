@@ -1,0 +1,14 @@
+---
+import { Image } from "astro:assets";
+
+const { src, alt } = Astro.props;
+---
+
+<Image
+  src={src}
+  alt={alt}
+  class="rounded-tuo shadow-tuo-md w-full object-cover"
+  loading="lazy"
+  decoding="async"
+  inferSize
+/>

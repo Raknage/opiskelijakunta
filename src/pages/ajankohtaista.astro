@@ -6,6 +6,7 @@ import RecentBlogs from "@/components/RecentBlogs.astro";
 import Carousel from "@/components/Carousel.astro";
 import type { PageProps } from "@/schemas";
 import { Image } from "astro:assets";
+import PageNav from "@/components/PageNav.astro";
 
 export const props: PageProps = {
   title: "Ajankohtaista",
@@ -22,6 +23,7 @@ export const props: PageProps = {
 <Layout>
   <main class="">
     <HeroPages title="Ajankohtaista" />
+    <PageNav {...props} />
 
     <section>
       <div class=""></div>
@@ -116,13 +118,13 @@ export const props: PageProps = {
       </section>
     </section>
 
-    <section class="text-center">
+    <section id="uutiset" class="text-center">
       <h2>Uutiset ja blogit</h2>
       <p>Täältä löydät uusimpien uutisten lisäksi TUOn blogin sekä tapahtumakalenterin.</p>
       <RecentBlogs />
     </section>
 
-    <section class="">
+    <section id="kalenteri" class="">
       <div class="mx-5 flex flex-col items-center gap-8 py-4 lg:mx-20 lg:flex-row">
         <div class="*:py-2 lg:w-2/3">
           <h2>Tapahtumakalenteri 2025</h2>

@@ -1,37 +1,44 @@
 ---
-import { Image } from "astro:assets";
+import TUOImage from "./ui/TUOImage.astro";
 
 interface Props {
+  slot?: "left" | "right" | null;
   reverse?: boolean;
+  reverseCol?: boolean;
   title: string;
   img?: string;
   id?: string;
   alt?: string;
 }
 
-const {
-  reverse = false,
-  title,
-  img = "https://opiskelijakunta.net/wp-content/uploads/2022/10/Nimeton-suunn.malli-9-min.jpg",
-  id,
-  alt = "",
-} = Astro.props;
+// const defaultSlot = Astro.slots.has("default");
+const leftSlot = true; //Astro.slots.has("left");
+const rightSlot = Astro.slots.has("right");
+
+const { reverse = false, reverseCol = false, title, img, id, alt = "" } = Astro.props;
 const rev = reverse ? "lg:flex-row-reverse" : "lg:flex-row";
+const revCol = reverseCol ? "flex-col-reverse" : "flex-col";
 ---
 
 <div id={id} class="bg-white py-10">
-  <div class:list={["mx-5 flex flex-col items-center gap-8 py-4 lg:mx-20", rev]}>
-    <Image
-      src={img}
-      alt={alt}
-      class="rounded-tuo shadow-tuo-md w-full object-cover lg:w-1/2"
-      loading="lazy"
-      decoding="async"
-      inferSize
-    />
-    <div class="w-full *:py-3 lg:w-1/2">
+  <div class:list={["mx-5 flex items-center gap-8 py-4 lg:mx-20", rev, revCol]}>
+    {
+      leftSlot && (
+        <div class="w-full flex-1">
+          <slot name="left">{img && <TUOImage src={img} alt={alt} />}</slot>
+        </div>
+      )
+    }
+    <div class="w-full flex-1 *:py-3">
       <h2 class="">{title}</h2>
       <slot />
     </div>
+    {
+      rightSlot && (
+        <div class="w-full flex-1 *:py-3">
+          <slot name="right" />
+        </div>
+      )
+    }
   </div>
 </div>
