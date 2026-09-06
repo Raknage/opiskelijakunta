@@ -1,6 +1,12 @@
 ---
+import HeroPages from "@/components/HeroPages.astro";
+import Collapsible from "@/components/ui/Collapsible.astro";
+import Layout from "@/layouts/Layout.astro";
+import RecentBlogs from "@/components/RecentBlogs.astro";
+import Carousel from "@/components/Carousel.astro";
 import type { PageProps } from "@/schemas";
 import { Image } from "astro:assets";
+import PageNav from "@/components/PageNav.astro";
 
 export const props: PageProps = {
   title: "Ajankohtaista",
@@ -14,277 +20,140 @@ export const props: PageProps = {
 };
 ---
 
-<article>
-  <h1>Ajankohtaista</h1>
+<Layout>
+  <main class="">
+    <HeroPages title="Ajankohtaista" />
+    <PageNav {...props} />
 
-  <nav>
-    <ul>
-      <li>
-        <a href="https://opiskelijakunta.net/ajankohtaista/#uutiset" aria-current="page">
-          Uutiset ja blogit
-        </a>
-      </li><li>
-        <a href="https://opiskelijakunta.net/ajankohtaista/#kalenteri" aria-current="page">
-          Tapahtumakalenteri
-        </a>
-      </li>
-    </ul>
-  </nav>
+    <section>
+      <div class=""></div>
+      <div class=""></div>
+    </section>
 
-  <ul>
-    <li>
-      <a href="https://opiskelijakunta.net/ajankohtaista/#uutiset" aria-current="page">
-        Uutiset ja blogit
-      </a>
-    </li><li>
-      <a href="https://opiskelijakunta.net/ajankohtaista/#kalenteri" aria-current="page">
-        Tapahtumakalenteri
-      </a>
-    </li>
-  </ul>
+    <section class="">
+      <section class="mx-5 flex flex-col items-center gap-8 py-4 lg:mx-20 lg:flex-row">
+        <div class="w-full *:py-3 lg:w-1/2">
+          <h2>Edustajistovaalit</h2>
+          <p>
+            Turun ammattikorkeakoulun opiskelijakunta - TUO järjestää edustajistovaalit
+            keskiviikkona 5.11.2025. Varsinaisen vaalipäivän lisäksi järjestetään ennakkoäänestys
+            sähköisenä äänestyksenä. Ennakkoäänestyksen ajankohta on 27.10.2025 alkaen klo 00.00 ja
+            päättyy 4.11.2025 klo 23:59.
+          </p><p>
+            Vaaleissa valitaan kaksikymmentäyksi (21) jäsentä ja enintään viisitoista (15)
+            varajäsentä opiskelijakunta TUOn edustajistoon. Varsinainen äänestyspäivä on keskiviikko
+            5.11.2025, äänestyspisteet ovat Turun ammattikorkeakoululla EduCityn, Lemminkäisenkadun,
+            Linnankadun sekä Salon toimipisteissä. Varsinaisen vaalipäivän äänestysaika on klo
+            10-13.
+          </p><p>
+            Vaalikelpoisia ovat kaikki Turun ammattikorkeakoulun opiskelijakunta - TUOn jäsenmaksun
+            maksaneet jäsenet, joiden jäsenmaksu on maksettu sekä HAKA-tunnistautuminen on
+            suoritettu viimeistään 17.10.2025 klo 12.00 mennessä.
+          </p><p>
+            Äänestysoikeus on kaikilla Turun ammattikorkeakoulun opiskelijakunta - TUOn jäsenmaksun
+            maksaneilla. Jäsenmaksun tulee olla maksettuna 4.11.2025 klo 23.59 mennessä.
+          </p>
+        </div>
+        <div class="grid w-full grid-cols-1 gap-4 object-cover lg:w-1/2">
+          <h5>Löydät ehdokkaat ja heidän vaalinumeronsa listoittain alta.</h5>
+          <Collapsible title="Tradenomivaikuttajat">
+            <p>Listalla on vaalirengas Tekniikan Taitajien kanssa.</p><p>
+              Listanvetäjä: Kitisak Paanmongkhon<br />sähköposti <a
+                href="mailto:kitisak.paanmongkhon@gmail.com"
+                target="_blank"
+                rel="noopener">
+                kitisak.paanmongkhon@gmail.com
+              </a>
+            </p><p>
+              Ehdokkaat ja heidän vaalinumeronsa:<br />2. Saku Boman<br />3. Arvi Takala<br />4.
+              Kitisak Paanmongkhon<br />5. Miska Risku
+            </p>
+          </Collapsible>
+          <Collapsible title="Tekniikan Taitajat">
+            <p>Listalla on vaalirengas Tradenomivaikuttajien kanssa.</p><p>
+              Listanvetäjä: Artturi Lunnas
+              <br />sähköposti <a href="mailto:a.lunnas93@gmail.com" target="_blank" rel="noopener">
+                a.lunnas93@gmail.com
+              </a>
+              <p>
+                Ehdokkaat ja heidän vaalinumeronsa:<br />6. Sisu Jäntti<br />7. Juuso Käkönen<br
+                />8. Sara Sandberg<br />9. Artturi Lunnas<br />10. Eetu Äikäs<br />11. Roope Autio<br
+                />12. Iuri Gonçalves<br />13. Toni Saari
+              </p>
+            </p>
+          </Collapsible>
 
-  <h3>Edustajistovaalit</h3>
+          <Collapsible title="Kohtuuden Ystävät">
+            <p>Listalla on vaalirengas TUOn Tovereiden kanssa.</p><p>
+              Listanvetäjä: Petteri Alatalo<br />sähköposti <a
+                href="mailto:petteri.alatalo@edu.turkuamk.fi"
+                target="_blank"
+                rel="noopener">
+                petteri.alatalo@edu.turkuamk.fi
+              </a>
+            </p><p>
+              Ehdokkaat ja heidän vaalinumeronsa:<br />14. Aapo Pihlaja<br />15. Aino Nousiainen<br
+              />16. Oki Hellberg<br />17. Joosa Siltanen<br />18. Matias Sandberg<br />19. Petteri
+              Alatalo<br />20. Joni Rothström<br />21. Jori Jokinen
+            </p>
+          </Collapsible>
+          <Collapsible title="TUOn Toverit">
+            <p>Listalla on vaalirengas Kohtuuden Ystävien kanssa.</p><p>
+              Listanvetäjä: Olga Hellman<br />sähköposti <a
+                href="mailto:olga.hellman@edu.turkuamk.fi"
+                target="_blank"
+                rel="noopener">
+                olga.hellman@edu.turkuamk.fi
+              </a>
+            </p><p>Ehdokkaat ja heidän vaalinumeronsa:</p><p>
+              22. Alex Luotonen<br />23. Samu Saarimäki<br />24. Santeri Salonen<br />25. Jesse Mäki<br
+              />26. Olga Hellman<br />27. Johanna Vilén<br />28. Amanda Majuri<br />29. Mika
+              Kankkunen<br />30. Maria Rostedt<br />31. Niilo Tähti<br />32. Oona Kaarmela<br />33.
+              Duy Nguyen<br />34. Sampo Kurttila<br />35. Aada Uhlgren<br />36. Toni Haila<br />37.
+              Stiina Yläkoski<br />38. Ville Soikkeli<br />39. Pyry Tolvanen<br />40. Milla
+              Mesiranta
+            </p>
+          </Collapsible>
+        </div>
+      </section>
+    </section>
 
-  <p>
-    Turun ammattikorkeakoulun opiskelijakunta – TUO järjestää edustajistovaalit keskiviikkona
-    5.11.2025. Varsinaisen vaalipäivän lisäksi järjestetään ennakkoäänestys sähköisenä äänestyksenä.
-    Ennakkoäänestyksen ajankohta on 27.10.2025 alkaen klo 00.00 ja päättyy 4.11.2025 klo
-    23:59.&nbsp;
-  </p><p>
-    Vaaleissa valitaan kaksikymmentäyksi (21) jäsentä ja enintään viisitoista (15) varajäsentä
-    opiskelijakunta TUOn edustajistoon. Varsinainen äänestyspäivä on keskiviikko 5.11.2025,
-    äänestyspisteet ovat Turun ammattikorkeakoululla EduCityn, Lemminkäisenkadun, Linnankadun sekä
-    Salon toimipisteissä. Varsinaisen vaalipäivän äänestysaika on klo 10–13.&nbsp;
-  </p><p>
-    Vaalikelpoisia ovat kaikki Turun ammattikorkeakoulun opiskelijakunta – TUOn jäsenmaksun
-    maksaneet jäsenet, joiden jäsenmaksu on maksettu sekä HAKA-tunnistautuminen on suoritettu
-    viimeistään 17.10.2025 klo 12.00 mennessä.&nbsp;
-  </p><p>
-    Äänestysoikeus on kaikilla Turun ammattikorkeakoulun opiskelijakunta – TUOn jäsenmaksun
-    maksaneilla. Jäsenmaksun tulee olla maksettuna 4.11.2025 klo 23.59 mennessä.
-  </p>
+    <section id="uutiset" class="text-center">
+      <h2>Uutiset ja blogit</h2>
+      <p>Täältä löydät uusimpien uutisten lisäksi TUOn blogin sekä tapahtumakalenterin.</p>
+      <RecentBlogs />
+    </section>
 
-  <p>Löydät ehdokkaat ja heidän vaalinumeronsa listoittain alta.&nbsp;</p>
-
-  <h5>Tradenomivaikuttajat</h5>
-
-  <p>Listalla on vaalirengas Tekniikan Taitajien kanssa.</p><p>
-    Listanvetäjä: Kitisak Paanmongkhon<br />sähköposti <a
-      href="mailto:kitisak.paanmongkhon@gmail.com"
-      target="_blank"
-      rel="noopener">
-      kitisak.paanmongkhon@gmail.com
-    </a>
-  </p><p>
-    Ehdokkaat ja heidän vaalinumeronsa:<br />2. Saku Boman<br />3. Arvi Takala<br />4. Kitisak
-    Paanmongkhon<br />5. Miska Risku
-  </p>
-
-  <h5>Tekniikan Taitajat</h5>
-  <p>Listalla on vaalirengas Tradenomivaikuttajien kanssa.</p><p>
-    Listanvetäjä: <span ng-bind="::customerProductVariantList.model.customer.firstName">
-      Artturi &nbsp;<span ng-bind="::customerProductVariantList.model.customer.lastName">
-        Lunnas
-        <br />sähköposti <a href="mailto:a.lunnas93@gmail.com" target="_blank" rel="noopener">
-          a.lunnas93@gmail.com
-        </a>
-      </span><p>
-        Ehdokkaat ja heidän vaalinumeronsa:<br />6. Sisu Jäntti<br />7. Juuso Käkönen<br />8. Sara
-        Sandberg<br />9. Artturi Lunnas<br />10. Eetu Äikäs<br />11. Roope Autio<br />12. Iuri
-        Gonçalves<br />13. Toni Saari
-      </p>
-
-      <h5>Kohtuuden Ystävät</h5>
-      <p>Listalla on vaalirengas TUOn Tovereiden kanssa.</p><p>
-        Listanvetäjä: Petteri Alatalo<br />sähköposti <a
-          href="mailto:petteri.alatalo@edu.turkuamk.fi"
-          target="_blank"
-          rel="noopener">
-          petteri.alatalo@edu.turkuamk.fi
-        </a>
-      </p><p>
-        Ehdokkaat ja heidän vaalinumeronsa:<br />14. Aapo Pihlaja<br />15. Aino Nousiainen<br />16.
-        Oki Hellberg<br />17. Joosa Siltanen<br />18. Matias Sandberg<br />19. Petteri Alatalo<br
-        />20. Joni Rothström<br />21. Jori Jokinen
-      </p>
-
-      <h5>TUOn Toverit</h5>
-
-      <p>Listalla on vaalirengas Kohtuuden Ystävien kanssa.</p><p>
-        Listanvetäjä: Olga Hellman<br />sähköposti <a
-          href="mailto:olga.hellman@edu.turkuamk.fi"
-          target="_blank"
-          rel="noopener">
-          olga.hellman@edu.turkuamk.fi
-        </a>
-      </p><p>Ehdokkaat ja heidän vaalinumeronsa:</p><p>
-        22. Alex Luotonen<br />23. Samu Saarimäki<br />24. Santeri Salonen<br />25. Jesse Mäki<br
-        />26. Olga Hellman<br />27. Johanna Vilén<br />28. Amanda Majuri<br />29. Mika Kankkunen<br
-        />30. Maria Rostedt<br />31. Niilo Tähti<br />32. Oona Kaarmela<br />33. Duy Nguyen<br />34.
-        Sampo Kurttila<br />35. Aada Uhlgren<br />36. Toni Haila<br />37. Stiina Yläkoski<br />38.
-        Ville Soikkeli<br />39. Pyry Tolvanen<br />40. Milla Mesiranta
-      </p>
-
-      <h2>Uutiset ja blogit</h2><p></p><p>
-        Täältä löydät uusimpien uutisten lisäksi TUOn blogin sekä tapahtumakalenterin.
-      </p>
-
-      <article>
-        <a href="https://opiskelijakunta.net/kannanotto-ei-kukaan-valmistu-nopeammin-koyhyydessa/">
-          <Image
-            loading="lazy"
-            decoding="async"
-            src="https://opiskelijakunta.net/wp-content/uploads/2025/05/Edustajistovaalit-2024-kotisivut-1-400x250.jpg"
-            alt="Kannanotto: Ei kukaan valmistu nopeammin köyhyydessä"
-            width="400"
-            height="250"
-          />
-        </a>
-
-        <h2>
-          <a
-            href="https://opiskelijakunta.net/kannanotto-ei-kukaan-valmistu-nopeammin-koyhyydessa/">
-            Kannanotto: Ei kukaan valmistu nopeammin köyhyydessä
-          </a>
-        </h2>
-        20.5.2026
-        <p>
-          Opiskelijaliike on huutanut tätä. Opetus- ja kulttuuriministeriö on sanonut sen. Nyt myös
-          Kela on todennut saman: opiskelijat eivät pärjää. Opintotuen taso ei vastaa todellisia
-          elinkustannuksia, ja järjestelmä tarvitsee sekä välittömiä korjauksia että
-          rakenteellisia...
-        </p>
-
-        <a href="https://opiskelijakunta.net/kannanotto-ei-kukaan-valmistu-nopeammin-koyhyydessa/">
-          Lue lisää
-        </a>
-      </article><article>
-        <a
-          href="https://opiskelijakunta.net/haku-turun-ammattikorkeakoulu-oyn-opiskelijaedustajaksi-on-auki-3/">
-          <Image
-            loading="lazy"
-            decoding="async"
-            src="https://opiskelijakunta.net/wp-content/uploads/2025/10/Edustajistovaalit-2025-kotisivut-1-400x250.jpg"
-            alt="Haku Turun ammattikorkeakoulu Oy:n opiskelijaedustajaksi on auki"
-            width="400"
-            height="250"
-          />
-        </a>
-
-        <h2>
-          <a
-            href="https://opiskelijakunta.net/haku-turun-ammattikorkeakoulu-oyn-opiskelijaedustajaksi-on-auki-3/">
-            Haku Turun ammattikorkeakoulu Oy:n opiskelijaedustajaksi on auki
-          </a>
-        </h2>
-        8.4.2026
-        <p>
-          Turun ammattikorkeakoulun opiskelijakunta – TUOn keskusvaalilautakunta on avannut haun
-          Turun ammattikorkeakoulun osakeyhtiön hallituksen opiskelijaedustajaksi.
-          Opiskelijaedustajan luottamustoimi kestää yhden vuoden 1.6.2026&nbsp;– 30.5.2027.
-          Ammattikorkeakoulun toimielimiä...
-        </p>
-
-        <a
-          href="https://opiskelijakunta.net/haku-turun-ammattikorkeakoulu-oyn-opiskelijaedustajaksi-on-auki-3/">
-          Lue lisää
-        </a>
-      </article><article>
-        <a
-          href="https://opiskelijakunta.net/opiskelijakunta-tuon-edustajiston-kevatkokous-21-4-2026/">
-          <Image
-            loading="lazy"
-            decoding="async"
-            src="https://opiskelijakunta.net/wp-content/uploads/2026/04/Edustajistovaalit-2024-kotisivut-7-400x250.jpg"
-            alt="Opiskelijakunta TUOn edustajiston kevätkokous 21.4.2026"
-            width="400"
-            height="250"
-          />
-        </a>
-
-        <h2>
-          <a
-            href="https://opiskelijakunta.net/opiskelijakunta-tuon-edustajiston-kevatkokous-21-4-2026/">
-            Opiskelijakunta TUOn edustajiston kevätkokous 21.4.2026
-          </a>
-        </h2>
-        2.4.2026
-        <p>
-          Edustajiston kevätkokous pidetään maanantaina 21.4.2026 klo 17:00 alkaen. Kokous pidetään
-          EduCityn kampuksella tilassa 1002 Moriaberg, kokousta ovat tervetulleet seuraamaan kaikki
-          opiskelijakunnan jäsenet. Kokouksen esityslista löytyy lähempänä kokousta TUOn...
-        </p>
-
-        <a
-          href="https://opiskelijakunta.net/opiskelijakunta-tuon-edustajiston-kevatkokous-21-4-2026/">
-          Lue lisää
-        </a>
-      </article>
-
-      <a href="https://opiskelijakunta.net/ajankohtaista/page/2/?df_blog">Vanhemmat artikkelit</a>
-
-      <a href="https://opiskelijakunta.net/blogi/">Katso kaikki uutiset ja blogit</a>
-
-      <h2>Tapahtumakalenteri 2025</h2><p></p><p>
-        Opiskelijakunta TUOn vuoden 2025 tapahtumat löydät alta:
-      </p>
-
-      <h5>4.9.2025 | KNB &amp; PNB 2025</h5>
-      <p>
-        Keltanokkabileet eli KNB saapuu jälleen 4.9.2025! Tänä vuonna teemana on Selviytyjät!
-        Tapahtuma on suunnattu syksyllä aloittaville opiskelijoille, mutta mukaan voi tietysti
-        lähteä kuka vain aloittavanmielinen. Tule mukaan kokemaan aloitustapahtuman,
-        keltanokkavalan, rastikierroksen ja approjen yhdistelmä! Ilta saatetaan päätökseen jatkoilla
-        Fygasissa.
-      </p><p>
-        Keltanokkavalansa jo vannoneille on vaihtoehtona myös Punanenäbileet eli PNB! PNB:hen
-        sisältyy TUOppiapprokierros ja jatkot, halutessaan Punanenät voivat osallistua myös
-        Keltanokkien aloitustapahtumaan.
-      </p><p>Lipunmyynti tapahtuu Kide.appissa, sieltä löydät tarkemman tapahtumainfon!</p>
-
-      <div
-        data-settings='{"effect":"slide","desktop":"1","tablet":"1","mobile":"1","variable_width":"off","loop":true,"item_spacing":"30px","item_spacing_tablet":"","item_spacing_phone":"","arrow":"off","dots":"off","autoplay":"on","auto_delay":"2500","speed":"1000","pause_hover":"off","centeredSlides":"off","order":"0","use_lightbox":"off","use_lightbox_caption":"off"}'
-        data-item="1"
-        data-itemtablet="1"
-        data-itemphone="1">
-        <div style="transition-duration: 0ms; transform: translate3d(-1134px, 0px, 0px);">
-          <div data-swiper-slide-index="0" style="width: 537px; margin-right: 30px;">
-            <div
-              data-src="https://opiskelijakunta.net/wp-content/uploads/2025/09/HAALARIMERKIT-4.jpg">
-              <Image
-                decoding="async"
-                src="https://opiskelijakunta.net/wp-content/uploads/2025/09/HAALARIMERKIT-4.jpg"
-                alt=""
-                inferSize={true}
-              />
-
-              <div data-swiper-slide-index="0" style="width: 537px; margin-right: 30px;">
-                <div
-                  data-src="https://opiskelijakunta.net/wp-content/uploads/2025/09/HAALARIMERKIT-4.jpg">
-                  <Image
-                    decoding="async"
-                    src="https://opiskelijakunta.net/wp-content/uploads/2025/09/HAALARIMERKIT-4.jpg"
-                    alt=""
-                    inferSize={true}
-                  />
-
-                  <div data-swiper-slide-index="0" style="width: 537px; margin-right: 30px;">
-                    <div
-                      data-src="https://opiskelijakunta.net/wp-content/uploads/2025/09/HAALARIMERKIT-4.jpg">
-                      <Image
-                        decoding="async"
-                        src="https://opiskelijakunta.net/wp-content/uploads/2025/09/HAALARIMERKIT-4.jpg"
-                        alt=""
-                        inferSize={true}
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+    <section id="kalenteri" class="">
+      <div class="mx-5 flex flex-col items-center gap-8 py-4 lg:mx-20 lg:flex-row">
+        <div class="*:py-2 lg:w-2/3">
+          <h2>Tapahtumakalenteri 2025</h2>
+          <p>Opiskelijakunta TUOn vuoden 2025 tapahtumat löydät alta:</p>
+          <Collapsible title="4.9.2025 | KNB & PNB 2025">
+            <p>
+              Keltanokkabileet eli KNB saapuu jälleen 4.9.2025! Tänä vuonna teemana on Selviytyjät!
+              Tapahtuma on suunnattu syksyllä aloittaville opiskelijoille, mutta mukaan voi tietysti
+              lähteä kuka vain aloittavanmielinen. Tule mukaan kokemaan aloitustapahtuman,
+              keltanokkavalan, rastikierroksen ja approjen yhdistelmä! Ilta saatetaan päätökseen
+              jatkoilla Fygasissa.
+            </p><p>
+              Keltanokkavalansa jo vannoneille on vaihtoehtona myös Punanenäbileet eli PNB! PNB:hen
+              sisältyy TUOppiapprokierros ja jatkot, halutessaan Punanenät voivat osallistua myös
+              Keltanokkien aloitustapahtumaan.
+            </p><p>Lipunmyynti tapahtuu Kide.appissa, sieltä löydät tarkemman tapahtumainfon!</p>
+          </Collapsible>
+        </div>
+        <div class="rounded-tuo shadow-tuo-md overflow-hidden lg:w-1/3">
+          <Carousel>
+            <Image
+              decoding="async"
+              src="https://opiskelijakunta.net/wp-content/uploads/2025/09/HAALARIMERKIT-4.jpg"
+              alt=""
+              inferSize={true}
+            />
+          </Carousel>
         </div>
       </div>
-    </span>
-  </p>
-</article>
+    </section>
+  </main>
+</Layout>
